@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	@yield('topscript')
-    <title>Laravel Blog</title>
+    <title>Tandas</title>
 </head>
 <body>
     @yield('content')
