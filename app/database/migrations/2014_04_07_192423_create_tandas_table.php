@@ -12,7 +12,7 @@ class CreateTandasTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('tandas', function($table)) {
+		Schema::create('tandas', function($table) {
 			$table->increments('id');
 			$table->string('title', 200);
 			$table->tinyInteger('user_num')->unsigned();
@@ -20,7 +20,7 @@ class CreateTandasTable extends Migration {
 			$table->double('pay_per_user', 7, 2)->unsigned();
 			$table->double('payout', 8, 2)->unsigned();
 			$table->timestamps();
-		}
+		});
 	}
 
 	/**

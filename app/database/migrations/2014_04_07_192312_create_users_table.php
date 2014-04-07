@@ -12,7 +12,7 @@ class CreateUsersTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('users', function($table)) {
+		Schema::create('users', function($table) {
 			$table->increments('id');
 			$table->string('email', 50)->unique();
 			$table->string('password', 100);
@@ -23,7 +23,7 @@ class CreateUsersTable extends Migration {
 			$table->string('img_path', 200);
 			$table->double('trust_rate', 4, 2);
 			$table->timestamps();
-		}
+		});
 	}
 
 	/**
