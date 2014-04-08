@@ -62,7 +62,7 @@
         </div>
     </section>
 
-    <div id="map"></div>
+    <div id="login"></div>
      <div class="omb_login">
     	<h3 class="omb_authTitle">Login or <a href="#">Sign up</a></h3>
 		<div class="row omb_row-sm-offset-3 omb_socialButtons">
@@ -94,22 +94,12 @@
 		</div>
 
 		<div class="row omb_row-sm-offset-3">
-			<div class="col-xs-12 col-sm-6">	
-			    <form class="omb_loginForm" action="" autocomplete="off" method="POST">
-					<div class="input-group">
-						<span class="input-group-addon"><i class="fa fa-user"></i></span>
-						<input type="text" class="form-control" name="username" placeholder="email address">
-					</div>
-					<span class="help-block"></span>
-										
-					<div class="input-group">
-						<span class="input-group-addon"><i class="fa fa-lock"></i></span>
-						<input  type="password" class="form-control" name="password" placeholder="Password">
-					</div>
-                    <span class="help-block">Password error</span>
-
-					<button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
-				</form>
+			<div class="col-xs-12 col-sm-6">				   
+				{{ Form::open(array('action' => 'HomeController@doLogin', 'form-signin')) }}       
+                    {{ Form::text('email', null, array('class' => 'form-control' , 'placeholder' => 'Email address', 'required' => 'required', 'autofocus')) }}
+                    {{ Form::password('password', array('class' => 'form-control', 'placeholder' => 'Password', 'required' => 'required')) }} 
+                    {{ Form::submit('Login',  array('class' => 'btn btn-lg btn-primary btn-block')) }}
+                {{ Form::close() }}
 			</div>
     	</div>
 		<div class="row omb_row-sm-offset-3">
