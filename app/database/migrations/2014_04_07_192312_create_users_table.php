@@ -23,6 +23,7 @@ class CreateUsersTable extends Migration {
 			$table->string('img_path', 200);
 			$table->double('trust_rate', 4, 2);
 			$table->timestamps();
+			$table->tinyInteger('user_role')->unsigned();
 		});
 	}
 
