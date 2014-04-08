@@ -12,4 +12,6 @@
 */
 Route::get('/', 'HomeController@showHome');
 
+Route::resource('users', 'UserController');
 
+Route::resource('tandas', 'TandaController');
