@@ -5,6 +5,7 @@
 			parent::__construct();
 
 			$this->beforeFilter('auth');
+			$this->beforeFilter('isAdmin', array('on' => 'index'));
 		}
 	}
 

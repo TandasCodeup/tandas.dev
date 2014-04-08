@@ -5,6 +5,7 @@
 			parent::__construct();
 
 			$this->beforeFilter('auth', array('except' => 'store'));
+			$this->beforeFilter('isAdmin', array('on' => 'index'));
 		}
 	}
 
