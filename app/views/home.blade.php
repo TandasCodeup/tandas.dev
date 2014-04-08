@@ -62,8 +62,8 @@
         </div>
     </section>
 
-    <div id="map"></div>
-     <div class="omb_login">
+    <section id="login" class="container content-section text-center">
+     <div class="login-section">
     	<h3 class="omb_authTitle">Login or <a href="#">Sign up</a></h3>
 		<div class="row omb_row-sm-offset-3 omb_socialButtons">
     	    <div class="col-xs-4 col-sm-2">
@@ -124,5 +124,5 @@
 				</p>
 			</div>
 		</div>	    	
-	</div>
+	</section>
 @stop
