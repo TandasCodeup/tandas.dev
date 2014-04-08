@@ -4,6 +4,7 @@
 		public function __construct() {
 			parent::__construct();
 
+			$this->beforeFilter('csrf', array('on' => array('post', 'delete', 'put')));
 			$this->beforeFilter('auth');
 			$this->beforeFilter('isAdmin', array('on' => 'index'));
 		}
