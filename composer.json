@@ -29,6 +29,9 @@
 			"php artisan key:generate"
 		]
 	},
+	"require-dev": {
+    	"way/generators": "2.*"
+	},
 	"config": {
 		"preferred-install": "dist"
 	},
