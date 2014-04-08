@@ -63,7 +63,7 @@
     </section>
 
     <section id="login" class="container content-section text-center">
-     <div class="login-section">
+     <div class="omb_login">
     	<h3 class="omb_authTitle">Login or <a href="#">Sign up</a></h3>
 		<div class="row omb_row-sm-offset-3 omb_socialButtons">
     	    <div class="col-xs-4 col-sm-2">

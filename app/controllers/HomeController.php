@@ -24,8 +24,10 @@ class HomeController extends BaseController {
 		if (Auth::attempt(array('email' => Input::get('email'), 'password' => Input::get('password')))) {
 			// user is logged in
 			// This route is a filler, can be replaced with anything.
+			Session::flash('loginSucc', 'Login successful');
 			return Redirect::intended('/whatever_route_to_get_to_dashboard');
 		} else {
+			Session::flash('loginFail', 'Login failed');
 			// user not logged in
 			return Redirect::back()->withInput();
 		}
