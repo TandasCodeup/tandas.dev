@@ -11,7 +11,8 @@
 	}
 
 	public function index() {
-
+		$tandas = Tanda::with('users')->orderBy('created_at', 'desc')->paginate(10);
+		return View::make('tandaList')->with('tandas', $tandas);
 	}
 
 	public function store() {
