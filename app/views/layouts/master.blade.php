@@ -49,19 +49,44 @@
                     <li class="page-scroll">
                         <a href="#contact">Contact</a>
                     </li>
+                    <li class="page-scroll">
+                        <a href="#login">Login</a>
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container -->
     </nav>
-     @yield('content')
+
+
+    @yield('content')
+
+
+    <div class="container">
+        <div class="row col-md-6 col-md-offset-3">
+            @if (Session::has('loginSucc'))
+                <div class="alert alert-success alert-dismissable">{{{ Session::get('successMessage') }}}</div>
+            @endif
+            @if (Session::has('errorMessage'))
+                <div class="alert alert-warning alert-dismissable">{{{ Session::get('errorMessage') }}}</div>
+            @endif
+            @if (Session::has('loginFail'))
+                <div class="alert alert-warning alert-dismissable">{{{ Session::get('loginFail') }}}</div>
+            @endif
+        </div>
+    </div>
+
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-
-    <!-- Google Maps API Key - You will need to use your own API key to use the map feature -->
     
+    <script>
+		$('.alert').fadeIn();
+		setTimeout(function() {
+		$('.alert').fadeOut();
+		}, 3000);
+	</script>
 
     <!-- Custom Theme JavaScript -->
     <script src="/assets/js/tandas.js"></script>
