@@ -11,7 +11,8 @@
 	}
 
 	public function index() {
-
+		$users = User::with('tandas')->orderBy('first_name', 'desc')->paginate(10);
+		return View::make('userList')->with('users', $users);
 	}
 
 	public function store() {
