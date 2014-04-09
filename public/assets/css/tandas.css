@@ -4,6 +4,7 @@ body {
     font-family: Lato,"Helvetica Neue",Helvetica,Arial,sans-serif;
     color: #fff;
     background-color: #90C5A9;
+
 }
 
 html {
@@ -177,6 +178,7 @@ a:focus {
 
     margin-top: 150px;
     margin-bottom: 150px;
+    text-align: center;
 }
 
 .btn-circle {
@@ -268,16 +270,10 @@ a:focus {
     -o-background-size: cover;
     padding-top: 150px;
     padding-bottom: 150px;
+    text-align: center;
     
 
 }
-
-.login-section{
-    padding-top: 1000px;
-    padding-bottom: 1000px;
-    background-color: #FA8B60;
-}
-
 
 
 

@@ -31,61 +31,34 @@
             </div>
         </div>
     </section>
+  
 
-    <section id="Join" class="content-section text-center">
+    <section id="Join" class="container-fluid">
     
      <div class="Join-section">
-    	<h3 class="omb_authTitle">Sign up <a href="#">Log in</a></h3>
-		<div class="row omb_row-sm-offset-3 omb_socialButtons">
-    	    <div class="col-xs-4 col-sm-2">
-		        <a href="#" class="btn btn-lg btn-block omb_btn-facebook">
-			        <i class="fa fa-facebook visible-xs"></i>
-			        <span class="hidden-xs">Facebook</span>
-		        </a>
-	        </div>
-        	<div class="col-xs-4 col-sm-2">
-		        <a href="#" class="btn btn-lg btn-block omb_btn-twitter">
-			        <i class="fa fa-twitter visible-xs"></i>
-			        <span class="hidden-xs">Twitter</span>
-		        </a>
-	        </div>	
-        	<div class="col-xs-4 col-sm-2">
-		        <a href="#" class="btn btn-lg btn-block omb_btn-google">
-			        <i class="fa fa-google-plus visible-xs"></i>
-			        <span class="hidden-xs">Google+</span>
-		        </a>
-	        </div>	
-		</div>
+        <h3 class="col-md-12 col-md-12" >Sign up</h3>        
+        <div class="row">
+            <div class="col-xs-12 col-sm-12">
+                <div class="col-xs-7 col-md-7">
+                    {{ Form::open(array('action' => 'HomeController@doLogin', 'form-signin')) }}       
+                    {{ Form::text('first_name', null, array('class' => 'form-control' , 'placeholder' => 'First Name', 'required' => 'required', 'autofocus')) }}
+                    {{ Form::text('email', null, array('class' => 'form-control' , 'placeholder' => 'Email address', 'required' => 'required')) }}
+                    {{ Form::password('password', array('class' => 'form-control', 'placeholder' => 'Password', 'required' => 'required')) }}                
+                    {{ Form::text('last_name', null, array('class' => 'form-control' , 'placeholder' => 'Last Name', 'required' => 'required')) }}
+                    {{ Form::text('email', null, array('class' => 'form-control' , 'placeholder' => 'Confirm Email address', 'required' => 'required')) }}
+                    {{ Form::password('password', array('class' => 'form-control', 'placeholder' => 'Confirm Password', 'required' => 'required')) }}                  
+                    {{ Form::submit('Login',  array('class' => 'btn btn-lg btn-primary btn-block')) }}
+                    {{ Form::close() }}   
 
-		<div class="row omb_row-sm-offset-3 omb_loginOr">
-			<div class="col-xs-12 col-sm-6">
-				<hr class="omb_hrOr">
-				<span class="omb_spanOr">or</span>
-			</div>
-		</div>
-
-		<div class="row omb_row-sm-offset-3">
-			<div class="col-xs-12 col-sm-6">	
-		    <div class="col-xs-12 col-sm-6">                   
-                {{ Form::open(array('action' => 'HomeController@doLogin', 'form-signin')) }}       
-                {{ Form::text('email', null, array('class' => 'form-control' , 'placeholder' => 'Email address', 'required' => 'required', 'autofocus')) }}
-                {{ Form::password('password', array('class' => 'form-control', 'placeholder' => 'Password', 'required' => 'required')) }} 
-                {{ Form::submit('Login',  array('class' => 'btn btn-lg btn-primary btn-block')) }}
-                {{ Form::close() }}
-			</div>
-    	</div>
-		<div class="row omb_row-sm-offset-3">
-			<div class="col-xs-12 col-sm-3">
-				<label class="checkbox">
-					<input type="checkbox" value="remember-me">Remember Me
-				</label>
-			</div>
-			<div class="col-xs-12 col-sm-3">
-				<p class="omb_forgotPwd">
-					<a href="#">Forgot password?</a>
-				</p>
-			</div>
-		</div>	    	
+                    <label class="checkbox">
+                        <input type="checkbox" value="remember-me">Remember Me
+                    </label>
+                    <p class="omb_forgotPwd">
+                    <a href="#">Forgot password?</a>
+                </div>  
+            </div>
+        </div>
+    </div>
     </section>
 
     <section id="contact" class="container content-section text-center">
