@@ -19,6 +19,8 @@ class User extends BaseModel implements UserInterface, RemindableInterface {
 	 */
 	protected $hidden = array('password');
 
+	protected $fillable = ('email', 'first_name', 'last_name', 'gender', 'DOB');
+
 	public function tandas() {
 		return $this->belongsToMany('Tanda');
 	}
