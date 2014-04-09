@@ -50,6 +50,10 @@
 
 	public function show($id) {
 
+		$user = User::find($id);
+
+		return View::make('user.profile')->with('user', $user);
+
 	}
 
 	public function edit($id) {
