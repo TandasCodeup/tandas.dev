@@ -13,7 +13,7 @@
 
     <!-- Add custom CSS here -->
     <link href="/assets/css/sb-admin.css" rel="stylesheet">
-    <link rel="/assets/stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/font-awesome/css/font-awesome.min.css">
     <!-- Page Specific CSS -->
     <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css">
   </head>
@@ -57,10 +57,10 @@
           <div class="col-lg-12">
             <h1>Tandas <small>Statistics Overview</small></h1>
             <ol class="breadcrumb">
-              <li class="active"><i class="fa fa-dashboard"></i> Dashboard</li>
+              <li class="active"><i class="fa fa-dashboard fa-2x"></i> Dashboard</li>
             </ol
           </div>
-        </div><!-- /.row -->
+         </div><!-- /.row -->
 
         <div class="row">
           <div class="col-lg-3">
