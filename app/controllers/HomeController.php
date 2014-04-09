@@ -26,6 +26,7 @@ class HomeController extends BaseController {
 			// This route is a filler, can be replaced with anything.
 			Session::flash('loginSucc', 'Login successful');
 			return Redirect::action('UserController@show', Auth::user()->id);
+
 		} else {
 			Session::flash('loginFail', 'Login failed');
 			// user not logged in
