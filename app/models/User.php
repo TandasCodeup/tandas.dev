@@ -19,16 +19,16 @@ class User extends BaseModel implements UserInterface, RemindableInterface {
 	 */
 	protected $hidden = array('password');
 
-	protected $guarded = ('email', 'password', 'user_role');
+	protected $guarded = array('email', 'password', 'user_role');
 
-	protected $fillable = ('email', 'first_name', 'last_name', 'gender', 'DOB');
+	protected $fillable = array('email', 'first_name', 'last_name', 'gender', 'DOB');
 
 	public function tandas() {
 		return $this->belongsToMany('Tanda');
 	}
 
 	public function isAdmin() {
-		
+
 		$role = $this->user_role;
 
 		if ($role === 1) {
