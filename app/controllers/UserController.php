@@ -58,6 +58,32 @@
 
 	public function edit($id) {
 		
+		$user = User::find($id);
+
+		return View::make('user.edit')->with('user', $user);
+
+	}
+
+	public function update($id) {
+
+		$user = User::find($id);
+
+		if (Input::hasFile('image')) {
+			if (!empty($user->img_path)) {
+				File::delete($user->img_path);
+			}
+			$file = Input::file('image');
+			$ext = File::extension($file->getClientOriginalName());
+			$filename = uniqid() . '.' . $ext;
+			$upPost->image_path = $filename;
+			Input::file('image')->move('uploads/', $filename);
+		}
+		$user->email = Input::get('email');
+		$user->password = Hash::make(Input::get('password'));
+		$user->first_name = Input::get('first_name');
+		$user->last_name = Input::get('last_name');
+		$user->save();
+
 	}
 
 	public function destroy($id) {
