@@ -18,10 +18,10 @@ class CreateUsersTable extends Migration {
 			$table->string('password', 100);
 			$table->string('first_name', 50);
 			$table->string('last_name', 50);
-			$table->string('img_path', 200);
-			$table->double('trust_rate', 4, 2);
+			$table->string('img_path', 200)->nullable();
+			$table->double('trust_rate', 4, 2)->default(5);
 			$table->timestamps();
-			$table->tinyInteger('user_role')->unsigned();
+			$table->tinyInteger('user_role')->default(2)->unsigned();
 		});
 	}
 
