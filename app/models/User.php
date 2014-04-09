@@ -27,6 +27,17 @@ class User extends BaseModel implements UserInterface, RemindableInterface {
 		return $this->belongsToMany('Tanda');
 	}
 
+	public function isAdmin() {
+		
+		$role = $this->user_role;
+
+		if ($role === 1) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
 	/**
 	 * Get the unique identifier for the user.
 	 *
