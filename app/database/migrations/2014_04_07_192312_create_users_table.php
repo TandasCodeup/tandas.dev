@@ -18,8 +18,6 @@ class CreateUsersTable extends Migration {
 			$table->string('password', 100);
 			$table->string('first_name', 50);
 			$table->string('last_name', 50);
-			$table->string('gender', 1);
-			$table->date('DOB');
 			$table->string('img_path', 200);
 			$table->double('trust_rate', 4, 2);
 			$table->timestamps();
