@@ -1,5 +1,6 @@
 @extends('layouts.master')
 
+
 @section('content')
     <section class="intro">
         <div class="intro-body">
@@ -35,13 +36,13 @@
 
     <section id="Join" class="container-fluid">
     
-     <div class="Join-section">
+     <div class="Join-section" id="Join-section">
         <h3 class="col-md-12 col-md-12" >Sign up</h3>        
         <div class="row">
-            <div class="col-xs-12 col-sm-12">
-                <div class="col-xs-7 col-md-7">
-                    {{ Form::open(array('action' => 'UserController@store', 'id' => 'Join', 'class' => 'text-center')) }}       
-                    {{ Form::text('first_name', null, array('class' => 'form-control' , 'placeholder' => 'First Name', 'required' => 'required', 'autofocus')) }}
+            <div class="col-lg-8 col-lg-offset-2">
+                
+                    {{ Form::open(array('action' => 'UserController@store', 'class' => 'Join-section')) }}       
+                    {{ Form::text('first_name', null, array('class' => 'form-control' , 'placeholder' => 'First Name', 'required' => 'required')) }}
                     {{ Form::text('last_name', null, array('class' => 'form-control' , 'placeholder' => 'Last Name', 'required' => 'required')) }}
                     {{ Form::text('email1', null, array('class' => 'form-control' , 'placeholder' => 'Email address', 'required' => 'required')) }}
                     {{ Form::text('email2', null, array('class' => 'form-control' , 'placeholder' => 'Confirm Email address', 'required' => 'required')) }}
@@ -55,7 +56,7 @@
                     </label>
                     <p class="omb_forgotPwd">
                     <a href="#">Forgot password?</a>
-                </div>  
+                  
             </div>
         </div>
     </div>

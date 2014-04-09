@@ -48,7 +48,12 @@
                     </li>
                     <li class="page-scroll">
                         <a href="#contact">Contact</a>
+                    </li>
+                     @if (Auth::check())
+                     <li>
+                        <a href="{{{ action('HomeController@logout') }}}"><span class="label label-warning" >Logout&nbsp;{{ Auth::user()->email }}</span></a>
                     </li>                              
+                    @else
                     <li class="dropdown">
                         <a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign In <strong class="caret"></strong></a>
                         <div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
@@ -59,7 +64,8 @@
                             {{ Form::close() }} 
                         </div>
                     </li>
-               
+                    @endif
+                    
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
