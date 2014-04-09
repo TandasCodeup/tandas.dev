@@ -19,6 +19,8 @@ class User extends BaseModel implements UserInterface, RemindableInterface {
 	 */
 	protected $hidden = array('password');
 
+	protected $guarded = ('email', 'password', 'user_role');
+
 	protected $fillable = ('email', 'first_name', 'last_name', 'gender', 'DOB');
 
 	public function tandas() {

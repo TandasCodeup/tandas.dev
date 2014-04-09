@@ -17,6 +17,17 @@
 
 	public function store() {
 
+		$newTanda = new Tanda;
+
+		$newTanda->title = Input::get('title');
+		$newTanda->user_num = Input::get('user_num');
+		$newTanda->time_period = Input::get('time_period');
+		$newTanda->payout = Input::get('payout');
+		$newTanda->pay_per_user = $newTanda->payout / $newTanda->user_num;
+		$newTanda->save();
+
+		return Redirect::action('TandaController@show', $newTanda->id);
+
 	}
 
 	public function show($id) {
