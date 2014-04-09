@@ -41,7 +41,7 @@
 		$newUser->last_name = Input::get('last_name');
 		$newUser->save();
 
-		return Redirect::action('DashController@show');
+		return Redirect::action('UserController@show', $newUser->id);
 	}
 
 	public function show($id) {

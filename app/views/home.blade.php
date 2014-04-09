@@ -49,11 +49,9 @@
                     {{ Form::text('email2', null, array('class' => 'form-control' , 'placeholder' => 'Confirm Email address', 'required' => 'required')) }}
                     {{ Form::password('pass1', array('class' => 'form-control', 'placeholder' => 'Password', 'required' => 'required')) }}                
                     {{ Form::password('pass2', array('class' => 'form-control', 'placeholder' => 'Confirm Password', 'required' => 'required')) }}                  
-                    {{ Form::submit('Login',  array('class' => 'btn btn-lg btn-primary btn-block')) }}
+                    {{ Form::submit('Sign Up',  array('class' => 'btn btn-lg btn-primary btn-block')) }}
                     {{ Form::close() }}  
-                    <p class="omb_forgotPwd">
-                    <a href="#">Forgot password?</a>
-                  
+                   
             </div>
         </div>
     </div>

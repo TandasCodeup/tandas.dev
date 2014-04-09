@@ -67,14 +67,16 @@
                     @else
                     <li class="dropdown">
                         <a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign In <strong class="caret"></strong></a>
-                        <div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
+                        <ul class="dropdown-menu" style="padding: 15px;min-width: 250px;">
                             {{ Form::open(array('action' => 'HomeController@doLogin', 'form-signin')) }}  
-                            {{ Form::text('email', null, array('class' => 'form-control' , 'placeholder' => 'Email address', 'required' => 'required', 'autofocus')) }}
-                            {{ Form::password('password', array('class' => 'form-control', 'placeholder' => 'Confirm Password', 'required' => 'required')) }}                  
-                            {{ Form::checkbox('name', 'value', 'true')}}
+                            {{ Form::text('email', null, array('class' => 'form-control' , 'placeholder' => 'Email address', 'required' => 'required')) }}
+                            {{ Form::password('password', array('class' => 'form-control', 'placeholder' => 'Password', 'required' => 'required')) }}
+                            <label>{{ Form::checkbox('name', 'value', 'true') }} Remember Me</label>
                             {{ Form::submit('Login',  array('class' => 'btn btn-lg btn-primary btn-block')) }}
-                            {{ Form::close() }} 
-                        </div>
+                            {{ Form::close() }}
+                            <a id= "fg" href="#">Forgot password?</a>
+                  
+                        </ul>
                     </li>
                     @endif
                     
