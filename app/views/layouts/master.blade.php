@@ -93,7 +93,7 @@
 		$('.alert').fadeIn();
 		setTimeout(function() {
 		$('.alert').fadeOut();
-		}, 3000);
+		}, 2000);
 	</script>
 
     <!-- Custom Theme JavaScript -->

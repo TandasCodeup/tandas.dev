@@ -40,15 +40,15 @@
         <div class="row">
             <div class="col-xs-12 col-sm-12">
                 <div class="col-xs-7 col-md-7">
-                    {{ Form::open(array('action' => 'HomeController@doLogin', 'form-signin')) }}       
+                    {{ Form::open(array('action' => 'UserController@store', 'id' => 'Join', 'class' => 'text-center')) }}       
                     {{ Form::text('first_name', null, array('class' => 'form-control' , 'placeholder' => 'First Name', 'required' => 'required', 'autofocus')) }}
-                    {{ Form::text('email', null, array('class' => 'form-control' , 'placeholder' => 'Email address', 'required' => 'required')) }}
-                    {{ Form::password('password', array('class' => 'form-control', 'placeholder' => 'Password', 'required' => 'required')) }}                
                     {{ Form::text('last_name', null, array('class' => 'form-control' , 'placeholder' => 'Last Name', 'required' => 'required')) }}
-                    {{ Form::text('email', null, array('class' => 'form-control' , 'placeholder' => 'Confirm Email address', 'required' => 'required')) }}
-                    {{ Form::password('password', array('class' => 'form-control', 'placeholder' => 'Confirm Password', 'required' => 'required')) }}                  
+                    {{ Form::text('email1', null, array('class' => 'form-control' , 'placeholder' => 'Email address', 'required' => 'required')) }}
+                    {{ Form::text('email2', null, array('class' => 'form-control' , 'placeholder' => 'Confirm Email address', 'required' => 'required')) }}
+                    {{ Form::password('pass1', array('class' => 'form-control', 'placeholder' => 'Password', 'required' => 'required')) }}                
+                    {{ Form::password('pass2', array('class' => 'form-control', 'placeholder' => 'Confirm Password', 'required' => 'required')) }}                  
                     {{ Form::submit('Login',  array('class' => 'btn btn-lg btn-primary btn-block')) }}
-                    {{ Form::close() }}   
+                    {{ Form::close() }}  
 
                     <label class="checkbox">
                         <input type="checkbox" value="remember-me">Remember Me
