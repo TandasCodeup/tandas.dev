@@ -48,7 +48,7 @@
 
 		$user = User::find($id);
 
-		return View::make('user.profile')->with('user', $user);
+		return View::make('user.dashboard')->with('user', $user);
 
 	}
 

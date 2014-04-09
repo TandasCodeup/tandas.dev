@@ -100,6 +100,16 @@ a:focus {
     outline: 0;
 }
 
+
+
+#login-nav input {
+
+ margin-bottom: 15px;
+
+}
+
+
+
 @media(min-width:767px) {
     .navbar {
         padding: 20px 0;
@@ -280,8 +290,6 @@ a:focus {
     padding-top: 100px;
     padding-bottom: 100px;
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
 
 }
 
@@ -427,4 +435,64 @@ img::-moz-selection {
 
 body {
     webkit-tap-highlight-color: rgba(255,255,255,.2);
+}
+
+/* Just click to select the code */
+ 
+
+@font-face {
+  font-family: "untitled-font-1";
+  src:url("/assets/fonts/untitled-font-1.eot");
+  src:url("/assets/fonts/untitled-font-1.eot?#iefix") format("embedded-opentype"),
+    url("/assets/fonts/untitled-font-1.ttf") format("truetype"),
+    url("/assets/fonts/untitled-font-1.svg#untitled-font-1") format("svg"),
+    url("/assets/fonts/untitled-font-1.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+ 
+[data-icon]:before {
+  font-family: "untitled-font-1" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+ 
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "untitled-font-1" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+} 
+ 
+.icon-banknote:before {
+   content: "a"; 
+} 
+ 
+.icon-vallet:before {
+   content: "b"; 
+} 
+ 
+.icon-user-outline:before {
+   content: "c"; 
+} 
+ 
+.icon-users-outline:before {
+   content: "d"; 
+} 
+ 
+.icon-user:before {
+   content: "e"; 
 }

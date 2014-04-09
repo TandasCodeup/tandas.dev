@@ -29,7 +29,7 @@
                     <i class="fa fa-bars"></i>
                 </button>
                 <a class="navbar-brand" href="#page-top">
-                    <i class="fa fa-play-circle"></i>  <span class="light">Tandas</span>
+                <span data-icon="a" class="light"> Tandas</span>
                 </a>
             </div>
 
@@ -37,6 +37,17 @@
             <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
                 <ul class="nav navbar-nav">
                     <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li>
+                        @if (Session::has('loginSucc'))
+                            <div class="alert alert-success alert-dismissable">{{{ Session::get('successMessage') }}}</div>
+                        @endif
+                        @if (Session::has('errorMessage'))
+                            <div class="alert alert-warning alert-dismissable">{{{ Session::get('errorMessage') }}}</div>
+                        @endif
+                        @if (Session::has('loginFail'))
+                            <div class="alert alert-warning alert-dismissable">{{{ Session::get('loginFail') }}}</div>
+                        @endif
+                    </li>   
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
@@ -60,6 +71,7 @@
                             {{ Form::open(array('action' => 'HomeController@doLogin', 'form-signin')) }}  
                             {{ Form::text('email', null, array('class' => 'form-control' , 'placeholder' => 'Email address', 'required' => 'required', 'autofocus')) }}
                             {{ Form::password('password', array('class' => 'form-control', 'placeholder' => 'Confirm Password', 'required' => 'required')) }}                  
+                            {{ Form::checkbox('name', 'value', 'true')}}
                             {{ Form::submit('Login',  array('class' => 'btn btn-lg btn-primary btn-block')) }}
                             {{ Form::close() }} 
                         </div>
@@ -74,22 +86,11 @@
     </nav>
 
 
+
+
     @yield('content')
 
 
-    <div class="container">
-        <div class="row col-md-6 col-md-offset-3">
-            @if (Session::has('loginSucc'))
-                <div class="alert alert-success alert-dismissable">{{{ Session::get('successMessage') }}}</div>
-            @endif
-            @if (Session::has('errorMessage'))
-                <div class="alert alert-warning alert-dismissable">{{{ Session::get('errorMessage') }}}</div>
-            @endif
-            @if (Session::has('loginFail'))
-                <div class="alert alert-warning alert-dismissable">{{{ Session::get('loginFail') }}}</div>
-            @endif
-        </div>
-    </div>
 
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
@@ -101,6 +102,16 @@
 		$('.alert').fadeOut();
 		}, 2000);
 	</script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+    //Handles menu drop down
+    $('.dropdown-menu').find('form').click(function (e) {
+        e.stopPropagation();
+    });
+});
+    </script>
+
+
 
     <!-- Custom Theme JavaScript -->
     <script src="/assets/js/tandas.js"></script>
