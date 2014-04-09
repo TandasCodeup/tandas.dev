@@ -32,14 +32,16 @@
 
 	public function show($id) {
 
-	}
+		$tanda = Tanda::find($id);
 
-	public function edit($id) {
-		
+		return View::make('tanda.home')->with('tanda', $tanda);
+
 	}
 
 	public function destroy($id) {
 
+		$tanda = Tanda::find($id);
+		$tanda->delete();
 	}
 
 ?>
