@@ -7,6 +7,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
+                        <h1 data-icon="a"></h1>
                         <h1 class="brand-heading">tandas</h1>
                         <p class="intro-text">Tandas is a trust-based, community-centered savings/credit association</p>
                         <div class="page-scroll">
@@ -50,10 +51,6 @@
                     {{ Form::password('pass2', array('class' => 'form-control', 'placeholder' => 'Confirm Password', 'required' => 'required')) }}                  
                     {{ Form::submit('Login',  array('class' => 'btn btn-lg btn-primary btn-block')) }}
                     {{ Form::close() }}  
-
-                    <label class="checkbox">
-                        <input type="checkbox" value="remember-me">Remember Me
-                    </label>
                     <p class="omb_forgotPwd">
                     <a href="#">Forgot password?</a>
                   
