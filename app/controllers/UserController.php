@@ -4,11 +4,9 @@
 		public function __construct() {
 			parent::__construct();
 
-			$this->beforeFilter('csrf', array('on' => array('post', 'delete', 'put')));
 			$this->beforeFilter('auth', array('except' => 'store'));
 			$this->beforeFilter('isAdmin', array('on' => 'index'));
 		}
-	}
 
 	public function index() {
 		$users = User::with('tandas')->orderBy('first_name', 'desc')->paginate(10);
@@ -41,8 +39,6 @@
 
 		$newUser->first_name = Input::get('first_name');
 		$newUser->last_name = Input::get('last_name');
-		$newUser->gender = Input::get('gender');
-		$newUser->DOB = Input::get('DOB');
 		$newUser->save();
 
 		return Redirect::action('DashController@show');
@@ -91,5 +87,7 @@
 		$user = User::find($id);
 		$user->delete();
 	}
+
+}
 
 ?>

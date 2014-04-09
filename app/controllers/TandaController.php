@@ -4,11 +4,9 @@
 		public function __construct() {
 			parent::__construct();
 
-			$this->beforeFilter('csrf', array('on' => array('post', 'delete', 'put')));
 			$this->beforeFilter('auth');
 			$this->beforeFilter('isAdmin', array('on' => 'index'));
 		}
-	}
 
 	public function index() {
 		$tandas = Tanda::with('users')->orderBy('created_at', 'desc')->paginate(10);
@@ -43,5 +41,7 @@
 		$tanda = Tanda::find($id);
 		$tanda->delete();
 	}
+
+}
 
 ?>
