@@ -161,6 +161,23 @@ a:focus {
         font-size: 25px;
     }
 }
+.contact{
+
+    margin-top: 250px;
+    margin-bottom: 250px;
+}
+
+.about{
+
+    margin-top: 200px;
+    margin-bottom: 250px;
+}
+
+.Join{
+
+    margin-top: 150px;
+    margin-bottom: 150px;
+}
 
 .btn-circle {
     width: 70px;
@@ -244,24 +261,24 @@ a:focus {
     width: 100%;
     padding: 50px 0;
     color: #000;
-    background-color: #FFF;
+    background-color: #7A9A95;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    
+
 }
 
 .login-section{
-    padding-bottom: 100px
+    padding-top: 1000px;
+    padding-bottom: 1000px;
     background-color: #FA8B60;
 }
 
-#login {
-    width: 100%;
-    height: 200px;
-    margin-top: 100px;
 
-}
 
 
 
