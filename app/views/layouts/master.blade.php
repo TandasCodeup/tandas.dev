@@ -5,16 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Tandas website">
     <meta name="author" content="Codeup Team">
-	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="//netdna.bootstrapcdn.com/bootswatch/3.1.1/united/bootstrap.min.css" rel="stylesheet">
 
     <!-- Fonts -->
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href='http://fonts.googleapis.com/css?family=Lato:200,500,200italic,500italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:200,500' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Bowlby+One+SC' rel='stylesheet' type='text/css'>
+    
 
     <!-- Custom Theme CSS -->
     <link href="/assets/css/tandas.css" rel="stylesheet">
-	@yield('topscript')
+
+
+@yield('topscript')
 
 
 </head>
@@ -68,14 +72,18 @@
                     <li class="dropdown">
                         <a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign In <strong class="caret"></strong></a>
                         <ul class="dropdown-menu" style="padding: 15px;min-width: 250px;">
-                            {{ Form::open(array('action' => 'HomeController@doLogin', 'form-signin')) }}  
+                            {{ Form::open(array('action' => 'HomeController@doLogin', 'form-signin')) }}
+                            <br>  
                             {{ Form::text('email', null, array('class' => 'form-control' , 'placeholder' => 'Email address', 'required' => 'required')) }}
+                            <br>
                             {{ Form::password('password', array('class' => 'form-control', 'placeholder' => 'Password', 'required' => 'required')) }}
-                            <label>{{ Form::checkbox('name', 'value', 'true') }} Remember Me</label>
-                            {{ Form::submit('Login',  array('class' => 'btn btn-lg btn-primary btn-block')) }}
+                            <br>
+                            <center></center>enter<label>{{ Form::checkbox('name', 'value', 'true') }} Remember Me</label></center>
+                            <br>
+                            {{ Form::submit('Login',  array('class' => 'btn btn-sm btn-info btn-block')) }}
                             {{ Form::close() }}
-                            <a id= "fg" href="#">Forgot password?</a>
-                  
+                            <br>
+                            <center><a id= "fg" href="#">Forgot password?</a></center>                 
                         </ul>
                     </li>
                     @endif
@@ -91,9 +99,6 @@
 
 
     @yield('content')
-
-
-
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
@@ -117,6 +122,12 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="/assets/js/tandas.js"></script>
-    @yield('bottomscript')
+
+
+
+@yield('bottomscript')
+
+
+
 </body>
 </html>

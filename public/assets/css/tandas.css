@@ -1,9 +1,10 @@
 body {
     width: 100%;
     height: 100%;
-    font-family: Lato,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Lato' ,"Helvetica Neue",Helvetica,Arial,sans-serif;
     color: #fff;
     background-color: #90C5A9;
+
 
 }
 
@@ -20,14 +21,15 @@ h5,
 h6 {
     margin: 0 0 35px;
     text-transform: uppercase;
-    font-family: Open Sans,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: Open Sans, sans-serif;
     font-weight: 500;
     letter-spacing: 1px;
 }
 
 p {
+    font-family: 'Lato', 'sans-serif';
     margin: 0 0 25px;
-    font-size: 18px;
+    font-weight: 200;
     line-height: 1.5;
 }
 
@@ -40,7 +42,7 @@ p {
 }
 
 a {
-    color: #28c3ab;
+    color: blue;
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
@@ -49,8 +51,25 @@ a {
 a:hover,
 a:focus {
     text-decoration: none;
-    color: #176e61;
+    color: #7A9A95;
 }
+
+
+div.hr {
+background: #fff  no-repeat scroll center;
+margin: auto;
+width:90em;
+margin-bottom: 170px;
+height: .2em;
+background-color: black;
+}
+
+div.hr hr {
+display: none;
+}
+
+
+
 
 .light {
     font-weight: 200;
@@ -150,6 +169,7 @@ a:focus {
 }
 
 .intro {
+
     display: table;
     width: 100%;
     height: auto;
@@ -169,12 +189,16 @@ a:focus {
 }
 
 .brand-heading {
+    font-family: 'Bowlby One SC', sans-serif;
     font-size: 40px;
+    color: #FA8B60;
 }
 
 .intro-text {
-    font-size: 18px;
+    font-family: 'Lato';
+    font-weight: 200;
 }
+
 
 @media(min-width:767px) {
     .intro {
@@ -190,16 +214,25 @@ a:focus {
         font-size: 25px;
     }
 }
+
+
 .contact{
 
     margin-top: 250px;
     margin-bottom: 250px;
 }
 
-.about{
+#contact{
+    margin-top: 50px;
+    margin-bottom: 100px;
 
-    margin-top: 200px;
-    margin-bottom: 250px;
+}
+
+#about{
+
+    
+    padding-top: 250px;
+    padding-bottom: 250px;
 }
 
 
@@ -208,11 +241,12 @@ a:focus {
     width: 70px;
     height: 70px;
     margin-top: 15px;
-    padding: 7px 16px;
+    padding: 7px 15px;
     border: 2px solid #fff;
     border-radius: 35px;
     font-size: 40px;
     color: #fff;
+    text-align: center;
     background: 0 0;
     -webkit-transition: background .3s ease-in-out;
     -moz-transition: background .3s ease-in-out;
@@ -286,8 +320,6 @@ a:focus {
 
 .Join{
 
-    margin-top: 100px;
-    margin-bottom: 100px;
     margin-left: auto;
     margin-right: auto;
 
@@ -306,10 +338,40 @@ a:focus {
     background-size: cover;
     -o-background-size: cover;
     text-align: center;
+    padding-top: 200px;
+    padding-bottom: 200px;
 
 }
 
+#circle1 {
+width: 200px;
+height: 200px;
+background: #FA8B60;
+float: left;
+page-break-inside: auto;
+}
 
+#circle2 {
+width: 200px;
+height: 200px;
+background: #FA8B60;
+page-break-inside: auto;
+}
+
+#circle3 {
+width: 200px;
+height: 200px;
+background: #FA8B60;
+float: right;
+page-break-inside: auto;
+}
+
+.circle {
+border-radius: 50%;
+display: inline-block;
+margin-right: 20px;
+margin-top: 100px;
+}
 
 
 @media (min-width: 768px) {
@@ -390,7 +452,7 @@ a:focus {
 
 .btn-default {
     border: 1px solid #EF6D3B;
-    color: #FA8B60;
+    color: #3F2860;
     background-color: transparent;
 }
 
@@ -511,4 +573,11 @@ body {
  
 .icon-user:before {
    content: "e"; 
+}
+
+.niceicons{
+    font-size: 100px;
+    margin-top: 40px;
+    color: #EF6D3B;
+   
 }

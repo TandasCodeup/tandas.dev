@@ -21,35 +21,57 @@
   <body>
 
     <div id="wrapper">
-
-      <!-- Sidebar -->
       <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="{{{action('HomeController@showHome')}}}">Tandas</a>
+        <div class="container">
+            <div class="navbar-header"> 
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="#page-top">
+                <span data-icon="a" class="light"> Tandas</span>
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li>
+                        @if (Session::has('loginSucc'))
+                            <div class="alert alert-success alert-dismissable">{{{ Session::get('successMessage') }}}</div>
+                        @endif
+                        @if (Session::has('errorMessage'))
+                            <div class="alert alert-warning alert-dismissable">{{{ Session::get('errorMessage') }}}</div>
+                        @endif
+                        @if (Session::has('loginFail'))
+                            <div class="alert alert-warning alert-dismissable">{{{ Session::get('loginFail') }}}</div>
+                        @endif
+                    </li>   
+                    <li class="">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="">
+                        <a href="#">Help</a>
+                    </li>
+                    <li class="">
+                        <a href="#Join">My Account</a>
+                    </li>
+                    <li class="">
+                        <a href="#contact">Dashboard</a>
+                    </li>
+                     @if (Auth::check())
+                     <li>
+                        <a href="{{{ action('HomeController@logout') }}}"><span class="label label-warning" >Logout&nbsp;{{ Auth::user()->email }}</span></a>
+                    </li>
+                    @endif
+                    
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
         </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse navbar-ex1-collapse">
-          <ul class="nav navbar-nav side-nav">
-            <li class="active"><a href="index.html"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-            
-            </li>
-          </ul>
-
-          <ul class="nav navbar-nav navbar-right navbar-user">
-            <li class="user">
-              <h4><a href="{{{ action('HomeController@logout') }}}"><span class="label label-warning" >Logout&nbsp;{{ Auth::user()->email }}</span></a></h4>
-            </li>
-          </ul>
-        </div><!-- /.navbar-collapse -->
-      </nav>
+      </div>
+        <!-- /.container -->
+    </nav>
 
       <div id="page-wrapper">
 
@@ -80,7 +102,7 @@
                 <div class="panel-footer announcement-bottom">
                   <div class="row">
                     <div class="col-xs-6">
-                      View Tandas
+                    Ongoing Tandas
                     </div>
                     <div class="col-xs-6 text-right">
                       <i class="fa fa-arrow-circle-right"></i>
@@ -99,7 +121,7 @@
                   </div>
                   <div class="col-xs-6 text-right">
                     <p class="announcement-heading">12</p>
-                    <p class="announcement-text">To-Do Items</p>
+                    <p class="announcement-text">Days until your turn</p>
                   </div>
                 </div>
               </div>
@@ -107,7 +129,7 @@
                 <div class="panel-footer announcement-bottom">
                   <div class="row">
                     <div class="col-xs-6">
-                      Complete Tasks
+                      Calendar
                     </div>
                     <div class="col-xs-6 text-right">
                       <i class="fa fa-arrow-circle-right"></i>
@@ -125,8 +147,8 @@
                     <i class="fa fa-tasks fa-5x"></i>
                   </div>
                   <div class="col-xs-6 text-right">
-                    <p class="announcement-heading">18</p>
-                    <p class="announcement-text">Crawl Errors</p>
+                    <p class="announcement-heading">9</p>
+                    <p class="announcement-text">Days to your next payment</p>
                   </div>
                 </div>
               </div>
@@ -152,8 +174,8 @@
                     <i class="fa fa-comments fa-5x"></i>
                   </div>
                   <div class="col-xs-6 text-right">
-                    <p class="announcement-heading">56</p>
-                    <p class="announcement-text">New Orders!</p>
+                    <p class="announcement-heading">7</p>
+                    <p class="announcement-text">Trust Rating</p>
                   </div>
                 </div>
               </div>
@@ -161,7 +183,7 @@
                 <div class="panel-footer announcement-bottom">
                   <div class="row">
                     <div class="col-xs-6">
-                      Complete Orders
+                      Improve your rating
                     </div>
                     <div class="col-xs-6 text-right">
                       <i class="fa fa-arrow-circle-right"></i>
