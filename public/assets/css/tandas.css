@@ -189,8 +189,9 @@ display: none;
 }
 
 .brand-heading {
-    font-family: 'Bowlby One SC', sans-serif;
-    font-size: 40px;
+    font-family: 'Alegreya Sans', sans-serif;
+    font-weight: 900;
+    font-style: italic;
     color: #FA8B60;
 }
 

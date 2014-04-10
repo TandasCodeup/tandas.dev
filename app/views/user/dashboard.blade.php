@@ -36,17 +36,6 @@
             <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
                 <ul class="nav navbar-nav">
                     <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                    <li>
-                        @if (Session::has('loginSucc'))
-                            <div class="alert alert-success alert-dismissable">{{{ Session::get('successMessage') }}}</div>
-                        @endif
-                        @if (Session::has('errorMessage'))
-                            <div class="alert alert-warning alert-dismissable">{{{ Session::get('errorMessage') }}}</div>
-                        @endif
-                        @if (Session::has('loginFail'))
-                            <div class="alert alert-warning alert-dismissable">{{{ Session::get('loginFail') }}}</div>
-                        @endif
-                    </li>   
                     <li class="">
                         <a href="#page-top"></a>
                     </li>
@@ -61,7 +50,7 @@
                     </li>
                      @if (Auth::check())
                      <li>
-                        <a href="{{{ action('HomeController@logout') }}}"><span class="label label-warning" >Logout&nbsp;{{ Auth::user()->email }}</span></a>
+                        <h4><a href="{{{ action('HomeController@logout') }}}"><span class="label label-warning" >Logout&nbsp;{{ Auth::user()->email }}</span></a></h4>
                     </li>
                     @endif
                     
@@ -77,10 +66,7 @@
 
         <div class="row">
           <div class="col-lg-12">
-            <h1>Tandas <small>Statistics Overview</small></h1>
-            <ol class="breadcrumb">
-              <li class="active"><i class="fa fa-dashboard fa-2x"></i> Dashboard</li>
-            </ol
+            <h1>{{{ Auth::user()->first_name }}} Dashboard</h1>
           </div>
          </div><!-- /.row -->
 
@@ -196,32 +182,6 @@
         </div><!-- /.row -->
 
         <div class="row">
-          <div class="col-lg-12">
-            <div class="panel panel-primary">
-              <div class="panel-heading">
-                <h3 class="panel-title"><i class="fa fa-bar-chart-o"></i> Traffic Statistics: October 1, 2013 - October 31, 2013</h3>
-              </div>
-              <div class="panel-body">
-                <div id="morris-chart-area"></div>
-              </div>
-            </div>
-          </div>
-        </div><!-- /.row -->
-
-        <div class="row">
-          <div class="col-lg-4">
-            <div class="panel panel-primary">
-              <div class="panel-heading">
-                <h3 class="panel-title"><i class="fa fa-long-arrow-right"></i> Traffic Sources: October 1, 2013 - October 31, 2013</h3>
-              </div>
-              <div class="panel-body">
-                <div id="morris-chart-donut"></div>
-                <div class="text-right">
-                  <a href="#">View Details <i class="fa fa-arrow-circle-right"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
           <div class="col-lg-4">
             <div class="panel panel-primary">
               <div class="panel-heading">
@@ -358,6 +318,11 @@
     <script src="/assets/js/morris/chart-data-morris.js"></script>
     <script src="/assets/js/tablesorter/jquery.tablesorter.js"></script>
     <script src="/assets/js/tablesorter/tables.js"></script>
+
+
+
+
+
 
   </body>
 </html>
