@@ -16,7 +16,10 @@ class CreateTandasTable extends Migration {
 			$table->increments('id');
 			$table->string('title', 200);
 			$table->tinyInteger('user_num')->unsigned();
-			$table->string('time_period', '10');
+
+			// 1 = weekly, 2 = monthly
+			$table->tinyInteger('time_period')->unsigned();
+			
 			$table->double('pay_per_user', 7, 2)->unsigned();
 			$table->double('payout', 8, 2)->unsigned();
 			$table->timestamps();
