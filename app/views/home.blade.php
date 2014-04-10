@@ -4,7 +4,6 @@
 @section('content')
     <section class="intro">
         <div class="intro-body">
-            <div class="hr"><hr /></div>
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">

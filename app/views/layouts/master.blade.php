@@ -10,10 +10,8 @@
     <!-- Fonts -->
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href='http://fonts.googleapis.com/css?family=Lato:200,500,200italic,500italic' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:200,500' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Bowlby+One+SC' rel='stylesheet' type='text/css'>
-    
-
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,800italic,400,300,600,800' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Alegreya+Sans:100,300,400,900italic' rel='stylesheet' type='text/css'>
     <!-- Custom Theme CSS -->
     <link href="/assets/css/tandas.css" rel="stylesheet">
 
@@ -33,7 +31,7 @@
                     <i class="fa fa-bars"></i>
                 </button>
                 <a class="navbar-brand" href="#page-top">
-                <span data-icon="a" class="light"> Tandas</span>
+                <span data-icon="a" class="light"> Money Carousel</span>
                 </a>
             </div>
 
