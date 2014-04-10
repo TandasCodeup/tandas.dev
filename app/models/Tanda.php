@@ -8,6 +8,8 @@
 			return $this->belongsToMany('User');
 		}
 
+		protected $fillable = ('title', 'user_num', 'time_period', 'pay_per_user', 'payout');
+
 	}
 
 ?>

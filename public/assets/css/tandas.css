@@ -4,6 +4,7 @@ body {
     font-family: Lato,"Helvetica Neue",Helvetica,Arial,sans-serif;
     color: #fff;
     background-color: #90C5A9;
+
 }
 
 html {
@@ -72,8 +73,26 @@ a:focus {
 }
 
 .navbar-custom a {
-    color: #fff;
+    color: #f9f9f9;
+    text-align: center;
 }
+
+.navbar-custom label  {
+    color: #000;
+    text-align: center;
+    font-size: 12px;
+    
+}
+
+#fg {
+
+    color: #000;
+    text-align: center;
+    font-size: 12px;
+}
+
+
+.navbar-custom 
 
 .navbar-custom .nav li a {
     -webkit-transition: background .3s ease-in-out;
@@ -98,6 +117,16 @@ a:focus {
 .navbar-toggle:active {
     outline: 0;
 }
+
+
+
+#login-nav input {
+
+ margin-bottom: 15px;
+
+}
+
+
 
 @media(min-width:767px) {
     .navbar {
@@ -161,6 +190,19 @@ a:focus {
         font-size: 25px;
     }
 }
+.contact{
+
+    margin-top: 250px;
+    margin-bottom: 250px;
+}
+
+.about{
+
+    margin-top: 200px;
+    margin-bottom: 250px;
+}
+
+
 
 .btn-circle {
     width: 70px;
@@ -240,21 +282,31 @@ a:focus {
     padding-top: 100px;
 }
 
+
+
+.Join{
+
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+
+
 .Join-section {
+
     width: 100%;
-    padding: 50px 0;
+    padding: 50px;
     color: #000;
-    background-color: #FFF;
+    background-color: #7A9A95;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
-}
+    text-align: center;
 
-#login {
-    width: 100%;
-    height: 200px;
-    margin-top: 100px;
 }
 
 
@@ -325,3 +377,138 @@ a:focus {
     }       
 }
 
+
+
+.btn {
+    text-transform: uppercase;
+    font-family: Open Sans,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 200;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+.btn-default {
+    border: 1px solid #EF6D3B;
+    color: #FA8B60;
+    background-color: transparent;
+}
+
+.btn-default:hover,
+.btn-default:focus {
+    border: 1px solid #7A9A95;
+    outline: 0;
+    color: #000;
+    background-color: #7A9A95;
+}
+
+.btn-huge {
+    padding: 25px;
+    font-size: 26px;
+}
+
+.banner-social-buttons {
+    margin-top: 0;
+}
+
+@media(max-width:1199px) {
+    ul.banner-social-buttons {
+        margin-top: 15px;
+    }
+}
+
+@media(max-width:767px) {
+    ul.banner-social-buttons>li {
+        display: block;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+
+    ul.banner-social-buttons>li:last-child {
+        margin-bottom: 0;
+    }
+}
+
+::-moz-selection {
+    text-shadow: none;
+    background: #fcfcfc;
+    background: rgba(255,255,255,.2);
+}
+
+::selection {
+    text-shadow: none;
+    background: #fcfcfc;
+    background: rgba(255,255,255,.2);
+}
+
+img::selection {
+    background: 0 0;
+}
+
+img::-moz-selection {
+    background: 0 0;
+}
+
+body {
+    webkit-tap-highlight-color: rgba(255,255,255,.2);
+}
+
+/* Just click to select the code */
+ 
+
+@font-face {
+  font-family: "untitled-font-1";
+  src:url("/assets/fonts/untitled-font-1.eot");
+  src:url("/assets/fonts/untitled-font-1.eot?#iefix") format("embedded-opentype"),
+    url("/assets/fonts/untitled-font-1.ttf") format("truetype"),
+    url("/assets/fonts/untitled-font-1.svg#untitled-font-1") format("svg"),
+    url("/assets/fonts/untitled-font-1.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+ 
+[data-icon]:before {
+  font-family: "untitled-font-1" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+ 
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "untitled-font-1" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+} 
+ 
+.icon-banknote:before {
+   content: "a"; 
+} 
+ 
+.icon-vallet:before {
+   content: "b"; 
+} 
+ 
+.icon-user-outline:before {
+   content: "c"; 
+} 
+ 
+.icon-users-outline:before {
+   content: "d"; 
+} 
+ 
+.icon-user:before {
+   content: "e"; 
+}

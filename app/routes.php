@@ -17,3 +17,8 @@ Route::resource('users', 'UserController');
 Route::resource('tandas', 'TandaController');
 
 Route::post('/', 'HomeController@doLogin');
+
+Route::get('/logout', 'HomeController@logout');
+
+
+
