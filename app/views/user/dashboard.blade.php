@@ -66,10 +66,7 @@
 
         <div class="row">
           <div class="col-lg-12">
-            <h1>Tandas <small>Statistics Overview</small></h1>
-            <ol class="breadcrumb">
-              <li class="active"><i class="fa fa-dashboard fa-2x"></i> Dashboard</li>
-            </ol
+            <h1>{{{ Auth::user()->first_name }}} Dashboard</h1>
           </div>
          </div><!-- /.row -->
 
@@ -185,32 +182,6 @@
         </div><!-- /.row -->
 
         <div class="row">
-          <div class="col-lg-12">
-            <div class="panel panel-primary">
-              <div class="panel-heading">
-                <h3 class="panel-title"><i class="fa fa-bar-chart-o"></i> Traffic Statistics: October 1, 2013 - October 31, 2013</h3>
-              </div>
-              <div class="panel-body">
-                <div id="morris-chart-area"></div>
-              </div>
-            </div>
-          </div>
-        </div><!-- /.row -->
-
-        <div class="row">
-          <div class="col-lg-4">
-            <div class="panel panel-primary">
-              <div class="panel-heading">
-                <h3 class="panel-title"><i class="fa fa-long-arrow-right"></i> Traffic Sources: October 1, 2013 - October 31, 2013</h3>
-              </div>
-              <div class="panel-body">
-                <div id="morris-chart-donut"></div>
-                <div class="text-right">
-                  <a href="#">View Details <i class="fa fa-arrow-circle-right"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
           <div class="col-lg-4">
             <div class="panel panel-primary">
               <div class="panel-heading">

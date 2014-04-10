@@ -41,6 +41,8 @@
 		$newUser->last_name = Input::get('last_name');
 		$newUser->save();
 
+		Auth::login(User::find($newUser->id));
+
 		return Redirect::action('UserController@show', $newUser->id);
 	}
 
