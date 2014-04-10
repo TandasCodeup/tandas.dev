@@ -36,17 +36,6 @@
             <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
                 <ul class="nav navbar-nav">
                     <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                    <li>
-                        @if (Session::has('loginSucc'))
-                            <div class="alert alert-success alert-dismissable">{{{ Session::get('successMessage') }}}</div>
-                        @endif
-                        @if (Session::has('errorMessage'))
-                            <div class="alert alert-warning alert-dismissable">{{{ Session::get('errorMessage') }}}</div>
-                        @endif
-                        @if (Session::has('loginFail'))
-                            <div class="alert alert-warning alert-dismissable">{{{ Session::get('loginFail') }}}</div>
-                        @endif
-                    </li>   
                     <li class="">
                         <a href="#page-top"></a>
                     </li>
@@ -61,7 +50,7 @@
                     </li>
                      @if (Auth::check())
                      <li>
-                        <a href="{{{ action('HomeController@logout') }}}"><span class="label label-warning" >Logout&nbsp;{{ Auth::user()->email }}</span></a>
+                        <h4><a href="{{{ action('HomeController@logout') }}}"><span class="label label-warning" >Logout&nbsp;{{ Auth::user()->email }}</span></a></h4>
                     </li>
                     @endif
                     
@@ -358,6 +347,11 @@
     <script src="/assets/js/morris/chart-data-morris.js"></script>
     <script src="/assets/js/tablesorter/jquery.tablesorter.js"></script>
     <script src="/assets/js/tablesorter/tables.js"></script>
+
+
+
+
+
 
   </body>
 </html>

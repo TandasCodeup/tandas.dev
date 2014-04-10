@@ -55,17 +55,17 @@
                     {{ Form::open(array('action' => 'UserController@store', 'class' => 'form')) }}   
                 <div class="row">
                     <div class="col-xs-6 col-md-6">
-                    {{ Form::text('first_name', null, array('class' => 'form-control' , 'name' => 'firstname', 'placeholder' => 'First Name', 'required' => 'required')) }}        
+                    {{ Form::text('first_name', null, array('class' => 'form-control', 'placeholder' => 'First Name', 'required' => 'required')) }}        
                     </div>
                     <div class="col-xs-6 col-md-6">
-                   {{ Form::text('last_name', null, array('class' => 'form-control' , 'name' => 'lastname', 'placeholder' => 'Last Name', 'required' => 'required')) }}
+                   {{ Form::text('last_name', null, array('class' => 'form-control', 'placeholder' => 'Last Name', 'required' => 'required')) }}
                     </div>
                 </div>
                 <br>
                 <div class="col-xs-12 col-md-12">
-                    {{ Form::text('email1', null, array('class' => 'form-control' , 'name' => 'youremail', 'placeholder' => 'Your Email', 'required' => 'required')) }}
+                    {{ Form::text('email1', null, array('class' => 'form-control', 'placeholder' => 'Your Email', 'required' => 'required')) }}
                     <br>               
-                    {{ Form::text('email2', null, array('class' => 'form-control' , 'name' => 'reenteremail', 'placeholder' => 'Confirm Email address', 'required' => 'required')) }}
+                    {{ Form::text('email2', null, array('class' => 'form-control', 'placeholder' => 'Confirm Email address', 'required' => 'required')) }}
                     <br>               
                     {{ Form::password('pass1', array('class' => 'form-control', 'placeholder' => 'Password', 'required' => 'required')) }}
                     <br>                
