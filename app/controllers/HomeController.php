@@ -20,6 +20,11 @@ class HomeController extends BaseController {
 		return View::make('home');
 	}
 
+	public function showAbout()
+	{
+		return View::make('about');
+	}
+
 	public function doLogin() {
 		if (Auth::attempt(array('email' => Input::get('email'), 'password' => Input::get('password')))) {
 			// user is logged in
