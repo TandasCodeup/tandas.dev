@@ -42,7 +42,7 @@ p {
 }
 
 a {
-    color: #28c3ab;
+    color: blue;
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
@@ -51,8 +51,25 @@ a {
 a:hover,
 a:focus {
     text-decoration: none;
-    color: #176e61;
+    color: #7A9A95;
 }
+
+
+div.hr {
+background: #fff  no-repeat scroll center;
+margin: auto;
+width:90em;
+margin-bottom: 170px;
+height: .2em;
+background-color: black;
+}
+
+div.hr hr {
+display: none;
+}
+
+
+
 
 .light {
     font-weight: 200;
@@ -172,8 +189,9 @@ a:focus {
 }
 
 .brand-heading {
-    font-family: 'Sniglet', cursive;
+    font-family: 'Bowlby One SC', sans-serif;
     font-size: 40px;
+    color: #FA8B60;
 }
 
 .intro-text {
@@ -434,7 +452,7 @@ margin-top: 100px;
 
 .btn-default {
     border: 1px solid #EF6D3B;
-    color: #FA8B60;
+    color: #3F2860;
     background-color: transparent;
 }
 

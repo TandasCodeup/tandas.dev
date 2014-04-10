@@ -4,10 +4,10 @@
 @section('content')
     <section class="intro">
         <div class="intro-body">
+            <div class="hr"><hr /></div>
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
-                        
                         <h1 class="brand-heading">Money Carousel</h1>
                         <p class="intro-text">What goes around comes around</p>
                         <div class="page-scroll">
