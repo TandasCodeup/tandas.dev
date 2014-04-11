@@ -26,6 +26,10 @@
                 <h2>About Money Carousel</h2>
                 <p>A trust-based lending circle where everyone saves and when its their turn, gets paid.</p>
                 <p>Through our Trust Ratings System, users can create a reputation.</p>
+                    <a href="{{{ action('HomeController@showAbout') }}}"<button type="button" class="btn btn-default btn-lg">
+                        <span class="glyphicon glyphicon-star"></span> Learn More
+                    </button>
+                    ></a>
                 <br>
                 <br>
                 <br>
