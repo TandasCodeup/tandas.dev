@@ -322,16 +322,13 @@ about{
 }
 
 
-
-
-
 .Join-section {
 
     width: 100%;
     padding: 50px;
     color: #000;
     /*background-color: #7A9A95;*/
-    background-image:url('/assets/img/grey.png');
+    background-image:url('/assets/img/pattern_152.gif');
     background-repeat:repeat;
    /* -webkit-background-size: cover;
     -moz-background-size: cover;
