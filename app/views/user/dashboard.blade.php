@@ -84,14 +84,46 @@
                   </div>
                 </div>
               </div>
-              <a href="#">
+
+
                 <div class="panel-footer announcement-bottom">
                   <div class="row">
+
                     <div class="col-xs-6">
                     Ongoing Carousels
                     </div>
+
                     <div class="col-xs-6 text-right">
                       <i class="fa fa-arrow-circle-right"></i>
+              <button class="btn btn-primary btn-xs" data-toggle="modal" data-target=".bs-example-modal-lg">Create Tanda</button>
+
+                  <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                      <div class="modal-content">
+                     
+                                  
+                             <div class="col-xs-12 col-sm-6 col-md-offset-3 well well-lg">
+                                  <h1 data-icon="a"></h1>
+                                  <legend>Create a new Tanda</legend>
+                                      {{ Form::open(array('action' => 'TandaController@store', 'class' => 'form')) }}
+                                  <br>
+                                  <div class="col-xs-12 col-md-12">
+                                      {{ Form::text('title', null, array('class' => 'form-control', 'placeholder' => 'Carousel Title', 'required' => 'required')) }}
+                                      <br>               
+                                      <center><label>{{ Form::select('user_num', array('5' => '5', '10' => '10')) }} Tanda members</label></center>
+                                      <br>              
+                                      {{ Form::text('payout', null, array('class' => 'form-control', 'placeholder' => 'User Payout', 'required' => 'required')) }}
+                                      <br>
+                                      <div class="col-xs-12 col-md-6 col-md-offset-3 ">
+                                      {{ Form::submit('Create Tanda',  array('class' => 'btn btn-md btn-primary btn-block')) }}
+                                      {{ Form::close() }}                          
+                                    </div>
+                                  </div>
+                                  <br/>
+                              </div>    
+                      </div>
+                    </div>
+                  </div>
                     </div>
                   </div>
                 </div>
@@ -111,7 +143,7 @@
                   </div>
                 </div>
               </div>
-              <a href="#">
+
                 <div class="panel-footer announcement-bottom">
                   <div class="row">
                     <div class="col-xs-6">
@@ -193,7 +225,7 @@
                     No Current Carousels
                   @else
                     @foreach ($user->tandas as $tanda)
-                      <a href="#" class="list-group-item">
+                      <a href="{{{action('TandaController@show', $tanda->id)}}}" class="list-group-item">
                         <span class="badge">just now</span>
                         {{{$tanda->title}}}
                       </a>
@@ -242,8 +274,8 @@
     </div><!-- /#wrapper -->
 
     <!-- JavaScript -->
-    <script src="js/jquery-1.10.2.js"></script>
-    <script src="js/bootstrap.js"></script>
+    <script src="/assets/js/jquery-1.10.2.js"></script>
+    <script src="/assets/js/bootstrap.js"></script>
 
     <!-- Page Specific Plugins -->
     <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
@@ -251,8 +283,6 @@
     <script src="/assets/js/morris/chart-data-morris.js"></script>
     <script src="/assets/js/tablesorter/jquery.tablesorter.js"></script>
     <script src="/assets/js/tablesorter/tables.js"></script>
-
-
 
 
 
