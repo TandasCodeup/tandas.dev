@@ -189,9 +189,8 @@ display: none;
 }
 
 .brand-heading {
-    font-family: 'Alegreya Sans', sans-serif;
-    font-weight: 900;
-    font-style: italic;
+    font-family: 'Bowlby One SC', sans-serif;
+    font-size: 40px;
     color: #FA8B60;
 }
 
@@ -321,6 +320,13 @@ about{
     padding-top: 100px;
 }
 
+
+.Join{
+
+    margin-left: auto;
+    margin-right: auto;
+
+}
 
 
 
@@ -579,7 +585,6 @@ body {
     font-size: 100px;
     margin-top: 40px;
     color: #EF6D3B;
-   
 }
 
 
@@ -612,4 +617,6 @@ body {
 .well legend {
 
     color: #000;
+=======
+>>>>>>> fe95d109f11bee56a7e84df3d1da81df6475826a
 }
