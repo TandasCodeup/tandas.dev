@@ -230,12 +230,16 @@ display: none;
 }
 
 #about{
-
+   
     
     padding-top: 250px;
     padding-bottom: 250px;
 }
 
+about{
+   
+    background-image:url('/assets/img/arches.png');
+  }
 
 
 .btn-circle {
@@ -319,11 +323,6 @@ display: none;
 
 
 
-.Join{
-
-
-}
-
 
 
 .Join-section {
@@ -331,11 +330,13 @@ display: none;
     width: 100%;
     padding: 50px;
     color: #000;
-    background-color: #7A9A95;
-    -webkit-background-size: cover;
+    /*background-color: #7A9A95;*/
+    background-image:url('/assets/img/grey.png');
+    background-repeat:repeat;
+   /* -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
-    -o-background-size: cover;
+    -o-background-size: cover;*/
     text-align: center;
     padding-top: 200px;
     padding-bottom: 200px;
@@ -605,10 +606,10 @@ body {
 }
 
 .well {
-    background-color: #3F2860;
+    background-color: #f3f3f3;
 }
 
 .well legend {
 
-    color: #fff;
+    color: #000;
 }
