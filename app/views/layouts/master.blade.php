@@ -65,7 +65,10 @@
                      @if (Auth::check())
                      <li>
                         <a href="{{{ action('HomeController@logout') }}}"><span class="label label-warning" >Logout&nbsp;{{ Auth::user()->email }}</span></a>
-                    </li>                              
+                    </li> 
+                    <li>
+                        <a href="{{{ action('UserController@show', Auth::user()->id) }}}">Dashboard</a>
+                    </li>                                
                     @else
                     <li class="dropdown">
                         <a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign In <strong class="caret"></strong></a>
