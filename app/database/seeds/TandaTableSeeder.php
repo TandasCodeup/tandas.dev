@@ -13,7 +13,7 @@
 				$tanda = Tanda::create(array(
 					'title' => $faker->domainWord,
 					'user_num' => $randomUserNum,
-					'time_period' => $faker->randomNumber(1, 2),
+					'time_period' => 2,
 					'pay_per_user' => $randomPayPerUser,
 					'payout' => $payout
 				));

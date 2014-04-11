@@ -105,15 +105,13 @@
                              <div class="col-xs-12 col-sm-6 col-md-offset-3 well well-lg">
                                   <h1 data-icon="a"></h1>
                                   <legend>Create a new Tanda</legend>
-                                      {{ Form::open(array('action' => 'UserController@store', 'class' => 'form')) }}
+                                      {{ Form::open(array('action' => 'TandaController@store', 'class' => 'form')) }}
                                   <br>
                                   <div class="col-xs-12 col-md-12">
-                                      {{ Form::text('title', null, array('class' => 'form-control', 'placeholder' => 'Tanda Title', 'required' => 'required')) }}
+                                      {{ Form::text('title', null, array('class' => 'form-control', 'placeholder' => 'Carousel Title', 'required' => 'required')) }}
                                       <br>               
-                                      <center><label>{{ Form::select('user_', array('5' => '5', '10' => '10')) }} Tanda members</label></center>
-                                      <br>               
-                                      {{ Form::text('pay_per_user', null, array('class' => 'form-control', 'placeholder' => 'Monthly payment', 'required' => 'required')) }}
-                                      <br>                
+                                      <center><label>{{ Form::select('user_num', array('5' => '5', '10' => '10')) }} Tanda members</label></center>
+                                      <br>              
                                       {{ Form::text('payout', null, array('class' => 'form-control', 'placeholder' => 'User Payout', 'required' => 'required')) }}
                                       <br>
                                       <div class="col-xs-12 col-md-6 col-md-offset-3 ">
@@ -227,7 +225,7 @@
                     No Current Carousels
                   @else
                     @foreach ($user->tandas as $tanda)
-                      <a href="#" class="list-group-item">
+                      <a href="{{{action('TandaController@show', $tanda->id)}}}" class="list-group-item">
                         <span class="badge">just now</span>
                         {{{$tanda->title}}}
                       </a>
