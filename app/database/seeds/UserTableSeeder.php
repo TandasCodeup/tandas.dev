@@ -21,6 +21,7 @@
 					'password' => Hash::make($faker->word)
 				));
 			}
+			
 		}
 
 	}
