@@ -19,6 +19,9 @@ class DatabaseSeeder extends Seeder {
 
 		$this->call('TandaUserTableSeeder');
 		$this->command->info('Pivot table seeded!');
+
+		$this->call('PaymentTableSeeder');
+		$this->command->info('Payment table seeded!');
 	}
 
 }

@@ -50,7 +50,17 @@
 
 		$user = User::find($id);
 
-		return View::make('user.dashboard')->with('user', $user);
+		$tanda_table_check = DB::table('tandas')->get();
+
+		$records = DB::table('payment')->where('user_id', '=', $id)->get();
+
+		$data = array(
+			'user' => $user,
+			'tandas' => $tanda_table_check,
+			'records' => $records
+		);
+
+		return View::make('user.dashboard')->with($data);
 
 	}
 
