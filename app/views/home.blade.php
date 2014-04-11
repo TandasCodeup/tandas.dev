@@ -8,7 +8,7 @@
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
                         <h1 class="brand-heading">Money Carousel</h1>
-                        <p class="intro-text">What goes around comes around</p>
+                        <p class="heading">What goes around comes around</p>
                         <div class="page-scroll">
                             <center><a href="#about" class="btn btn-circle">
                                 <i data-icon="a"></i>
@@ -26,6 +26,10 @@
                 <h2>About Money Carousel</h2>
                 <p>A trust-based lending circle where everyone saves and when its their turn, gets paid.</p>
                 <p>Through our Trust Ratings System, users can create a reputation.</p>
+                <a href="{{{ action('HomeController@showAbout') }}}"><button type="button" class="btn btn-default btn-lg">
+                    <span class="glyphicon glyphicon-star"></span> Learn More
+                   </a>
+                </button>
                 <br>
                 <br>
                 <br>

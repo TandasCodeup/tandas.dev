@@ -189,9 +189,8 @@ display: none;
 }
 
 .brand-heading {
-    font-family: 'Alegreya Sans', sans-serif;
-    font-weight: 900;
-    font-style: italic;
+    font-family: 'Bowlby One SC', sans-serif;
+    font-size: 40px;
     color: #FA8B60;
 }
 
@@ -321,6 +320,8 @@ display: none;
 
 .Join{
 
+    margin-left: auto;
+    margin-right: auto;
 
 }
 
@@ -579,36 +580,4 @@ body {
     margin-top: 40px;
     color: #EF6D3B;
    
-}
-
-
-.container {
-    margin-top: 20px;
-}
-
-
-
-#footer {
-  position: relative;
-  text-align: center;
-  bottom: 0;
-  width: 100%;
-  /* Set the fixed height of the footer here */
-  height: 280px;
-  background: 
-  /* color overlay */ 
-    linear-gradient(
-      rgba(240, 212, 0, 0.45), 
-      rgba(0, 0, 0, 0.45)
-    ),
-    
-}
-
-.well {
-    background-color: #3F2860;
-}
-
-.well legend {
-
-    color: #fff;
 }
