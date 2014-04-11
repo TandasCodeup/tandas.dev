@@ -182,20 +182,20 @@
         </div><!-- /.row -->
 
         <div class="row">
-          <div class="col-lg-4">
+          <div class="col-lg-6">
             <div class="panel panel-primary">
               <div class="panel-heading">
-                <h3 class="panel-title"><i class="fa fa-clock-o"></i> Upcoming Events</h3>
+                <h3 class="panel-title"><i class="fa fa-clock-o"></i> Current Tanda</h3>
               </div>
               <div class="panel-body">
                 <div class="list-group">
                   <a href="#" class="list-group-item">
                     <span class="badge">just now</span>
-                    <i class="fa fa-calendar"></i> Calendar updated
+                    <i class="fa fa-calendar"></i> Tanda Calendar
                   </a>
                   <a href="#" class="list-group-item">
                     <span class="badge">4 minutes ago</span>
-                    <i class="fa fa-comment"></i> Commented on a post
+                    <i class="fa fa-comment"></i> Comment on Tanda
                   </a>
                   <a href="#" class="list-group-item">
                     <span class="badge">23 minutes ago</span>
@@ -203,15 +203,15 @@
                   </a>
                   <a href="#" class="list-group-item">
                     <span class="badge">46 minutes ago</span>
-                    <i class="fa fa-money"></i> Invoice 653 has been paid
+                    <i class="fa fa-money"></i> Next Tanda Payment
                   </a>
                   <a href="#" class="list-group-item">
-                    <span class="badge">1 hour ago</span>
-                    <i class="fa fa-user"></i> A new user has been added
+                    <span class="badge">10 members</span>
+                    <i class="fa fa-user"></i> Tanda Members
                   </a>
                   <a href="#" class="list-group-item">
-                    <span class="badge">2 hours ago</span>
-                    <i class="fa fa-check"></i> Completed task: "pick up dry cleaning"
+                    <span class="badge">nov 9</span>
+                    <i class="fa fa-check"></i> Payout day"
                   </a>
                   <a href="#" class="list-group-item">
                     <span class="badge">yesterday</span>
@@ -228,7 +228,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-4">
+          <div class="col-lg-6">
             <div class="panel panel-primary">
               <div class="panel-heading">
                 <h3 class="panel-title"><i class="fa fa-money"></i> Recent Activity</h3>
@@ -303,80 +303,7 @@
             </div>
           </div>
         </div><!-- /.row -->
-         <div class="col-lg-4">
-            <div class="panel panel-primary">
-              <div class="panel-heading">
-                <h3 class="panel-title"><i class="fa fa-money"></i> Your Tandas</h3>
-              </div>
-              <div class="panel-body">
-                <div class="table-responsive">
-                  <table class="table table-bordered table-hover table-striped tablesorter">
-                    <thead>
-                      <tr>
-                        <th>Order # <i class="fa fa-sort"></i></th>
-                        <th>Order Date <i class="fa fa-sort"></i></th>
-                        <th>Order Time <i class="fa fa-sort"></i></th>
-                        <th>Amount (USD) <i class="fa fa-sort"></i></th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>3326</td>
-                        <td>10/21/2013</td>
-                        <td>3:29 PM</td>
-                        <td>$321.33</td>
-                      </tr>
-                      <tr>
-                        <td>3325</td>
-                        <td>10/21/2013</td>
-                        <td>3:20 PM</td>
-                        <td>$234.34</td>
-                      </tr>
-                      <tr>
-                        <td>3324</td>
-                        <td>10/21/2013</td>
-                        <td>3:03 PM</td>
-                        <td>$724.17</td>
-                      </tr>
-                      <tr>
-                        <td>3323</td>
-                        <td>10/21/2013</td>
-                        <td>3:00 PM</td>
-                        <td>$23.71</td>
-                      </tr>
-                      <tr>
-                        <td>3322</td>
-                        <td>10/21/2013</td>
-                        <td>2:49 PM</td>
-                        <td>$8345.23</td>
-                      </tr>
-                      <tr>
-                        <td>3321</td>
-                        <td>10/21/2013</td>
-                        <td>2:23 PM</td>
-                        <td>$245.12</td>
-                      </tr>
-                      <tr>
-                        <td>3320</td>
-                        <td>10/21/2013</td>
-                        <td>2:15 PM</td>
-                        <td>$5663.54</td>
-                      </tr>
-                      <tr>
-                        <td>3319</td>
-                        <td>10/21/2013</td>
-                        <td>2:13 PM</td>
-                        <td>$943.45</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-                <div class="text-right">
-                  <a href="#">View All Transactions <i class="fa fa-arrow-circle-right"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
+         
       </div><!-- /#page-wrapper -->
 
     </div><!-- /#wrapper -->
