@@ -244,13 +244,15 @@ body{
                                     <p><i class="icon icon-map-marker"></i> PayOut Date: June 15 2014</p>
                                   </div>
                                   <div class="modal-footer" style="text-align: left">
-                                    <div class="progress progress-striped active" style="background: #ddd">
-                                      <div class="bar" style="width: 60%;"></div>
+                                    <div class="progress progress-striped active">
+                                      <div class="progress-bar"  role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%">
+                                        <span class="sr-only">45% Complete</span>
+                                      </div>
                                     </div>
                                     <div class="row-fluid">
-                                      <div class="span4"><b>60%</b><br/><small>FUNDED</small></div>
-                                      <div class="span4"><b>$400</b><br/><small>PLEDGED</small></div>
-                                      <div class="span4"><b>18</b><br/><small>DAYS</small></div>
+                                      <div class="span4"><b>45%</b><br/><small>Progress</small></div>
+                                      <div class="span4"><b>$400</b><br/><small>Paid to date</small></div>
+                                      <div class="span4"><b>18</b><br/><small>Days to payout</small></div>
                                     </div>
                                   </div>
                               </li>
