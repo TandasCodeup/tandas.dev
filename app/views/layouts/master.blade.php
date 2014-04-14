@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Tandas website">
     <meta name="author" content="Codeup Team">
-	<link href="//netdna.bootstrapcdn.com/bootswatch/3.1.1/united/bootstrap.min.css" rel="stylesheet">
+	 
+
+@yield('topscript')
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 
     <!-- Fonts -->
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -14,12 +17,12 @@
     <link href='http://fonts.googleapis.com/css?family=Alegreya+Sans:100,300,400,900italic' rel='stylesheet' type='text/css'>
     <!-- Custom Theme CSS -->
     <link href="/assets/css/tandas.css" rel="stylesheet">
-
-
-@yield('topscript')
-
+ 
 
 </head>
+
+
+
 <body>
    
     <body id="page-top" data-spy="scroll" data-target=".navbar-custom">
