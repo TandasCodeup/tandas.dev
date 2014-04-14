@@ -4,86 +4,132 @@
 
 	<style type="text/css">
 
-		#center{
-			margin-left: 140px;
+		#accordion p{
+			color:#000;
 		}
 
-		#aboutpage{
+		#about{
 			padding-top: 120px;
-			color:#333333;
+			color:#000;
 		}
 
-		#aboutpage{
-			padding-bottom: 40px;
-			color:#333333;
-		}
-
-		
 	</style>
 
 @stop
 
 @section('content')
 
-  <section id="aboutpage" class="container content-section text-center">
-  		<div class="intro-body">
+  <section id="about" class="container content-section text-center">
         <div class="row">
-
             <div class="col-lg-8 col-lg-offset-2">
-                <h1 id="heading">About Money Carousel</h1>
-
+                <h2>Frequently Asked Questions</h2>
             </div>
         </div>
 
 
-        <div class="col-lg-12">
-            <div class="col-lg-3 pull-left" >
-                <div>
-                	<h1>What Is Money Carousel?</h1>
-
-                		<p>On a carousel, what goes around comes around. And when we’re talking about money, it’s pretty great when it comes your way. 
-
-							Money Carousel is a trust-based lending circle where friends, family members and even strangers can help each other save money for vacations, emergencies or even a down payment on a car or yacht. OK, maybe not a yacht. 
-
-							But depending on the amount of money each person contributes, when the carousel comes your way, the payout could be substantial. 
-						</p>
-            	</div>               
-            </div>
-
-
-            <div class="col-lg-3" id="center">    
-                <div>                	
-
-                	<h1>How It Works</h1>                	
-
-                		<p>Lending circles — called tandas in Latin America — have a long history in cultures across the globe. But until the Internet, such circles were conducted face-to-face or through snail mail. 
-
-							The concept is this: A group of people form a lending circle and contribute a set amount of money per month. Each month, someone in the circle gets the whole pot of money, kind of like landing on Free Parking in a game of Monopoly. 
-
-							So if there are 12 people in the lending circle and everyone throws in $100 per week, someone will receive a payout of $1,200 every week. With 12 people in the circle, the money carousel would come your way every three months. 
-						</p>
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                        What if someone drops out of the group or doesn’t pay their share?
+                        </a>
+                    </h4>
                 </div>
-            </div>
+            <div id="collapse1" class="panel-collapse collapse out">
+                <div class="panel-body">
+                	<p>If someone drops out of the group, Money Carousel will join the lending circle and begin covering payments to ensure that no one gets stiffed on payday. However, a member who is late on their payments could delay payouts for the rest of the group. That’s why it’s important to use the Trust Rating System and choose group members with a solid track record.</p>
+                </div>
+            </div>  
+        </div>
 
 
-            <div class="col-lg-3 pull-right" >
-
-                <div><h1>What’s the advantage? </h1>
-
-                	<p>The idea behind a lending circle is that it helps you save money without being tempted to raid your own cookie jar. 
-
-						When you really DO need or want the money, it will be available to you at no interest, a much smarter option than a predatory, high-interest payday loan and a much easier option than trying to get a loan from a bank. 
-
-						The advantage of using Money Carousel is that it allows you to conduct financial transactions online through PayPal. You can set up the carousel to draft elecronically from your PayPal account each week or month, and when it’s your turn to receive the payout, the lump sum will deposit directly into your account. 
-
-						Best of all, unlike the old days, we can help you connect with like-minded people you may not know in person, but who have similar goals. Want to start a small business? Join a carousel where the contributions are larger, but so is the payout. 
-					</p>
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+                        How does the group decide who gets the money when? 
+                        </a>
+                    </h4>
+                </div>
+            <div id="collapse2" class="panel-collapse collapse out">
+                <div class="panel-body">
+                    <p>Payout dates will be decided amongst the group using a simple calendar system. If an emergency comes up and you need the money quickly, you can request to swap payout dates with another member. If it’s REALLY an emergency and no one is willing to swap dates, Money Carousel will step in to front the money, but your next payout will be delayed.</p> 
                 </div>
             </div>
         </div>
+
+
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+                            Question 3
+                        </a>
+                    </h4>
+                </div>
+            <div id="collapse3" class="panel-collapse collapse out">
+                <div class="panel-body">
+                    <p>Awesome answer here!</p>
+                </div>
+            </div>  
+        </div>
+
+
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">
+                            Question 4
+                        </a>
+                    </h4>
+                </div>
+            <div id="collapse4" class="panel-collapse collapse out">
+                <div class="panel-body">
+                    <p>Awesome answer here!</p>
+                </div>
+            </div>  
+        </div>
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">
+                            Question 5
+                        </a>
+                    </h4>
+                </div>
+            <div id="collapse5" class="panel-collapse collapse out">
+                <div class="panel-body">
+                    <p>Awesome answer here!</p>
+                </div>
+            </div>  
+        </div>
+
+
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse6">
+                            Question 6
+                        </a>
+                    </h4>
+                </div>
+            <div id="collapse6" class="panel-collapse collapse out">
+                <div class="panel-body">
+                    <p>Awesome answer here!</p>
+                </div>
+            </div>  
+        </div>
+
+
+        
+
     </section>
 
 
 @stop
-
-
