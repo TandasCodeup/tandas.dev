@@ -33,7 +33,7 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
                     <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="#page-top">
+                <a class="navbar-brand" href="{{{ action('HomeController@showHome') }}}">
                 <span data-icon="a" class="light"> Money Carousel</span>
                 </a>
             </div>
@@ -56,8 +56,8 @@
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
-                    <li class="page-scroll">
-                        <a href="#about">About</a>
+                    <li>
+                        <a href="{{{ action('HomeController@showAbout') }}}">FAQ</a>
                     </li>
                     <li class="page-scroll">
                         <a href="#Join">Join</a>
