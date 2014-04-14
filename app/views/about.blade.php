@@ -10,12 +10,15 @@
 
 		#aboutpage{
 			padding-top: 120px;
+			color:#333333;
 		}
 
 		#aboutpage{
 			padding-bottom: 40px;
+			color:#333333;
 		}
 
+		
 	</style>
 
 @stop
@@ -25,77 +28,55 @@
   <section id="aboutpage" class="container content-section text-center">
   		<div class="intro-body">
         <div class="row">
+
             <div class="col-lg-8 col-lg-offset-2">
-                <h1>About Money Carousel</h1>
+                <h1 id="heading">About Money Carousel</h1>
+
             </div>
         </div>
-        
 
 
         <div class="col-lg-12">
             <div class="col-lg-3 pull-left" >
                 <div>
                 	<h1>What Is Money Carousel?</h1>
-                		<p>If you are a disciplined person, you will be able to hold yourself accountable and actually be able to save money.  Otherwise, tandas are a great alternative.
 
-							What is a tanda?  A tanda uses a set amount of people, pooling a set amount of money per set amount of time, to give a lump sum of money to each individual at his/her assigned time.  Wow, that was pretty confusing right?!?
+                		<p>On a carousel, what goes around comes around. And when we’re talking about money, it’s pretty great when it comes your way. 
 
-							Let me break it down through an example so that it will be much easier to follow:
-							There are 10 people who decide to create a “tanda” together.  They each will give $100 a week.  Each person will be assigned a number and in that order will receive the lump sum of the $1000 (10 people x $100 each).  Whoever is first receives $900 the first week.  (That person receives $900 from the other 9 individuals; add the $100 of their own money and that equals the $1000 lump sum total.)  Whoever is second recevies $900 the second week. And so on.
+							Money Carousel is a trust-based lending circle where friends, family members and even strangers can help each other save money for vacations, emergencies or even a down payment on a car or yacht. OK, maybe not a yacht. 
 
-							So instead of trying to be disciplined enough to save $1000 on your own, using the tanda you will receive that money on your assigned date and you are responsible for paying the others in your tanda each week.  This is a wonderful form of accountability if you’re not disciplined enough to hold yourself accountable.  One person typically is the organizer and as such gathers the money and distributes it to whomever’s turn it is to receive the lump sum.
-
-							To complicate things further, you are allowed to take more than one number.  So let’s say there are only 9 people in the tanda but one person wants to have two numbers.  That means the tanda would act as if there were 10 members but the indvidual who has 2 numbers would be paying double each specified date.
-
-							As in the example above:
-							If 9 people decided to pay $100 a week, but one of those individuals decided to take two numbers, he/she would pay $200 each week and would be paid out twice over the course of the tanda.
-
-							This is a very common practice in Mexico (and in the US among Mexican immigrants).  I have never participated in a tanda myself but I think it’s a wonderful concept to hold oneself accountable and actually “save” the money.
+							But depending on the amount of money each person contributes, when the carousel comes your way, the payout could be substantial. 
 						</p>
             	</div>               
             </div>
 
 
             <div class="col-lg-3" id="center">    
-                <div>
-                	<h1>What Is A Tanda?</h1>                	
-                		<p>If you are a disciplined person, you will be able to hold yourself accountable and actually be able to save money.  Otherwise, tandas are a great alternative.
+                <div>                	
 
-							What is a tanda?  A tanda uses a set amount of people, pooling a set amount of money per set amount of time, to give a lump sum of money to each individual at his/her assigned time.  Wow, that was pretty confusing right?!?
+                	<h1>How It Works</h1>                	
 
-							Let me break it down through an example so that it will be much easier to follow:
-							There are 10 people who decide to create a “tanda” together.  They each will give $100 a week.  Each person will be assigned a number and in that order will receive the lump sum of the $1000 (10 people x $100 each).  Whoever is first receives $900 the first week.  (That person receives $900 from the other 9 individuals; add the $100 of their own money and that equals the $1000 lump sum total.)  Whoever is second recevies $900 the second week. And so on.
+                		<p>Lending circles — called tandas in Latin America — have a long history in cultures across the globe. But until the Internet, such circles were conducted face-to-face or through snail mail. 
 
-							So instead of trying to be disciplined enough to save $1000 on your own, using the tanda you will receive that money on your assigned date and you are responsible for paying the others in your tanda each week.  This is a wonderful form of accountability if you’re not disciplined enough to hold yourself accountable.  One person typically is the organizer and as such gathers the money and distributes it to whomever’s turn it is to receive the lump sum.
+							The concept is this: A group of people form a lending circle and contribute a set amount of money per month. Each month, someone in the circle gets the whole pot of money, kind of like landing on Free Parking in a game of Monopoly. 
 
-							To complicate things further, you are allowed to take more than one number.  So let’s say there are only 9 people in the tanda but one person wants to have two numbers.  That means the tanda would act as if there were 10 members but the indvidual who has 2 numbers would be paying double each specified date.
-
-							As in the example above:
-							If 9 people decided to pay $100 a week, but one of those individuals decided to take two numbers, he/she would pay $200 each week and would be paid out twice over the course of the tanda.
-
-							This is a very common practice in Mexico (and in the US among Mexican immigrants).  I have never participated in a tanda myself but I think it’s a wonderful concept to hold oneself accountable and actually “save” the money.
+							So if there are 12 people in the lending circle and everyone throws in $100 per week, someone will receive a payout of $1,200 every week. With 12 people in the circle, the money carousel would come your way every three months. 
 						</p>
                 </div>
             </div>
 
 
             <div class="col-lg-3 pull-right" >
-                <div><h1>Why Should You Join?</h1>
-                	<p>If you are a disciplined person, you will be able to hold yourself accountable and actually be able to save money.  Otherwise, tandas are a great alternative.
 
-						What is a tanda?  A tanda uses a set amount of people, pooling a set amount of money per set amount of time, to give a lump sum of money to each individual at his/her assigned time.  Wow, that was pretty confusing right?!?
+                <div><h1>What’s the advantage? </h1>
 
-						Let me break it down through an example so that it will be much easier to follow:
-						There are 10 people who decide to create a “tanda” together.  They each will give $100 a week.  Each person will be assigned a number and in that order will receive the lump sum of the $1000 (10 people x $100 each).  Whoever is first receives $900 the first week.  (That person receives $900 from the other 9 individuals; add the $100 of their own money and that equals the $1000 lump sum total.)  Whoever is second recevies $900 the second week. And so on.
+                	<p>The idea behind a lending circle is that it helps you save money without being tempted to raid your own cookie jar. 
 
-						So instead of trying to be disciplined enough to save $1000 on your own, using the tanda you will receive that money on your assigned date and you are responsible for paying the others in your tanda each week.  This is a wonderful form of accountability if you’re not disciplined enough to hold yourself accountable.  One person typically is the organizer and as such gathers the money and distributes it to whomever’s turn it is to receive the lump sum.
+						When you really DO need or want the money, it will be available to you at no interest, a much smarter option than a predatory, high-interest payday loan and a much easier option than trying to get a loan from a bank. 
 
-						To complicate things further, you are allowed to take more than one number.  So let’s say there are only 9 people in the tanda but one person wants to have two numbers.  That means the tanda would act as if there were 10 members but the indvidual who has 2 numbers would be paying double each specified date.
+						The advantage of using Money Carousel is that it allows you to conduct financial transactions online through PayPal. You can set up the carousel to draft elecronically from your PayPal account each week or month, and when it’s your turn to receive the payout, the lump sum will deposit directly into your account. 
 
-						As in the example above:
-						If 9 people decided to pay $100 a week, but one of those individuals decided to take two numbers, he/she would pay $200 each week and would be paid out twice over the course of the tanda.
-
-						This is a very common practice in Mexico (and in the US among Mexican immigrants).  I have never participated in a tanda myself but I think it’s a wonderful concept to hold oneself accountable and actually “save” the money.
+						Best of all, unlike the old days, we can help you connect with like-minded people you may not know in person, but who have similar goals. Want to start a small business? Join a carousel where the contributions are larger, but so is the payout. 
 					</p>
                 </div>
             </div>
