@@ -4,7 +4,7 @@
 
 
 @section('topscript')
-<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
 
 <style type="text/css">
 
@@ -105,19 +105,54 @@ body{
 /*Carrousel Modal*/
 
 
-.glyphicon-lg{font-size:3em}
-.blockquote-box{border-right:5px solid #E6E6E6;margin-bottom:25px}
-.blockquote-box .square{width:100px;min-height:50px;margin-right:22px;text-align:center!important;background-color:#E6E6E6;padding:20px 0}
-.blockquote-box.blockquote-primary{border-color:#357EBD}
-.blockquote-box.blockquote-primary .square{background-color:#428BCA;color:#FFF}
-.blockquote-box.blockquote-success{border-color:#4CAE4C}
-.blockquote-box.blockquote-success .square{background-color:#5CB85C;color:#FFF}
-.blockquote-box.blockquote-info{border-color:#46B8DA}
-.blockquote-box.blockquote-info .square{background-color:#5BC0DE;color:#FFF}
-.blockquote-box.blockquote-warning{border-color:#EEA236}
-.blockquote-box.blockquote-warning .square{background-color:#F0AD4E;color:#FFF}
-.blockquote-box.blockquote-danger{border-color:#D43F3A}
-.blockquote-box.blockquote-danger .square{background-color:#D9534F;color:#FFF}
+.glyphicon-lg{
+  font-size:3em
+}
+.blockquote-box{
+  border-right:5px solid #E6E6E6;
+  margin-bottom:25px
+}
+.blockquote-box .square{
+  width:100px;
+  min-height:50px;
+  margin-right:22px;
+  text-align:center!important;
+  background-color:#E6E6E6;padding:20px 0
+}
+.blockquote-box.blockquote-primary{
+  border-color:#357EBD
+}
+.blockquote-box.blockquote-primary .square{
+  background-color:#428BCA;
+  color:#FFF
+}
+
+.blockquote-box.blockquote-success{
+  border-color:#4CAE4C
+}
+.blockquote-box.blockquote-success .square{
+  background-color:#5CB85C;
+  color:#FFF
+}
+.blockquote-box.blockquote-info{
+  border-color:#46B8DA
+}
+.blockquote-box.blockquote-info .square{
+  background-color:#5BC0DE;
+  color:#FFF
+}
+.blockquote-box.blockquote-warning{
+  border-color:#EEA236
+}
+.blockquote-box.blockquote-warning .square{
+  background-color:#F0AD4E;
+  color:#FFF
+}
+.blockquote-box.blockquote-danger{
+  border-color:#D43F3A
+}
+.blockquote-box.blockquote-danger .square{
+  background-color:#D9534F;color:#FFF}
 
 
 
@@ -139,8 +174,37 @@ body{
         <div class="col-md-12">
                 <div class="panel">
                     <img class="pic img-circle" src="http://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/twDq00QDud4/s120-c/photo.jpg" alt="...">
-                    <div class="name"><small>{{{ Auth::user()->first_name }}}</small></div>
-                  
+                    <div class="name"><small>{{{ Auth::user()->first_name }}}</small>
+                       <button class="btn btn-primary btn-xs" data-toggle="modal" data-target=".bs-example-modal-lg">Create Tanda</button>
+
+                  <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                      <div class="modal-content">
+                     
+                                  
+                             <div class="col-xs-12 col-sm-6 col-md-offset-3 well well-lg">
+                                  <h1 data-icon="a"></h1>
+                                  <legend>Create a new Tanda</legend>
+                                      {{ Form::open(array('action' => 'TandaController@store', 'class' => 'form')) }}
+                                  <br>
+                                  <div class="col-xs-12 col-md-12">
+                                      {{ Form::text('title', null, array('class' => 'form-control', 'placeholder' => 'Carousel Title', 'required' => 'required')) }}
+                                      <br>               
+                                      <center><label>{{ Form::select('user_num', array('5' => '5', '10' => '10')) }} Tanda members</label></center>
+                                      <br>              
+                                      {{ Form::text('payout', null, array('class' => 'form-control', 'placeholder' => 'User Payout', 'required' => 'required')) }}
+                                      <br>
+                                      <div class="col-xs-12 col-md-6 col-md-offset-3 ">
+                                      {{ Form::submit('Create Tanda',  array('class' => 'btn btn-md btn-primary btn-block')) }}
+                                      {{ Form::close() }}                          
+                                    </div>
+                                  </div>
+                                  <br/>
+                              </div>    
+                      </div>
+                    </div>
+                  </div>
+                    </div>   
                 </div>
 
                 <br>
@@ -170,97 +234,35 @@ body{
                             <div class="modal-body">
                              
 
-
-                                  
-                        <div class="col-md-6">
-                            <div class="blockquote-box clearfix">
-                                <div class="square pull-left">
-                                    <img src="http://placehold.it/60/8e44ad/FFF&text=B" alt="" class="" />
-                                </div>
-                                <h4>
-                                    Bootsnipp</h4>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a
-                                    ante.
-                                </p>
-                            </div>
-                            <div class="blockquote-box blockquote-primary clearfix">
-                                <div class="square pull-left">
-                                    <span class="glyphicon glyphicon-music glyphicon-lg"></span>
-                                </div>
-                                <h4>
-                                    Let's music play</h4>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a
-                                    ante. <a href="http://www.jquery2dotnet.com/search/label/jquery">jquery2dotnet</a>
-                                </p>
-                            </div>
-                            <div class="blockquote-box blockquote-success clearfix">
-                                <div class="square pull-left">
-                                    <span class="glyphicon glyphicon-tree-conifer glyphicon-lg"></span>
-                                </div>
-                                <h4>
-                                    Tree conifer</h4>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a
-                                    ante.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="blockquote-box blockquote-info clearfix">
-                                <div class="square pull-left">
-                                    <span class="glyphicon glyphicon-info-sign glyphicon-lg"></span>
-                                </div>
-                                <h4>
-                                    Information</h4>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a
-                                    ante.
-                                </p>
-                            </div>
-                            <div class="blockquote-box blockquote-warning clearfix">
-                                <div class="square pull-left">
-                                    <span class="glyphicon glyphicon-warning-sign glyphicon-lg"></span>
-                                </div>
-                                <h4>
-                                    Warning</h4>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a
-                                    ante.
-                                </p>
-                            </div>
-                            <div class="blockquote-box blockquote-danger clearfix">
-                                <div class="square pull-left">
-                                    <span class="glyphicon glyphicon-record glyphicon-lg"></span>
-                                </div>
-                                <h4>
-                                    Danger</h4>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a
-                                    ante.
-                                </p>
-                            </div>
-                        </div>
-
-
-                            </div>
-                            <div class="modal-footer">
-                              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            </div>
+                         <div class="container">
+                          <div class="row-fluid col-sm-8">
+                            <ul class="thumbnails">
+                              <li class="span3">
+                                  <div class="caption">
+                                    <h2>Carousel A</h2>
+                                    <p>Started Feb 15 2014</p>
+                                    <p><i class="icon icon-map-marker"></i> PayOut Date: June 15 2014</p>
+                                  </div>
+                                  <div class="modal-footer" style="text-align: left">
+                                    <div class="progress progress-striped active" style="background: #ddd">
+                                      <div class="bar" style="width: 60%;"></div>
+                                    </div>
+                                    <div class="row-fluid">
+                                      <div class="span4"><b>60%</b><br/><small>FUNDED</small></div>
+                                      <div class="span4"><b>$400</b><br/><small>PLEDGED</small></div>
+                                      <div class="span4"><b>18</b><br/><small>DAYS</small></div>
+                                    </div>
+                                  </div>
+                              </li>
+                            </ul>
                           </div>
                         </div>
+                        </div>
                       </div>
-
-
-
-
-
-
-
-
-                </div>
-            </div>
+                    </div>
+                  </div>
+           </div>
+        </div>
     </div>
         <div class="col-sm-4">
             <div class="hero-widget well well-sm">
@@ -567,8 +569,81 @@ body{
                     <label class="text-muted">Payment Due</label>
                 </div>
                 <div class="options">
-                    <a href="javascript:;" class="btn btn-default btn-lg"><i class="glyphicon glyphicon-search"></i> Make Payment</a>
-                </div>
+                    <a href="javascript:;" class="btn btn-default btn-lg" data-toggle="modal" data-target="#payModal"><i class="glyphicon glyphicon-search"></i> Make Payment</a>
+                    <div class="modal fade" id="payModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                          <div class="modal-header">                          
+                            <div class="container">
+                              <div class="row">
+                                  <div class="col-xs-12 col-md-9">
+                                      <div class="panel panel-default">
+                                          <div class="panel-heading">
+                                              <h3 class="panel-title">
+                                                  Payment Details
+                                              </h3>
+                                              <div class="checkbox pull-right">
+                                                  <label>
+                                                      <input type="checkbox" />
+                                                      Remember
+                                                  </label>
+                                              </div>
+                                          </div>
+                                          <div class="panel-body">
+                                              <form role="form">
+                                              <div class="form-group">
+                                                  <label for="cardNumber">
+                                                      CARD NUMBER</label>
+                                                  <div class="input-group">
+                                                      <input type="text" class="form-control" id="cardNumber" placeholder="Valid Card Number"
+                                                          required autofocus />
+                                                      <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                                                  </div>
+                                              </div>
+                                              <div class="row">
+                                                  <div class="col-xs-6 col-md-4">
+                                                      <div class="form-group">
+                                                          <label for="expityMonth">
+                                                              EXPIRY DATE</label>
+                                                         
+                                                              <input type="text" class="form-control" id="expityMonth" placeholder="MM" required />
+                                                    
+                                                              <input type="text" class="form-control" id="expityYear" placeholder="YY" required />
+                                                      </div>
+                                                  </div>
+                                                  <div class="col-xs-5 col-md-5 pull-right">
+                                                      <div class="form-group">
+                                                          <label for="cvCode">
+                                                              CV CODE</label>
+                                                          <input type="password" class="form-control" id="cvCode" placeholder="CV" required />
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                              </form>
+                                          </div>
+                                      </div>
+      
+                                      <br/>
+                                      <div class="col-xs-6 col-md-12">
+                                      <center><a href="http://www.jquery2dotnet.com" class="btn btn-success btn-lg btn-block" role="button">Pay</a></center>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+
+
+
+
+
+
+
+
+
+
+                          </div>
+                        </div>
+                     </div>
+                    </div>
             </div>
       </div>
         
