@@ -50,6 +50,16 @@
 
 		$user = User::find($id);
 
+		if ($user->user_role == 1) {
+			$userList = User::paginate(10);
+			$tandaList = Tanda::paginate(10);
+			$data = array(
+				'userList' => $userList,
+				'tandaList' => $tandaList
+			);
+			return View::make('user.admin')->with($data);
+		}
+
 		$tanda_table_check = DB::table('tandas')->get();
 
 		$records = DB::table('payment')->where('user_id', '=', $id)->get();
