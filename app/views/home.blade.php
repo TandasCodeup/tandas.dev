@@ -8,11 +8,13 @@
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
                         <h1 class="brand-heading">Money Carousel</h1>
-                        <p class="heading">What goes around comes around</p>
+                        <p class="heading">What goes around comes around. A trust-based lending circle where everyone saves, and when it’s their turn, gets paid.</p>
                         <div class="page-scroll">
-                            <center><a href="#about" class="btn btn-circle">
-                                <i data-icon="a"></i>
-                            </a></center>
+                            <center>
+                                <button type="button" class="btn btn-default btn-lg" class="page-scroll">
+                                    <a href="#about">Learn More About Money Carousel</a> 
+                                </button>
+                            </center>
                         </div>
                     </div>
                 </div>
@@ -24,49 +26,65 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
                 <h2>About Money Carousel</h2>
-                <p>A trust-based lending circle where everyone saves and when its their turn, gets paid.</p>
-                <p>Through our Trust Ratings System, users can create a reputation.</p>
-
-                    <a href="{{{ action('HomeController@showAbout') }}}"<button type="button" class="btn btn-default btn-lg">
-                        <span class="glyphicon glyphicon-star"></span> Learn More
-                    </button>
-                    </a>
-                <br>
-                <br>
-                <br>
             </div>
         </div>
-        <div class="col-lg-12 col-md-10 ">
-            <div class="col-lg-4" >
-                <div id="circle1" class="circle"></i><h1 class="niceicons"><i data-icon="c"></i></h1>
-                    <br>
-                    <p>Collaboratively administrate empowered markets via plug-and-play networks. 
-                        Dynamically procrastinate B2C users after installed base benefits. 
-                        Dramatically visualize customer directed convergence without revolutionary ROI.
-                    </p>
-                </div>
-            </div>
-            <div class="col-lg-4" >    
-                <div id="circle2" class="circle"></i><h1 class="niceicons"><i data-icon="d"></i></h1>
-                   <br>
-                    <p>
-                        Efficiently unleash cross-media information without cross-media value. 
-                        Quickly maximize timely deliverables for real-time schemas. 
-                        Dramatically maintain clicks-and-mortar solutions without functional solutions.
-                    </p>
-                </div>
-            </div>
-            <div class="col-lg-4" >
-                <div id="circle3" class="circle"><h1 class="niceicons"><i data-icon="b"></i></h1>
-                    <br>
-                    <p>
-                        Efficiently unleash cross-media information without cross-media value. 
-                        Quickly maximize timely deliverables for real-time schemas. 
-                        Dramatically maintain clicks-and-mortar solutions without functional solutions.
-                    </p>
 
+
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                        What Is Money Carousel?
+                        </a>
+                    </h4>
+                </div>
+            <div id="collapseOne" class="panel-collapse collapse out">
+                <div class="panel-body">
+                    <p>On a carousel, what goes around comes around. And when we’re talking about money, it’s pretty great when it comes your way. 
+                    Money Carousel is a trust-based lending circle where friends, family members and even strangers can help each other save money for vacations, emergencies or even a down payment on a car or yacht. OK, maybe not a yacht. 
+                    But depending on the amount of money each person contributes, when the carousel comes your way, the payout could be substantial.</p>
+                </div>
+            </div>  
+        </div>
+
+
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                        How It Works
+                        </a>
+                    </h4>
+                </div>
+            <div id="collapseTwo" class="panel-collapse collapse out">
+                <div class="panel-body">
+                    <p>Lending circles — called tandas in Latin America — have a long history in cultures across the globe. But until the Internet, such circles were conducted face-to-face or through snail mail. 
+                    The concept is this: A group of people form a lending circle and contribute a set amount of money per month. Each month, someone in the circle gets the whole pot of money, kind of like landing on Free Parking in a game of Monopoly. 
+                    So if there are 12 people in the lending circle and everyone throws in $100 per week, someone will receive a payout of $1,200 every week. With 12 people in the circle, the money carousel would come your way every three months.</p>
                 </div>
             </div>
+        </div>
+
+
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                            What’s the advantage?
+                        </a>
+                    </h4>
+                </div>
+            <div id="collapseThree" class="panel-collapse collapse out">
+                <div class="panel-body">
+                    <p>The idea behind a lending circle is that it helps you save money without being tempted to raid your own cookie jar. 
+                    When you really DO need or want the money, it will be available to you at no interest, a much smarter option than a predatory, high-interest payday loan and a much easier option than trying to get a loan from a bank. 
+                    The advantage of using Money Carousel is that it allows you to conduct financial transactions online through PayPal. You can set up the carousel to draft elecronically from your PayPal account each week or month, and when it’s your turn to receive the payout, the lump sum will deposit directly into your account. 
+                    Best of all, unlike the old days, we can help you connect with like-minded people you may not know in person, but who have similar goals. Want to start a small business? Join a carousel where the contributions are larger, but so is the payout.</p>
+                </div>
+            </div>  
         </div>
     </section>
   
