@@ -8,7 +8,7 @@
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
                         <h1 class="brand-heading">Money Carousel</h1>
-                        <p class="heading">What goes around comes around. A trust-based lending circle where everyone saves, and when it’s their turn, gets paid.</p>
+                        <h1 class="heading">What goes around comes around.</h1><h2> A trust-based lending circle where everyone saves, and when it’s their turn, gets paid.</h2>
                         <div class="page-scroll">
                             <center>
                                 <button type="button" class="btn btn-default btn-lg" class="page-scroll">
@@ -168,7 +168,7 @@
             </div>
         </div>
     </section>
-    
+
 
     <div id="footer">
         <div class="container">
