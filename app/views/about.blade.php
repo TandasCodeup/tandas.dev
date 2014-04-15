@@ -1,21 +1,6 @@
 @extends('layouts.master')
 
-@section('topscript')
 
-	<style type="text/css">
-
-		#accordion p{
-			color:#000;
-		}
-
-		#about{
-			padding-top: 120px;
-			color:#000;
-		}
-
-	</style>
-
-@stop
 
 @section('content')
 
@@ -66,13 +51,13 @@
                 <div class="panel-heading">
                     <h4 class="panel-title">
                         <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
-                            Question 3
+                            How much does it cost?
                         </a>
                     </h4>
                 </div>
             <div id="collapse3" class="panel-collapse collapse out">
                 <div class="panel-body">
-                    <p>Awesome answer here!</p>
+                    <p>Money Carousel is free for users.</p>
                 </div>
             </div>  
         </div>
@@ -83,50 +68,16 @@
                 <div class="panel-heading">
                     <h4 class="panel-title">
                         <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">
-                            Question 4
+                            Do I have to report payouts on my taxes?
                         </a>
                     </h4>
                 </div>
             <div id="collapse4" class="panel-collapse collapse out">
                 <div class="panel-body">
-                    <p>Awesome answer here!</p>
+                    <p>No. It’s your money and likely comes from income that’s already being taxed. </p>
                 </div>
             </div>  
         </div>
-        <div class="panel-group" id="accordion">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4 class="panel-title">
-                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">
-                            Question 5
-                        </a>
-                    </h4>
-                </div>
-            <div id="collapse5" class="panel-collapse collapse out">
-                <div class="panel-body">
-                    <p>Awesome answer here!</p>
-                </div>
-            </div>  
-        </div>
-
-
-        <div class="panel-group" id="accordion">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4 class="panel-title">
-                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse6">
-                            Question 6
-                        </a>
-                    </h4>
-                </div>
-            <div id="collapse6" class="panel-collapse collapse out">
-                <div class="panel-body">
-                    <p>Awesome answer here!</p>
-                </div>
-            </div>  
-        </div>
-
-
         
 
     </section>
