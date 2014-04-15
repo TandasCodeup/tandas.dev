@@ -51,9 +51,9 @@
 		$user = User::find($id);
 
 		if ($user->user_role == 1) {
-			$userList = User::get();
-			$userPages = User::with('tandas')->get();
-			$tandaList = Tanda::get();
+			$userList = User::with('tandas')->get();
+			$userPages = User::paginate(7);
+			$tandaList = Tanda::with('users')->get();
 			$tandaPages = Tanda::paginate(7);
 			$data = array(
 				'userList' => $userList,
