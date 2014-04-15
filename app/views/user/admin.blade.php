@@ -5,7 +5,7 @@
 	<style type="text/css">
 
 		body {
-		    padding-top: 7.5%;
+		    padding-top: 5%;
 		}
 
 		/*Big Buttons CSS*/
@@ -212,10 +212,10 @@
 				</div>
 				<div class="modal-body">
 					@foreach ($tandaList as $tanda)
-						<div clas="row user-row">
+						<div class="row user-row">
 							<div class="col-xs-8 col-sm-9 col-md-10 col-lg-11">
 								<strong>{{{ $tanda->title }}}</strong>
-								<span class="text-muted">Number of Users: {{{ count($tanda->users) }}} / {{{ $tanda->user_num }}} | Date Started: {{{ $tanda->created_at }}}</span>
+								<span class="text-muted">Number of Users: {{{ count($tanda->users) }}} / {{{ $tanda->user_num }}} | Created: {{{ $tanda->created_at }}}</span>
 							</div>
 							<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 dropdown-user" data-for=".{{{ $tanda->id }}}">
 								<i class="glyphicon glyphicon-chevron-down text-muted"></i>
@@ -319,7 +319,6 @@
 								</div>
 							</ul>
 						</div>
-						<div class="row"></div>
 					@endforeach
 				</div>
 			</div>
