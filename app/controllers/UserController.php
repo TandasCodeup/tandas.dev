@@ -51,11 +51,15 @@
 		$user = User::find($id);
 
 		if ($user->user_role == 1) {
-			$userList = User::paginate(10);
-			$tandaList = Tanda::paginate(10);
+			$userList = User::get();
+			$userPages = User::with('tandas')->get();
+			$tandaList = Tanda::get();
+			$tandaPages = Tanda::paginate(7);
 			$data = array(
 				'userList' => $userList,
-				'tandaList' => $tandaList
+				'userPages' => $userPages,
+				'tandaList' => $tandaList,
+				'tandaPages' => $tandaPages
 			);
 			return View::make('user.admin')->with($data);
 		}
