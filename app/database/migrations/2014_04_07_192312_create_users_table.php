@@ -22,6 +22,7 @@ class CreateUsersTable extends Migration {
 			$table->double('trust_rate', 4, 2)->default(5);
 			$table->timestamps();
 			$table->tinyInteger('user_role')->default(2)->unsigned();
+			$table->string('remember_token', 100)->nullable();
 		});
 	}
 
