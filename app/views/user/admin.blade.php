@@ -183,6 +183,7 @@
 								<label class="text-muted">Total Carousels</label>
 							</div>
 							<br>
+							<button class="btn btn-default btn-lg" data-toggle="modal" data-target="#tandaModal"><i class="glyphicon glyphicon-search"></i> View Carousels</button>
 						</div>
 					</div>
 					<div class="col-sm-6">
@@ -202,6 +203,128 @@
 			</div>
 		</div>
 	</div>
+	<div class="modal fade" id="tandaModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="myModalLabel">Ongoing Carousels</h4>
+				</div>
+				<div class="modal-body">
+					@foreach ($tandaList as $tanda)
+						<div clas="row user-row">
+							<div class="col-xs-8 col-sm-9 col-md-10 col-lg-11">
+								<strong>{{{ $tanda->title }}}</strong>
+								<span class="text-muted">Number of Users: {{{ count($tanda->users) }}} / {{{ $tanda->user_num }}} | Date Started: {{{ $tanda->created_at }}}</span>
+							</div>
+							<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 dropdown-user" data-for=".{{{ $tanda->id }}}">
+								<i class="glyphicon glyphicon-chevron-down text-muted"></i>
+							</div>
+						</div>
+						<div class="row col-sm-8 user-infos {{{ $tanda->id }}}">
+							<div class="row">
+								<div class="col-sm-6"><small>PAY PER USER</small><br><b>${{{ $tanda->pay_per_user }}}</b></div>
+								<div class="col-sm-6"><small>PAYOUT</small><br><b>${{{ $tanda->payout }}}</b></div>
+							</div>
+							<p style="margin: 0px">Users Associated:</p>
+							<ul class="thumbnails">
+								<div class="caption">
+									@foreach ($tanda->users as $user)
+										<div class="row user-row">
+											<div class="col-xs-3 col-sm-2 col-md-1 col-lg-1">
+												<img class="img-circle" src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=50" alt="User Pic">
+											</div>
+											<div class="col-xs-8 col-sm-9 col-md-10 col-lg-10">
+												<strong>{{{ $user->email }}}</strong>
+												<span class="text-muted">User Level: 
+													@if ($user->user_role == 1)
+														Administrator
+													@elseif ($user->user_role == 2)
+														Standard
+													@endif
+												</span>
+											</div>
+											<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 dropdown-user" data-for=".{{{ $user->id }}}">
+												<i class="glyphicon glyphicon-chevron-down text-muted"></i>
+											</div>
+										</div>
+										<div class="row user-infos {{{ $user->id }}}">
+											<div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 col-xs-offset-0 col-sm-offset-0 col-md-offset-1 col-lg-offset-1">
+												<div class="panel panel-primary">
+													<div class="panel-heading">
+														<h3 class="panel-title">User Information</h3>
+													</div>
+													<div class="panel-body">
+														<div class="row">
+															<div class="col-md-3 col-lg-3 hidden-xs hidden-sm">
+																<img class="img-circle" src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=100" alt="User Pic">
+															</div>
+															<div class="col-xs-10 col-sm-10 hidden-md hidden-lg">
+																<strong>{{{ $user->email }}}</strong>
+																<br>
+																<dl>
+																	<dt>User Level:</dt>
+																	@if ($user->user_role == 1)
+																		<dd>Administrator</dd>
+																	@elseif ($user->user_role == 2)
+																		<dd>Standard</dd>
+																	@endif
+																	<dt>Registered Since:</dt>
+																		<dd>{{{ $user->created_at }}}</dd>
+																	<dt>Carousels:</dt>
+																		<dd>{{{ count($user->tandas )}}}</dd>
+																	<dt>Trust Rating:</dt>
+																		<dd>{{{ $user->trust_rate }}}</dd>
+																</dl>
+															</div>
+															<div class="col-md-9 col-lg-9 hidden-xs hidden-sm">
+																<strong>{{{ $user->email }}}</strong>
+																<table class="table table-user-information">
+																	<tbody>
+																		<tr>
+																			<td>User Level:</td>
+																			@if ($user->user_role == 1)
+																				<td>Administrator</td>
+																			@elseif ($user->user_role == 2)
+																				<td>Standard</td>
+																			@endif
+																		</tr>
+																		<tr>
+																			<td>Registered Since:</td>
+																			<td>{{{ $user->created_at }}}</td>
+																		</tr>
+																		<tr>
+																			<td>Carousels:</td>
+																			<td>{{{ count($user->tandas) }}}</td>
+																		</tr>
+																		<tr>
+																			<td>Trust Rating:</td>
+																			<td>{{{ $user->trust_rate }}}</td>
+																		</tr>
+																	</tbody>
+																</table>
+															</div>
+														</div>
+													</div>
+													<div class="panel-footer">
+														<span class="pull-right">
+															<button class="btn btn-sm btn-warning" type="button" data-toggle="tooltip" data-original-title="Edit this user"><i class="glyphicon glyphicon-edit"></i></button>
+															<button class="btn btn-sm btn-danger" type="button" data-toggle="tooltip" data-original-title="Remove this user"><i class="glyphicon glyphicon-remove"></i></button>
+														</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									@endforeach
+								</div>
+							</ul>
+						</div>
+						<div class="row"></div>
+					@endforeach
+				</div>
+			</div>
+		</div>
+	</div>
 	<div class="modal fade" id="userModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 		<div class="modal-dialog">
 			<div class="modal-content">
@@ -210,7 +333,7 @@
 					<h4 class="modal-title" id="myModalLabel">All Users</h4>
 				</div>
 				<div class="modal-body">
-					@foreach ($userPages as $user)
+					@foreach ($userList as $user)
 						<div class="row user-row">
 							<div class="col-xs-3 col-sm-2 col-md-1 col-lg-1">
 								<img class="img-circle" src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=50" alt="User Pic">
