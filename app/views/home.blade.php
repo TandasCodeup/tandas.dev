@@ -7,57 +7,56 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
+                        <img border="0" src="/assets/img/recycling.png" alt="recycle">
                         <h1 class="brand-heading">Money Carousel</h1>
-                        <p class="heading"><strong>What goes around comes around.</strong> A trust-based lending circle where everyone saves, and when it’s their turn, gets paid.</p>
+                        <br>
+                        <p class="heading"><strong>What goes around comes around</strong><br>A trust-based lending circle where everyone saves, and when it’s their turn, gets paid.</p>
                         <div class="page-scroll">
                             <center>
                                 <button type="button" class="btn btn-default btn-lg" class="page-scroll">
-                                    <a href="#about">Learn More About Money Carousel</a> 
+                                    <a href="#about">Learn More About Us</a> 
                                 </button>
-                                <br><br><br>
-                                <div class="col-lg-8 col-lg-offset-2">  
-                                <!-- Button trigger modal -->
-                                    <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#signUpModal">
-                                      Join Money Carousel
-                                    </button>
-                                    <!-- Modal -->
-                                    <div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                      <div class="modal-dialog">
-                                          <div class="modal-body">
-                                            <div class="col-xs-12 well">
-                                                <h1 data-icon="a"></h1>
-                                                    <legend>Sign up!</legend>
-                                                        {{ Form::open(array('action' => 'UserController@store', 'class' => 'form')) }}   
-                                                <div class="row">
-                                                    <div class="col-xs-6 col-md-6">
-                                                        {{ Form::text('first_name', null, array('class' => 'form-control', 'placeholder' => 'First Name', 'required' => 'required')) }}        
-                                                    </div>
-                                                    <div class="col-xs-6 col-md-6">
-                                                        {{ Form::text('last_name', null, array('class' => 'form-control', 'placeholder' => 'Last Name', 'required' => 'required')) }}
-                                                    </div>
+                            <!-- Button trigger modal -->
+                                <button type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#signUpModal">
+                                  <a href="">Join Now!</a> 
+                                </button>
+                                <!-- Modal -->
+                                <div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                  <div class="modal-dialog">
+                                      <div class="modal-body">
+                                        <div class="col-xs-12 well">
+                                            <h1 class="modal-title"data-icon="a">
+                                                <legend >Sign up!</legend></h1>
+                                                    {{ Form::open(array('action' => 'UserController@store', 'class' => 'form')) }}   
+                                            <div class="row">
+                                                <div class="col-xs-6 col-md-6">
+                                                    {{ Form::text('first_name', null, array('class' => 'form-control', 'placeholder' => 'First Name', 'required' => 'required')) }}        
                                                 </div>
-                                                    <br>
-                                                <div class="col-xs-12 col-md-12">
-                                                    {{ Form::text('email1', null, array('class' => 'form-control', 'placeholder' => 'Your Email', 'required' => 'required')) }}
-                                                    <br>               
-                                                    {{ Form::text('email2', null, array('class' => 'form-control', 'placeholder' => 'Confirm Email address', 'required' => 'required')) }}
-                                                    <br>               
-                                                    {{ Form::password('pass1', array('class' => 'form-control', 'placeholder' => 'Password', 'required' => 'required')) }}
-                                                    <br>                
-                                                     {{ Form::password('pass2', array('class' => 'form-control', 'placeholder' => 'Confirm   Password', 'required' => 'required')) }}
-                                                    <br>                          
-                                                </div>
-                                                    <br/>
-                                          
-                                                <div class="col-xs-12 col-md-6 col-md-offset-3 ">
-                                                {{ Form::submit('Sign Up',  array('class' => 'btn btn-md btn-primary btn-block')) }}
-                                                {{ Form::close() }}
+                                                <div class="col-xs-6 col-md-6">
+                                                    {{ Form::text('last_name', null, array('class' => 'form-control', 'placeholder' => 'Last Name', 'required' => 'required')) }}
                                                 </div>
                                             </div>
-                                          </div>
+                                                <br>
+                                            <div class="col-xs-12 col-md-12">
+                                                {{ Form::text('email1', null, array('class' => 'form-control', 'placeholder' => 'Your Email', 'required' => 'required')) }}
+                                                <br>               
+                                                {{ Form::text('email2', null, array('class' => 'form-control', 'placeholder' => 'Confirm Email address', 'required' => 'required')) }}
+                                                <br>               
+                                                {{ Form::password('pass1', array('class' => 'form-control', 'placeholder' => 'Password', 'required' => 'required')) }}
+                                                <br>                
+                                                 {{ Form::password('pass2', array('class' => 'form-control', 'placeholder' => 'Confirm   Password', 'required' => 'required')) }}
+                                                <br>                          
+                                            </div>
+                                                <br/>
+                                      
+                                            <div class="col-xs-12 col-md-6 col-md-offset-3 ">
+                                            {{ Form::submit('Sign Up',  array('class' => 'btn btn-md btn-primary btn-block')) }}
+                                            {{ Form::close() }}
+                                            </div>
                                         </div>
                                       </div>
-                                </div>
+                                    </div>
+                                  </div>
                             </center>
                         </div>
                     </div>
@@ -75,7 +74,7 @@
         </div>
         <!-- Button trigger firstModal -->
         <div class="col-lg-4">
-            <button class="btn btn-danger btn-lg" data-toggle="modal" data-target="#modal1">
+            <button class="btn btn-default btn-lg" data-toggle="modal" data-target="#modal1">
               What Is Money Carousel?
             </button>
             <br>
@@ -83,7 +82,7 @@
         </div>
         <!-- Button trigger secondModal -->
         <div class="col-lg-4">
-            <button class="btn btn-danger btn-lg" data-toggle="modal" data-target="#modal2">
+            <button class="btn btn-default btn-lg" data-toggle="modal" data-target="#modal2">
               How It Works
             </button>
             <br>
@@ -92,7 +91,7 @@
 
         <!-- Button trigger thirdModal -->
         <div class="col-lg-4">
-            <button class="btn btn-danger btn-lg" data-toggle="modal" data-target="#modal3">
+            <button class="btn btn-default btn-lg" data-toggle="modal" data-target="#modal3">
               What’s the advantage?
             </button>
             <br>
@@ -182,8 +181,8 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
                 <h2>Contact Tandas team</h2>
-                <p>Feel free to email us to provide some feedback on our website, give us suggestions for new features or omproovements, or to just say hello!</p>
-                <p>feedback@tandas.com</p>
+                <p>Feel free to email us to provide some feedback on our website, give us suggestions for new features or improvements, or to just say hello!</p>
+                <h3><a href="mailto:contact@moneycarousel.us">contact@moneycarousel.us</a></h3> 
                 <ul class="list-inline banner-social-buttons">
                     <li><a href="https://twitter.com/Tandas" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
                     </li>
@@ -197,40 +196,6 @@
     </section>
     
 
-    <div id="footer">
-        <div class="container">
-            <div class="row">
-                <h3 class="footertext">Team Tanda:</h3>
-                <br>
-                <div class="col-md-4">
-                    <center>
-                        <img src="http://oi60.tinypic.com/w8lycl.jpg" class="img-circle" alt="the-brains">
-                        <br>
-                            <h4 class="footertext">Programmer</h4>
-                        <p class="footertext">You can thank all the crazy programming here to this guy.<br>
-                    </center>
-                </div>
-                <div class="col-md-4">
-                    <center>
-                        <img src="http://oi60.tinypic.com/2z7enpc.jpg" class="img-circle" alt="...">
-                        <br>
-                            <h4 class="footertext">Artist</h4>
-                        <p class="footertext">All the images here are hand drawn by this man.<br>
-                    </center>
-                </div>
-                <div class="col-md-4">
-                    <center>
-                        <img src="http://oi61.tinypic.com/307n6ux.jpg" class="img-circle" alt="...">
-                        <br>
-                            <h4 class="footertext">Designer</h4>
-                        <p class="footertext">This pretty site and the copy it holds are all thanks to this guy.<br>
-                    </center>
-                </div>
-                <div class="row">
-                    <p><center><a href="#">Contact Stuff Here</a> <p class="footertext">Copyright 2014</p></center></p>
-                </div>
-            </div>
-        </div>
-    </div>
+    
 
 @stop

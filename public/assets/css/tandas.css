@@ -42,7 +42,7 @@ p {
 }
 
 a {
-    color: blue;
+    color: #8179C9;
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
@@ -51,7 +51,7 @@ a {
 a:hover,
 a:focus {
     text-decoration: none;
-    color: #7A9A95;
+    color: #F1F1F1;
 }
 
 
@@ -71,15 +71,17 @@ display: none;
 
 
 
-.light {
-    font-weight: 200;
+.navbarTitle {
+    
+    font-style: bold;
+    color: #8179C9;
 }
 
 .navbar {
     margin-bottom: 0;
     border-bottom: 1px solid rgba(255,255,255,.3);
     text-transform: uppercase;
-    font-family: Open Sans,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Open Sans', sans-serif;
     background-color: #000;
 }
 
@@ -190,13 +192,14 @@ display: none;
 
 .intro-body {
     display: table-cell;
-    vertical-align: middle;
+    vertical-align: top;
     
 }
 
 .brand-heading {
-    font-family: 'Candal', sans-serif;
-    color: darkgray;
+    font-family: 'Poiret One', sans-serif;
+    font-weight: bold;
+    color: #25881B;
     position: relative;
     float: left;
 }
@@ -214,7 +217,7 @@ display: none;
     }
 
     .brand-heading {
-        font-size: 100px;
+        font-size: 90px;
     }
 
     .intro-text {
@@ -352,7 +355,7 @@ display: none;
 
 .btn {
     text-transform: uppercase;
-    font-family: Open Sans,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Open Sans',Helvetica,Arial,sans-serif;
     font-weight: 200;
     -webkit-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
@@ -361,7 +364,7 @@ display: none;
 
 .btn-default {
     border: 1px dash #000;
-    color: #3F2860;
+    color: #8179C9;
     background-color: transparent;
 }
 
@@ -511,3 +514,19 @@ body {
     color: #000;
 
 }
+
+
+/*modals*/
+
+.modal-body {
+
+    text-align: justify;
+}
+
+.modal-title {
+
+    text-align: center;
+}
+
+
+
