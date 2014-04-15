@@ -14,7 +14,7 @@
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href='http://fonts.googleapis.com/css?family=Lato:200,500,200italic,500italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,800italic,400,300,600,800' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Candal' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
     <!-- Custom Theme CSS -->
     <link href="/assets/css/tandas.css" rel="stylesheet">
  
@@ -34,7 +34,7 @@
                     <i class="fa fa-bars"></i>
                 </button>
                 <a class="navbar-brand" href="{{{ action('HomeController@showHome') }}}">
-                <span data-icon="a" class="light"> Money Carousel</span>
+                <span data-icon="a" class="navbarTitle"> Money Carousel</span>
                 </a>
             </div>
 
@@ -63,12 +63,15 @@
                         <a href="#contact">Contact</a>
                     </li>
                      @if (Auth::check())
-                     <li>
-                        <a href="{{{ action('HomeController@logout') }}}"><span class="label label-warning" >Logout&nbsp;{{ Auth::user()->email }}</span></a>
-                    </li> 
                     <li>
                         <a href="{{{ action('UserController@show', Auth::user()->id) }}}">Dashboard</a>
                     </li>                                
+                     <li>
+                        <a>{{ Auth::user()->email }}</a>
+                    </li>
+                    <li>
+                        <a href="{{{ action('HomeController@logout') }}}"><span class="label label-danger">&nbsp;Logout&nbsp;</span></a>
+                    </li> 
                     @else
                     <li class="page-scroll">
                         <a href="" data-toggle="modal" data-target="#signUpModal">Join</a>
