@@ -6,14 +6,62 @@
         <div class="intro-body">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
+                    <div class="col-md-6">
                         <h1 class="brand-heading">Money Carousel</h1>
-                        <h1 class="heading">What goes around comes around.</h1><h2> A trust-based lending circle where everyone saves, and when it’s their turn, gets paid.</h2>
+
+                        
+
+                        <p class="heading"><strong>What goes around comes around.</strong> A trust-based lending circle where everyone saves, and when it’s their turn, gets paid.</p>
+
                         <div class="page-scroll">
                             <center>
                                 <button type="button" class="btn btn-default btn-lg" class="page-scroll">
                                     <a href="#about">Learn More About Money Carousel</a> 
                                 </button>
+                                <br><br><br>
+                                <div class="col-lg-8 col-lg-offset-2">  
+                                <!-- Button trigger modal -->
+                                    <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#signUpModal">
+                                      Join Money Carousel
+                                    </button>
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                      <div class="modal-dialog">
+                                          <div class="modal-body">
+                                            <div class="col-xs-12 well">
+                                                <h1 data-icon="a"></h1>
+                                                    <legend>Sign up!</legend>
+                                                        {{ Form::open(array('action' => 'UserController@store', 'class' => 'form')) }}   
+                                                <div class="row">
+                                                    <div class="col-xs-6 col-md-6">
+                                                        {{ Form::text('first_name', null, array('class' => 'form-control', 'placeholder' => 'First Name', 'required' => 'required')) }}        
+                                                    </div>
+                                                    <div class="col-xs-6 col-md-6">
+                                                        {{ Form::text('last_name', null, array('class' => 'form-control', 'placeholder' => 'Last Name', 'required' => 'required')) }}
+                                                    </div>
+                                                </div>
+                                                    <br>
+                                                <div class="col-xs-12 col-md-12">
+                                                    {{ Form::text('email1', null, array('class' => 'form-control', 'placeholder' => 'Your Email', 'required' => 'required')) }}
+                                                    <br>               
+                                                    {{ Form::text('email2', null, array('class' => 'form-control', 'placeholder' => 'Confirm Email address', 'required' => 'required')) }}
+                                                    <br>               
+                                                    {{ Form::password('pass1', array('class' => 'form-control', 'placeholder' => 'Password', 'required' => 'required')) }}
+                                                    <br>                
+                                                     {{ Form::password('pass2', array('class' => 'form-control', 'placeholder' => 'Confirm   Password', 'required' => 'required')) }}
+                                                    <br>                          
+                                                </div>
+                                                    <br/>
+                                          
+                                                <div class="col-xs-12 col-md-6 col-md-offset-3 ">
+                                                {{ Form::submit('Sign Up',  array('class' => 'btn btn-md btn-primary btn-block')) }}
+                                                {{ Form::close() }}
+                                                </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                </div>
                             </center>
                         </div>
                     </div>
@@ -26,14 +74,42 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
                 <h2>About Money Carousel</h2>
+                <br><br><br>
             </div>
         </div>
+        <!-- Button trigger firstModal -->
+        <div class="col-lg-4">
+            <button class="btn btn-danger btn-lg" data-toggle="modal" data-target="#modal1">
+              What Is Money Carousel?
+            </button>
+            <br>
+            <br>
+        </div>
+        <!-- Button trigger secondModal -->
+        <div class="col-lg-4">
+            <button class="btn btn-danger btn-lg" data-toggle="modal" data-target="#modal2">
+              How It Works
+            </button>
+            <br>
+            <br>
+        </div>
+
+        <!-- Button trigger thirdModal -->
+        <div class="col-lg-4">
+            <button class="btn btn-danger btn-lg" data-toggle="modal" data-target="#modal3">
+              What’s the advantage?
+            </button>
+            <br>
+            <br>
+        </div>    
+    </section>
 
 
-        <!-- Button trigger modal -->
-        <button class="btn btn-danger btn-lg" data-toggle="modal" data-target="#modal1">
-          What Is Money Carousel?
-        </button>
+
+
+
+
+
 
         <!-- First Modal -->
         <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -57,10 +133,6 @@
             </div>
         </div>
 
-        <!-- Button trigger modal -->
-        <button class="btn btn-danger btn-lg" data-toggle="modal" data-target="#modal2">
-          How It Works
-        </button>
 
         <!-- Second Modal -->
         <div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -84,11 +156,6 @@
                
 
 
-        <!-- Button trigger modal -->
-        <button class="btn btn-danger btn-lg" data-toggle="modal" data-target="#modal3">
-          What’s the advantage?
-        </button>
-
         <!-- Third Modal -->
         <div class="modal fade" id="modal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog">
@@ -110,45 +177,9 @@
                 </div>
             </div>
         </div>
-    </section>
 
+        
 
-    <section id="Join" class="container-fluid">    
-        <div class="Join-section">        
-            <div class="row">               
-                <div class="col-xs-12 col-sm-6 col-md-offset-3 well well-lg">
-                    <h1 data-icon="a"></h1>
-                        <legend>Sign up!</legend>
-                            {{ Form::open(array('action' => 'UserController@store', 'class' => 'form')) }}   
-                    <div class="row">
-                        <div class="col-xs-6 col-md-6">
-                            {{ Form::text('first_name', null, array('class' => 'form-control', 'placeholder' => 'First Name', 'required' => 'required')) }}        
-                        </div>
-                        <div class="col-xs-6 col-md-6">
-                            {{ Form::text('last_name', null, array('class' => 'form-control', 'placeholder' => 'Last Name', 'required' => 'required')) }}
-                        </div>
-                    </div>
-                        <br>
-                    <div class="col-xs-12 col-md-12">
-                        {{ Form::text('email1', null, array('class' => 'form-control', 'placeholder' => 'Your Email', 'required' => 'required')) }}
-                        <br>               
-                        {{ Form::text('email2', null, array('class' => 'form-control', 'placeholder' => 'Confirm Email address', 'required' => 'required')) }}
-                        <br>               
-                        {{ Form::password('pass1', array('class' => 'form-control', 'placeholder' => 'Password', 'required' => 'required')) }}
-                        <br>                
-                         {{ Form::password('pass2', array('class' => 'form-control', 'placeholder' => 'Confirm   Password', 'required' => 'required')) }}
-                        <br>                          
-                    </div>
-                        <br/>
-              
-                    <div class="col-xs-12 col-md-6 col-md-offset-3 ">
-                    {{ Form::submit('Sign Up',  array('class' => 'btn btn-md btn-primary btn-block')) }}
-                    {{ Form::close() }}
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
 
     <section id="contact" class="container content-section text-center">
