@@ -29,16 +29,34 @@
 		$pivot->tanda_id = $newTanda->id;
 		$pivot->save();
 
-		return Redirect::action('TandaController@show', $newTanda->id);
+		return Redirect::action('UserController@show', Auth::user()->id);
 
 	}
 
-	public function show($id) {
+	// public function show($id) {
 
-		$tanda = Tanda::find($id);
+	// 	$tanda = Tanda::find($id);
 
-		return View::make('tanda.tanda')->with('tanda', $tanda);
+	// 	return View::make('tanda.tanda')->with('tanda', $tanda);
 
+	// }
+
+	public function update($id) {
+
+		$pivot = new Pivot;
+		$pivot->user_id = Auth::user()->id;
+		$pivot->tanda_id = $id;
+		$pivot->save();
+
+		$tanda = Tanda::with('users')->find($id);
+		if (count($tanda->users) == $tanda->user_num) {
+			$tanda->begun = true;
+			date_default_timezone_set('CST');
+			$tanda->began_at = date('Y-m-d H:i:s');
+			$tanda->save();
+		}
+
+		return Redirect::back();
 	}
 
 	public function destroy($id) {

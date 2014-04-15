@@ -14,7 +14,7 @@ class CreateTandasTable extends Migration {
 	{
 		Schema::create('tandas', function($table) {
 			$table->increments('id');
-			$table->string('title', 200);
+			$table->string('title', 200)->unique();
 			$table->tinyInteger('user_num')->unsigned();
 
 			// 1 = weekly, 2 = monthly
@@ -23,6 +23,9 @@ class CreateTandasTable extends Migration {
 			$table->double('pay_per_user', 7, 2)->unsigned();
 			$table->double('payout', 8, 2)->unsigned();
 			$table->timestamps();
+			$table->boolean('begun')->default(false);
+			$table->timestamp('began_at')->nullable()->default(null);
+			$table->timestamp('finished_at')->nullable()->default(null);
 		});
 	}
 
