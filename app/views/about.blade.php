@@ -4,14 +4,21 @@
 
 	<style type="text/css">
 
-		#accordion p{
+		#accordion p h1{
 			color:#000;
+            font-family: 'Candal', sans-serif;
 		}
 
 		#about{
 			padding-top: 120px;
 			color:#000;
 		}
+
+        .panel-body{
+            text-align: justify;
+        }
+
+        
 
 	</style>
 
@@ -22,11 +29,16 @@
   <section id="about" class="container content-section text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
-                <h2>Frequently Asked Questions</h2>
+                <h1>Frequently Asked Questions</h1>
             </div>
         </div>
+        <br>
+        <br>
+        <br>
 
-
+<br>
+<br>
+<br>
         <div class="panel-group" id="accordion">
             <div class="panel panel-default">
                 <div class="panel-heading">
@@ -43,7 +55,9 @@
             </div>  
         </div>
 
-
+<br>
+<br>
+<br>
         <div class="panel-group" id="accordion">
             <div class="panel panel-default">
                 <div class="panel-heading">
@@ -60,7 +74,9 @@
             </div>
         </div>
 
-
+<br>
+<br>
+<br>
         <div class="panel-group" id="accordion">
             <div class="panel panel-default">
                 <div class="panel-heading">
@@ -70,6 +86,7 @@
                         </a>
                     </h4>
                 </div>
+
             <div id="collapse3" class="panel-collapse collapse out">
                 <div class="panel-body">
                     <p>Awesome answer here!</p>
@@ -77,6 +94,9 @@
             </div>  
         </div>
 
+<br>
+<br>
+<br>
 
         <div class="panel-group" id="accordion">
             <div class="panel panel-default">
@@ -87,49 +107,16 @@
                         </a>
                     </h4>
                 </div>
+               
             <div id="collapse4" class="panel-collapse collapse out">
                 <div class="panel-body">
                     <p>Awesome answer here!</p>
                 </div>
             </div>  
         </div>
-        <div class="panel-group" id="accordion">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4 class="panel-title">
-                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">
-                            Question 5
-                        </a>
-                    </h4>
-                </div>
-            <div id="collapse5" class="panel-collapse collapse out">
-                <div class="panel-body">
-                    <p>Awesome answer here!</p>
-                </div>
-            </div>  
-        </div>
-
-
-        <div class="panel-group" id="accordion">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4 class="panel-title">
-                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse6">
-                            Question 6
-                        </a>
-                    </h4>
-                </div>
-            <div id="collapse6" class="panel-collapse collapse out">
-                <div class="panel-body">
-                    <p>Awesome answer here!</p>
-                </div>
-            </div>  
-        </div>
-
-
-        
-
     </section>
-
+<br>
+<br>
+<br>
 
 @stop
