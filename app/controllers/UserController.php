@@ -48,7 +48,7 @@
 
 	public function show($id) {
 
-		$user = User::find($id);
+		$user = User::with('tandas')->find($id);
 
 		if ($user->user_role == 1) {
 			$userList = User::with('tandas')->get();
@@ -64,13 +64,13 @@
 			return View::make('user.admin')->with($data);
 		}
 
-		$tanda_table_check = DB::table('tandas')->get();
+		$tandaList = Tanda::with('users')->get();
 
 		$records = DB::table('payment')->where('user_id', '=', $id)->get();
 
 		$data = array(
 			'user' => $user,
-			'tandas' => $tanda_table_check,
+			'tandaList' => $tandaList,
 			'records' => $records
 		);
 
