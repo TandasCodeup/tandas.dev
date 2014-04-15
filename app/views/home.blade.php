@@ -76,8 +76,7 @@
     <section id="about" class="container content-section text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
-                <h2>About Money Carousel</h2>
-                <br><br><br>
+                <h1>About Money Carousel</h1>
             </div>
         </div>
         <!-- Button trigger firstModal -->
@@ -188,7 +187,7 @@
     <section id="contact" class="container content-section text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
-                <h2>Contact Tandas team</h2>
+                <h1>Contact Money Carousel team</h1>
                 <p>Feel free to email us to provide some feedback on our website, give us suggestions for new features or improvements, or to just say hello!</p>
                 <h3><a href="mailto:contact@moneycarousel.us">contact@moneycarousel.us</a></h3> 
                 <ul class="list-inline banner-social-buttons">

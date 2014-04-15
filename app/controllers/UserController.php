@@ -48,15 +48,29 @@
 
 	public function show($id) {
 
-		$user = User::find($id);
+		$user = User::with('tandas')->find($id);
 
-		$tanda_table_check = DB::table('tandas')->get();
+		if ($user->user_role == 1) {
+			$userList = User::with('tandas')->get();
+			$userPages = User::paginate(7);
+			$tandaList = Tanda::with('users')->get();
+			$tandaPages = Tanda::paginate(7);
+			$data = array(
+				'userList' => $userList,
+				'userPages' => $userPages,
+				'tandaList' => $tandaList,
+				'tandaPages' => $tandaPages
+			);
+			return View::make('user.admin')->with($data);
+		}
+
+		$tandaList = Tanda::with('users')->get();
 
 		$records = DB::table('payment')->where('user_id', '=', $id)->get();
 
 		$data = array(
 			'user' => $user,
-			'tandas' => $tanda_table_check,
+			'tandaList' => $tandaList,
 			'records' => $records
 		);
 
