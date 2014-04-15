@@ -1,8 +1,7 @@
 @extends('layouts.master')
 
 
-<<<<<<< HEAD
-=======
+
 	<style type="text/css">
 
 		#accordion p h1{
@@ -24,7 +23,7 @@
 	</style>
 
 @stop
->>>>>>> master
+
 
 @section('content')
 
@@ -112,19 +111,17 @@
                
             <div id="collapse4" class="panel-collapse collapse out">
                 <div class="panel-body">
-<<<<<<< HEAD
+
                     <p>No. It’s your money and likely comes from income that’s already being taxed. </p>
                 </div>
             </div>  
         </div>
         
 
-=======
-                    <p>Awesome answer here!</p>
                 </div>
             </div>  
         </div>
->>>>>>> master
+
     </section>
 <br>
 <br>

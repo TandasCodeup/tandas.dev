@@ -9,16 +9,16 @@
                     <div class="col-md-6">
                         <img border="0" src="/assets/img/recycling.png" alt="recycle">
                         <h1 class="brand-heading">Money Carousel</h1>
-<<<<<<< HEAD
+
 
                         
 
                         <p class="heading"><strong>What goes around comes around.</strong> A trust-based lending circle where everyone saves, and when it’s their turn, gets paid.</p>
 
-=======
+
                         <br>
-                        <p class="heading"><strong>What goes around comes around</strong><br>A trust-based lending circle where everyone saves, and when it’s their turn, gets paid.</p>
->>>>>>> master
+                        
+
                         <div class="page-scroll">
                             <center>
                                 <button type="button" class="btn btn-default btn-lg" class="page-scroll">

@@ -42,7 +42,7 @@ p {
 }
 
 a {
-    color: #8179C9;
+    color: blue;
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
@@ -51,7 +51,7 @@ a {
 a:hover,
 a:focus {
     text-decoration: none;
-    color: #F1F1F1;
+    color: #7A9A95;
 }
 
 
@@ -71,17 +71,15 @@ display: none;
 
 
 
-.navbarTitle {
-    
-    font-style: bold;
-    color: #8179C9;
+.light {
+    font-weight: 200;
 }
 
 .navbar {
     margin-bottom: 0;
     border-bottom: 1px solid rgba(255,255,255,.3);
     text-transform: uppercase;
-    font-family: 'Open Sans', sans-serif;
+    font-family: Open Sans,"Helvetica Neue",Helvetica,Arial,sans-serif;
     background-color: #000;
 }
 
@@ -183,23 +181,19 @@ display: none;
     background-image:url("/assets/img/womanSavings.jpeg");
     background-size: 650px 697px;
     background-repeat: no-repeat;
-    background-position:right bottom;
-   /* -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;*/
+    background-position:right top;
+   
 }
 
 .intro-body {
     display: table-cell;
-    vertical-align: top;
+    vertical-align: middle;
     
 }
 
 .brand-heading {
-    font-family: 'Poiret One', sans-serif;
-    font-weight: bold;
-    color: #25881B;
+    font-family: 'Candal', sans-serif;
+    color: darkgray;
     position: relative;
     float: left;
 }
@@ -217,7 +211,7 @@ display: none;
     }
 
     .brand-heading {
-        font-size: 90px;
+        font-size: 100px;
     }
 
     .intro-text {
@@ -355,7 +349,7 @@ display: none;
 
 .btn {
     text-transform: uppercase;
-    font-family: 'Open Sans',Helvetica,Arial,sans-serif;
+    font-family: Open Sans,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 200;
     -webkit-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
@@ -364,7 +358,7 @@ display: none;
 
 .btn-default {
     border: 1px dash #000;
-    color: #8179C9;
+    color: #3F2860;
     background-color: transparent;
 }
 
@@ -514,19 +508,5 @@ body {
     color: #000;
 
 }
-
-
-/*modals*/
-
-.modal-body {
-
-    text-align: justify;
-}
-
-.modal-title {
-
-    text-align: center;
-}
-
 
 
