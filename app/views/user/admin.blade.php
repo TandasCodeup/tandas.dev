@@ -217,11 +217,11 @@
 								<strong>{{{ $tanda->title }}}</strong>
 								<span class="text-muted">Number of Users: {{{ count($tanda->users) }}} / {{{ $tanda->user_num }}} | Created: {{{ $tanda->created_at }}}</span>
 							</div>
-							<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 dropdown-user" data-for=".{{{ $tanda->id }}}">
+							<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 dropdown-user" data-for=".tanda{{{ $tanda->id }}}">
 								<i class="glyphicon glyphicon-chevron-down text-muted"></i>
 							</div>
 						</div>
-						<div class="row col-sm-8 user-infos {{{ $tanda->id }}}">
+						<div class="row col-sm-8 user-infos tanda{{{ $tanda->id }}}">
 							<div class="row">
 								<div class="col-sm-6"><small>PAY PER USER</small><br><b>${{{ $tanda->pay_per_user }}}</b></div>
 								<div class="col-sm-6"><small>PAYOUT</small><br><b>${{{ $tanda->payout }}}</b></div>
@@ -308,8 +308,7 @@
 													</div>
 													<div class="panel-footer">
 														<span class="pull-right">
-															<button class="btn btn-sm btn-warning" type="button" data-toggle="tooltip" data-original-title="Edit this user"><i class="glyphicon glyphicon-edit"></i></button>
-															<button class="btn btn-sm btn-danger" type="button" data-toggle="tooltip" data-original-title="Remove this user"><i class="glyphicon glyphicon-remove"></i></button>
+															<button href="{{{ action('UserController@destroy', $user->id) }}}" class="btn btn-sm btn-danger" type="button" data-toggle="tooltip" data-original-title="Remove this user"><i class="glyphicon glyphicon-remove"></i></button>
 														</span>
 													</div>
 												</div>
@@ -319,6 +318,7 @@
 								</div>
 							</ul>
 						</div>
+						<div class="row"></div>
 					@endforeach
 				</div>
 			</div>
@@ -411,8 +411,7 @@
 									</div>
 									<div class="panel-footer">
 										<span class="pull-right">
-											<button class="btn btn-sm btn-warning" type="button" data-toggle="tooltip" data-original-title="Edit this user"><i class="glyphicon glyphicon-edit"></i></button>
-											<button class="btn btn-sm btn-danger" type="button" data-toggle="tooltip" data-original-title="Remove this user"><i class="glyphicon glyphicon-remove"></i></button>
+											<button href="{{{ action('UserController@destroy', $user->id) }}}" class="btn btn-sm btn-danger" type="button" data-toggle="tooltip" data-original-title="Remove this user"><i class="glyphicon glyphicon-remove"></i></button>
 										</span>
 									</div>
 								</div>
