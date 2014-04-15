@@ -1,17 +1,46 @@
 @extends('layouts.master')
 
 
+<<<<<<< HEAD
+=======
+	<style type="text/css">
+
+		#accordion p h1{
+			color:#000;
+            font-family: 'Candal', sans-serif;
+		}
+
+		#about{
+			padding-top: 120px;
+			color:#000;
+		}
+
+        .panel-body{
+            text-align: justify;
+        }
+
+        
+
+	</style>
+
+@stop
+>>>>>>> master
 
 @section('content')
 
   <section id="about" class="container content-section text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
-                <h2>Frequently Asked Questions</h2>
+                <h1>Frequently Asked Questions</h1>
             </div>
         </div>
+        <br>
+        <br>
+        <br>
 
-
+<br>
+<br>
+<br>
         <div class="panel-group" id="accordion">
             <div class="panel panel-default">
                 <div class="panel-heading">
@@ -28,7 +57,9 @@
             </div>  
         </div>
 
-
+<br>
+<br>
+<br>
         <div class="panel-group" id="accordion">
             <div class="panel panel-default">
                 <div class="panel-heading">
@@ -45,7 +76,9 @@
             </div>
         </div>
 
-
+<br>
+<br>
+<br>
         <div class="panel-group" id="accordion">
             <div class="panel panel-default">
                 <div class="panel-heading">
@@ -55,6 +88,7 @@
                         </a>
                     </h4>
                 </div>
+
             <div id="collapse3" class="panel-collapse collapse out">
                 <div class="panel-body">
                     <p>Money Carousel is free for users.</p>
@@ -62,6 +96,9 @@
             </div>  
         </div>
 
+<br>
+<br>
+<br>
 
         <div class="panel-group" id="accordion">
             <div class="panel panel-default">
@@ -72,15 +109,25 @@
                         </a>
                     </h4>
                 </div>
+               
             <div id="collapse4" class="panel-collapse collapse out">
                 <div class="panel-body">
+<<<<<<< HEAD
                     <p>No. It’s your money and likely comes from income that’s already being taxed. </p>
                 </div>
             </div>  
         </div>
         
 
+=======
+                    <p>Awesome answer here!</p>
+                </div>
+            </div>  
+        </div>
+>>>>>>> master
     </section>
-
+<br>
+<br>
+<br>
 
 @stop
