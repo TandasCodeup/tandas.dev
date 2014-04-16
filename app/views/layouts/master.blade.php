@@ -56,13 +56,14 @@
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
+                    
+                    @yield('contact')
+
                     <li>
                         <a href="{{{ action('HomeController@showAbout') }}}">FAQ</a>
                     </li>
-                    <li class="page-scroll">
-                        <a href="#contact">Contact</a>
-                    </li>
-                     @if (Auth::check())
+
+                    @if (Auth::check())
                     <li>
                         <a href="{{{ action('UserController@show', Auth::user()->id) }}}">Dashboard</a>
                     </li>                                
