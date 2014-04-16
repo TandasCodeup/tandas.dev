@@ -20,7 +20,13 @@
 		$newTanda->title = Input::get('title');
 		$newTanda->user_num = Input::get('user_num');
 		$newTanda->time_period = 2;
-		$newTanda->payout = Input::get('payout');
+		$payout = str_split(Input::get('payout'));
+		if ($payout[0] == '$') {
+			unset($payout[0]);
+			$newTanda->payout = implode($payout);
+		} else {
+			$newTanda->payout = Input::get('payout');
+		}
 		$newTanda->pay_per_user = $newTanda->payout / $newTanda->user_num;
 		$newTanda->save();
 
