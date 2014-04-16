@@ -20,7 +20,7 @@ h4,
 h5,
 h6 {
     margin: 0 0 35px;
-    text-transform: uppercase;
+    text-transform: capitalize;
     font-family: Open Sans, sans-serif;
     font-weight: 500;
     letter-spacing: 1px;
@@ -99,18 +99,13 @@ display: none;
 }
 
 .navbar-custom label  {
-    color: #fff;
+    font-family: 'Lato', sans-serif;
+    color: #000;
     text-align: center;
-    font-size: 12px;
+    font-weight: 200;
     
 }
 
-#fg {
-
-    color: #fff;
-    text-align: center;
-    font-size: 12px;
-}
 
 
 .navbar-custom 
@@ -122,10 +117,9 @@ display: none;
 }
 
 .navbar-custom .nav li a:hover,
-.navbar-custom .nav li a:focus,
-.navbar-custom .nav li.active {
+.navbar-custom .nav li a:focus {
     outline: 0;
-    background-color: #f9f9f9;
+    background-color: #f3f3f3;
 }
 
 .navbar-toggle {
@@ -181,14 +175,14 @@ display: none;
     margin-top: 100px;
     background-color: transparent;
     background-image:url("/assets/img/womanSavings.jpeg");
-    background-size: 650px 697px;
+    background-size: 500px;
     background-repeat: no-repeat;
     background-position:right top;
 }
 
 .intro-body {
     display: table-cell;
-    vertical-align: middle;
+    vertical-align: top;
     
 }
 
@@ -198,6 +192,7 @@ display: none;
     color: #25881B;
     position: relative;
     float: left;
+
 }
 
 .intro-text {
@@ -213,7 +208,7 @@ display: none;
     }
 
     .brand-heading {
-        font-size: 90px;
+        font-size: 80px;
     }
 
     .intro-text {
@@ -250,6 +245,7 @@ display: none;
 }
 
 #about {
+    padding-top: 100px;
     padding-bottom: 130px;
 }
 
@@ -501,18 +497,6 @@ body {
 }
 
 
-
-#footer {
-  position: relative;
-  text-align: center;
-  bottom: 0;
-  width: 100%;
-  /* Set the fixed height of the footer here */
-  height: 280px;
- 
-    
-}
-
 .well {
     background-color: #f7f7f7;
 }
@@ -522,6 +506,7 @@ body {
     color: #000;
 
 }
+
 
 
 /*modals*/
@@ -535,6 +520,5 @@ body {
 
     text-align: center;
 }
-
 
 

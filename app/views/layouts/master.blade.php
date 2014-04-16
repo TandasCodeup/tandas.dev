@@ -74,7 +74,7 @@
                     </li> 
                     @else
                     <li class="page-scroll">
-                        <a href="" data-toggle="modal" data-target="#signUpModal">Join</a>
+                        <a  data-toggle="modal" data-target="#signUpModal">Join</a>
                     </li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign In <strong class="caret"></strong></a>
@@ -85,12 +85,12 @@
                             <br>
                             {{ Form::password('password', array('class' => 'form-control', 'placeholder' => 'Password', 'required' => 'required')) }}
                             <br>
-                            <center></center>enter<label>{{ Form::checkbox('name', 'value', 'true') }} Remember Me</label></center>
+                            <center>{{ Form::checkbox('name', 'value', 'true') }}<label>&nbsp;&nbsp;Remember me</label></center>
                             <br>
                             {{ Form::submit('Login',  array('class' => 'btn btn-sm btn-info btn-block')) }}
                             {{ Form::close() }}
                             <br>
-                            <center><a id= "fg" href="#">Forgot password?</a></center>                 
+                                           
                         </ul>
                     </li>
                     @endif

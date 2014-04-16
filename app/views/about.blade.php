@@ -18,7 +18,14 @@
             text-align: justify;
         }
 
-        
+        #panel-title:hover{
+            color: #000;
+        }
+
+        a:hover.accordion-title {
+            color: #7A9A95;
+        }
+
 
 	</style>
 
@@ -32,18 +39,12 @@
                 <h1>Frequently Asked Questions</h1>
             </div>
         </div>
-        <br>
-        <br>
-        <br>
-
-<br>
-<br>
-<br>
-        <div class="panel-group" id="accordion">
-            <div class="panel panel-default">
+        <br>    
+        <div class="col-lg-8 col-lg-offset-2 panel-group" id="accordion">
+            <div class="panel panel-info">
                 <div class="panel-heading">
                     <h4 class="panel-title">
-                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                        <a class="accordion-title" data-toggle="collapse" data-parent="#accordion" href="#collapse1">
                         What if someone drops out of the group or doesn’t pay their share?
                         </a>
                     </h4>
@@ -57,12 +58,11 @@
 
 <br>
 <br>
-<br>
         <div class="panel-group" id="accordion">
-            <div class="panel panel-default">
+            <div class="panel panel-info">
                 <div class="panel-heading">
                     <h4 class="panel-title">
-                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+                        <a class="accordion-title" data-toggle="collapse" data-parent="#accordion" href="#collapse2">
                         How does the group decide who gets the money when? 
                         </a>
                     </h4>
@@ -76,12 +76,11 @@
 
 <br>
 <br>
-<br>
         <div class="panel-group" id="accordion">
-            <div class="panel panel-default">
+            <div class="panel panel-info">
                 <div class="panel-heading">
                     <h4 class="panel-title">
-                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+                        <a class="accordion-title" data-toggle="collapse" data-parent="#accordion" href="#collapse3">
                             Question 3
                         </a>
                     </h4>
@@ -96,13 +95,11 @@
 
 <br>
 <br>
-<br>
-
         <div class="panel-group" id="accordion">
-            <div class="panel panel-default">
+            <div class="panel panel-info">
                 <div class="panel-heading">
                     <h4 class="panel-title">
-                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">
+                        <a class="accordion-title" data-toggle="collapse" data-parent="#accordion" href="#collapse4">
                             Question 4
                         </a>
                     </h4>
