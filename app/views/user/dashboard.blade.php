@@ -162,16 +162,18 @@
 @stop
 
 @section('content')
-
+    <!-- Page Container -->
     <div class="container">
         <div class="row well">
             <div class="col-md-12">
                 <div class="panel back">
                     <img class="pic img-circle" src="http://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/twDq00QDud4/s120-c/photo.jpg" alt="...">
-                    <div class="name"><small>User Dashboard for {{{ Auth::user()->first_name }}} {{{ Auth::user()->last_name }}}</small></div>   
+                    <div class="name"><small>User Dashboard for {{{ Auth::user()->first_name }}} {{{ Auth::user()->last_name }}}</small></div>  
                 </div>
                 <br>
-                <br>     
+                <br>
+
+                <!-- Panel Row -->
                 <div class="row">
 
                     <!-- First Panel -->
@@ -204,7 +206,7 @@
                                 <i data-icon="d"></i>
                             </div>
                             <div class="text">
-                                <var>{{{ count($user->tandas )}}}</var>
+                                <var>{{{ count($user->tandas) }}}</var>
                                 <label class="text-muted">Your Active Carousels</label>
                             </div>
                             <br>
@@ -230,79 +232,14 @@
                                 <label class="text-muted">Payment Due</label>
                             </div>
                             <div class="row">
-                                <a href="javascript:;" class="btn btn-default btn-md" data-toggle="modal" data-target="#payModal"><i class="glyphicon glyphicon-search"></i> Make Payment</a>
-                                <div class="modal fade" id="payModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog modal-lg">
-                            <div class="modal-content">
-                              <div class="modal-header">                          
-                                <div class="container">
-                                  <div class="row">
-                                      <div class="col-xs-12 col-md-9">
-                                          <div class="panel panel-default">
-                                              <div class="panel-heading">
-                                                  <h3 class="panel-title">
-                                                      Payment Details
-                                                  </h3>
-                                                  <div class="checkbox pull-right">
-                                                      <label>
-                                                          <input type="checkbox" />
-                                                          Remember
-                                                      </label>
-                                                  </div>
-                                              </div>
-                                              <div class="panel-body">
-                                                  <form role="form">
-                                                  <div class="form-group">
-                                                      <label for="cardNumber">
-                                                          CARD NUMBER</label>
-                                                      <div class="input-group">
-                                                          <input type="text" class="form-control" id="cardNumber" placeholder="Valid Card Number"
-                                                              required autofocus />
-                                                          <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-                                                      </div>
-                                                  </div>
-                                                  <div class="row">
-                                                      <div class="col-xs-6 col-md-4">
-                                                          <div class="form-group">
-                                                              <label for="expityMonth">
-                                                                  EXPIRY DATE</label>
-                                                             
-                                                                  <input type="text" class="form-control" id="expityMonth" placeholder="MM" required />
-                                                        
-                                                                  <input type="text" class="form-control" id="expityYear" placeholder="YY" required />
-                                                          </div>
-                                                      </div>
-                                                      <div class="col-xs-5 col-md-5 pull-right">
-                                                          <div class="form-group">
-                                                              <label for="cvCode">
-                                                                  CV CODE</label>
-                                                              <input type="password" class="form-control" id="cvCode" placeholder="CV" required />
-                                                          </div>
-                                                      </div>
-                                                  </div>
-                                                  </form>
-                                              </div>
-                                          </div>
-          
-                                          <br/>
-                                          <div class="col-xs-6 col-md-12">
-                                          <center><a href="http://www.jquery2dotnet.com" class="btn btn-success btn-lg btn-block" role="button">Pay</a></center>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-    
-                              </div>
+                                <button class="btn btn-default btn-md" data-toggle="modal" data-target="#payModal"><i class="glyphicon glyphicon-search"></i> Make Payment</button>
                             </div>
-                         </div>
-                        </div>
-                </div>
-          </div>
-            
+                        </div>  
+                    </div>
+                </div> <!-- End panel row -->
+            </div>
         </div>
-      </div>         
-      </div>
-    </div>
+    </div> <!-- End page container -->
     
     <!-- Create Carousel Modal -->
     <div class="modal fade bs-example-modal-lg" id="createTandaModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -317,7 +254,7 @@
                         <br>               
                         <center><label>{{ Form::select('user_num', array('5' => '5', '10' => '10')) }} Carousel members</label></center>
                         <br>              
-                        {{ Form::text('payout', null, array('class' => 'form-control', 'placeholder' => 'User Payout', 'required' => 'required')) }}
+                        {{ Form::text('payout', null, array('class' => 'form-control', 'placeholder' => 'Monthly Payout', 'required' => 'required')) }}
                         <br>
                         <div class="col-xs-12 col-md-6 col-md-offset-3 ">
                             {{ Form::submit('Create Carousel',  array('class' => 'btn btn-md btn-primary btn-block')) }}
@@ -362,8 +299,8 @@
                                 <div class="col-sm-3"><small>PAY PER USER</small><br><b>${{{ $tanda->pay_per_user }}}</b></div>
                                 <div class="col-sm-2"><small>PAYOUT</small><br><b>${{{ $tanda->payout }}}</b></div>
                                 <? $isIn = false; ?>
-                                @foreach ($tanda->users as $user)
-                                    @if ($user->id == Auth::user()->id)
+                                @foreach ($tanda->users as $theUser)
+                                    @if ($theUser->id == Auth::user()->id)
                                         <? $isIn = true;
                                         break; ?>
                                     @endif
@@ -381,20 +318,20 @@
                             <br>
                             <ul class="thumbnails">
                                 <div class="caption">
-                                    @foreach ($tanda->users as $user)
+                                    @foreach ($tanda->users as $theUser)
                                         <div class="row user-row">
                                             <div class="col-xs-3 col-sm-2 col-md-1 col-lg-1">
                                                 <img class="img-circle" src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=50" alt="User Pic">
                                             </div>
                                             <div class="col-xs-8 col-sm-9 col-md-10 col-lg-10">
-                                                <strong>{{{ $user->email }}}</strong>
-                                                <span class="text-muted">Trust Rating: {{{ $user->trust_rate }}}</span>
+                                                <strong>{{{ $theUser->email }}}</strong>
+                                                <span class="text-muted">Trust Rating: {{{ $theUser->trust_rate }}}</span>
                                             </div>
-                                            <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 dropdown-user" data-for=".{{{ $user->id }}}">
+                                            <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 dropdown-user" data-for=".{{{ $theUser->id }}}">
                                                 <i class="glyphicon glyphicon-chevron-down text-muted"></i>
                                             </div>
                                         </div>
-                                        <div class="row user-infos {{{ $user->id }}}">
+                                        <div class="row user-infos {{{ $theUser->id }}}">
                                             <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 col-xs-offset-0 col-sm-offset-0 col-md-offset-1 col-lg-offset-1">
                                                 <div class="panel panel-primary">
                                                     <div class="panel-heading">
@@ -406,32 +343,32 @@
                                                                 <img class="img-circle" src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=100" alt="User Pic">
                                                             </div>
                                                             <div class="col-xs-10 col-sm-10 hidden-md hidden-lg">
-                                                                <strong>{{{ $user->first_name }}}</strong>
+                                                                <strong>{{{ $theUser->first_name }}}</strong>
                                                                 <br>
                                                                 <dl>
                                                                     <dt>Registered Since:</dt>
-                                                                        <dd>{{{ $user->created_at }}}</dd>
+                                                                        <dd>{{{ $theUser->created_at }}}</dd>
                                                                     <dt>Carousels:</dt>
-                                                                        <dd>{{{ count($user->tandas )}}}</dd>
+                                                                        <dd>{{{ count($theUser->tandas )}}}</dd>
                                                                     <dt>Trust Rating:</dt>
-                                                                        <dd>{{{ $user->trust_rate }}}</dd>
+                                                                        <dd>{{{ $theUser->trust_rate }}}</dd>
                                                                 </dl>
                                                             </div>
                                                             <div class="col-md-9 col-lg-9 hidden-xs hidden-sm">
-                                                                <strong>{{{ $user->first_name }}}</strong>
+                                                                <strong>{{{ $theUser->first_name }}}</strong>
                                                                 <table class="table table-user-information">
                                                                     <tbody>
                                                                         <tr>
                                                                             <td>Registered Since:</td>
-                                                                            <td>{{{ $user->created_at }}}</td>
+                                                                            <td>{{{ $theUser->created_at }}}</td>
                                                                         </tr>
                                                                         <tr>
                                                                             <td>Carousels:</td>
-                                                                            <td>{{{ count($user->tandas) }}}</td>
+                                                                            <td>{{{ count($theUser->tandas) }}}</td>
                                                                         </tr>
                                                                         <tr>
                                                                             <td>Trust Rating:</td>
-                                                                            <td>{{{ $user->trust_rate }}}</td>
+                                                                            <td>{{{ $theUser->trust_rate }}}</td>
                                                                         </tr>
                                                                     </tbody>
                                                                 </table>
@@ -459,7 +396,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title" id="myModalLabel">Ongoing Carousels</h4>
+                    <h4 class="modal-title" id="myModalLabel">Your Carousels</h4>
                 </div>
                 <div class="modal-body">
                     @foreach ($user->tandas as $tanda)
@@ -552,45 +489,98 @@
     </div>
     <!-- End View Your Carousels Modal -->
 
+    <div class="modal fade" id="payModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">                          
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12 col-md-9">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">Payment Details</h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        {{ Form::open(array('action' => 'PaymentController@store')) }}
+                                            <div class="form-group">
+                                                <label for="cardNumber">CARD NUMBER</label>
+                                                <div class="input-group">
+                                                    {{ Form::text('cardNumber', null, array('class' => 'form-control', 'id' => 'cardNumber', 'placeholder' => 'Valid Card Number', 'required' => 'required')) }}
+                                                    <span class="input-group-addon">
+                                                        <span class="glyphicon glyphicon-lock"></span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-xs-6 col-md-4">
+                                                    <div class="form-group">
+                                                        <label for="expiryMonth">EXPIRY DATE</label>
+                                                        {{ Form::text('expiryMonth', null, array('class' => 'form-control', 'id' => 'expiryMonth', 'placeholder' => 'MM', 'required' => 'required')) }}
+                                                        {{ Form::text('expiryYear', null, array('class' => 'form-control', 'id' => 'expiryYear', 'placeholder' => 'YY', 'required' => 'required')) }}
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-5 col-md-5 pull-right">
+                                                    <div class="form-group">
+                                                        <label for="cvCode">CV CODE</label>
+                                                        {{ Form::password('cvCode', null, array('class' => 'form-control', 'id' => 'cvCode', 'placeholder' => 'CV', 'required' => 'required')) }}
+                                                        <div class="checkbox">
+                                                            <label>
+                                                                {{ Form::checkbox('remember', 'Remember My Details') }}Remember My Details
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <div class="col-xs-6 col-md-12">
+                                                <center>{{ Form::submit('Pay', array('class' => 'btn btn-success btn-block')) }}</center>
+                                            </div>
+                                        {{ Form::close() }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 @stop
 
 
 @section('bottomscript')
 
-<script type="text/javascript">
-    $(document).ready(function() {
-    var panels = $('.user-infos');
-    var panelsButton = $('.dropdown-user');
-    panels.hide();
+    <script type="text/javascript">
 
-    //Click dropdown
-    panelsButton.click(function() {
-        //get data-for attribute
-        var dataFor = $(this).attr('data-for');
-        var idFor = $(dataFor);
-
-        //current button
-        var currentButton = $(this);
-        idFor.slideToggle(400, function() {
-            //Completed slidetoggle
-            if(idFor.is(':visible'))
-            {
-                currentButton.html('<i class="glyphicon glyphicon-chevron-up text-muted"></i>');
-            }
-            else
-            {
-                currentButton.html('<i class="glyphicon glyphicon-chevron-down text-muted"></i>');
-            }
-        })
-    });
-
-
-    $('[data-toggle="tooltip"]').tooltip();
-
+        $(document).ready(function() {
+            var panels = $('.user-infos');
+            var panelsButton = $('.dropdown-user');
+            panels.hide();
+        
+            //Click dropdown
+            panelsButton.click(function() {
+                //get data-for attribute
+                var dataFor = $(this).attr('data-for');
+                var idFor = $(dataFor);
+        
+                //current button
+                var currentButton = $(this);
+                idFor.slideToggle(400, function() {
+                    //Completed slidetoggle
+                    if(idFor.is(':visible'))
+                    {
+                        currentButton.html('<i class="glyphicon glyphicon-chevron-up text-muted"></i>');
+                    }
+                    else
+                    {
+                        currentButton.html('<i class="glyphicon glyphicon-chevron-down text-muted"></i>');
+                    }
+                })
+            });
+            $('[data-toggle="tooltip"]').tooltip();
+        });
     
-});
-
-</script>
+    </script>
 
 @stop
-

@@ -48,33 +48,41 @@
 
 	public function show($id) {
 
-		$user = User::with('tandas')->find($id);
+		if (Auth::user()->id == $id || Auth::user()->user_role == 1) {
 
-		if ($user->user_role == 1) {
-			$userList = User::with('tandas')->get();
-			$userPages = User::paginate(7);
+			$user = User::with('tandas')->find($id);
+
+			if ($user->user_role == 1) {
+				$userList = User::with('tandas')->get();
+				$userPages = User::paginate(7);
+				$tandaList = Tanda::with('users')->get();
+				$tandaPages = Tanda::paginate(7);
+				$data = array(
+					'userList' => $userList,
+					'userPages' => $userPages,
+					'tandaList' => $tandaList,
+					'tandaPages' => $tandaPages
+				);
+				return View::make('user.admin')->with($data);
+			}
+
 			$tandaList = Tanda::with('users')->get();
-			$tandaPages = Tanda::paginate(7);
+
+			$records = DB::table('payment')->where('user_id', '=', $id)->get();
+
 			$data = array(
-				'userList' => $userList,
-				'userPages' => $userPages,
+				'user' => $user,
 				'tandaList' => $tandaList,
-				'tandaPages' => $tandaPages
+				'records' => $records
 			);
-			return View::make('user.admin')->with($data);
+
+			return View::make('user.dashboard')->with($data);
+
+		} else {
+
+			return Redirect::action('HomeController@showHome');
 		}
 
-		$tandaList = Tanda::with('users')->get();
-
-		$records = DB::table('payment')->where('user_id', '=', $id)->get();
-
-		$data = array(
-			'user' => $user,
-			'tandaList' => $tandaList,
-			'records' => $records
-		);
-
-		return View::make('user.dashboard')->with($data);
 
 	}
 
