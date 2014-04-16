@@ -7,18 +7,18 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <img border="0" src="/assets/img/recycling.png" alt="recycle">
+                        <img border="0" src="/assets/img/RecycleMoney.jpg" width="200" height="180" alt="recycle">
                         <h1 class="brand-heading">Money Carousel</h1>
                         <br>
                         <p class="heading"><strong>What goes around comes around</strong><br>A trust-based lending circle where everyone saves, and when it’s their turn, gets paid.</p>
                         <div class="page-scroll">
                             <center>
-                                <button type="button" class="btn btn-default btn-lg" class="page-scroll">
-                                    <a href="#about">Learn More About Us</a> 
-                                </button>
+                                <a href="#about" type="button" class="btn btn-warning btn-lg">
+                                    Learn More About Money Carousel
+                                </a>
                             <!-- Button trigger modal -->
-                                <button type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#signUpModal">
-                                  <a href="">Join Now!</a> 
+                                <button href="" type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#signUpModal">
+                                  Join Now! 
                                 </button>
                                 <!-- Modal -->
                                 <div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -73,7 +73,7 @@
         </div>
         <!-- Button trigger firstModal -->
         <div class="col-lg-4">
-            <button class="btn btn-default btn-lg" data-toggle="modal" data-target="#modal1">
+            <button class="btn btn-warning btn-lg" data-toggle="modal" data-target="#modal1">
               What Is Money Carousel?
             </button>
             <br>
@@ -81,7 +81,7 @@
         </div>
         <!-- Button trigger secondModal -->
         <div class="col-lg-4">
-            <button class="btn btn-default btn-lg" data-toggle="modal" data-target="#modal2">
+            <button class="btn btn-warning btn-lg" data-toggle="modal" data-target="#modal2">
               How It Works
             </button>
             <br>
@@ -90,7 +90,7 @@
 
         <!-- Button trigger thirdModal -->
         <div class="col-lg-4">
-            <button class="btn btn-default btn-lg" data-toggle="modal" data-target="#modal3">
+            <button class="btn btn-warning btn-lg" data-toggle="modal" data-target="#modal3">
               What’s the advantage?
             </button>
             <br>
@@ -181,7 +181,7 @@
             <div class="col-lg-8 col-lg-offset-2">
                 <h1>Contact Money Carousel team</h1>
                 <p>Feel free to email us to provide some feedback on our website, give us suggestions for new features or improvements, or to just say hello!</p>
-                <h3><a href="mailto:contact@moneycarousel.us">contact@moneycarousel.us</a></h3> 
+                <h3><button class="btn btn-default btn-lg" href="mailto:contact@moneycarousel.us">contact@moneycarousel.us</button></h3> 
                 <ul class="list-inline banner-social-buttons">
                     <li><a href="https://twitter.com/Tandas" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
                     </li>
