@@ -26,20 +26,38 @@ class HomeController extends BaseController {
 	}
 
 	public function doLogin() {
-		if (Auth::attempt(array('email' => Input::get('email'), 'password' => Input::get('password')))) {
-			// user is logged in
-			// This route is a filler, can be replaced with anything.
-			Session::flash('loginSucc', 'Login successful');
-			return Redirect::action('UserController@show', Auth::user()->id);
-
+		if (Input::get('name') == true) {
+			if (Auth::attempt(array('email' => Input::get('email'), 'password' => Input::get('password')), true)) {
+				// user is logged in
+				// This route is a filler, can be replaced with anything.
+				Session::flash('loginSucc', 'Login successful');
+				return Redirect::action('UserController@show', Auth::user()->id);
+			} else {
+				Session::flash('loginFail', 'Login failed');
+				// user not logged in
+				return Redirect::back()->withInput();
+			}
 		} else {
-			Session::flash('loginFail', 'Login failed');
-			// user not logged in
-			return Redirect::back()->withInput();
+			if (Auth::attempt(array('email' => Input::get('email'), 'password' => Input::get('password')))) {
+				if (isset(Auth::user()->remember_token)) {
+					Auth::user()->remember_token = null;
+				}
+				// user is logged in
+				// This route is a filler, can be replaced with anything.
+				Session::flash('loginSucc', 'Login successful');
+				return Redirect::action('UserController@show', Auth::user()->id);
+			} else {
+				Session::flash('loginFail', 'Login failed');
+				// user not logged in
+				return Redirect::back()->withInput();
+			}
 		}
 	}
 
 	public function logout() {
+		if (isset(Auth::user()->remember_token)) {
+			Auth::user()->remember_token = null;
+		}
 		Auth::logout();
 		return Redirect::action('HomeController@showHome');
 	}
