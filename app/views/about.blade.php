@@ -116,4 +116,43 @@
 <br>
 <br>
 
+
+<!-- Modal -->
+                                <div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                  <div class="modal-dialog">
+                                      <div class="modal-body">
+                                        <div class="col-xs-12 well">
+                                            <h1 class="modal-title"data-icon="a">
+                                                <legend >Sign up!</legend></h1>
+                                                    {{ Form::open(array('action' => 'UserController@store', 'class' => 'form')) }}   
+                                            <div class="row">
+                                                <div class="col-xs-6 col-md-6">
+                                                    {{ Form::text('first_name', null, array('class' => 'form-control', 'placeholder' => 'First Name', 'required' => 'required')) }}        
+                                                </div>
+                                                <div class="col-xs-6 col-md-6">
+                                                    {{ Form::text('last_name', null, array('class' => 'form-control', 'placeholder' => 'Last Name', 'required' => 'required')) }}
+                                                </div>
+                                            </div>
+                                                <br>
+                                            <div class="col-xs-12 col-md-12">
+                                                {{ Form::text('email1', null, array('class' => 'form-control', 'placeholder' => 'Your Email', 'required' => 'required')) }}
+                                                <br>               
+                                                {{ Form::text('email2', null, array('class' => 'form-control', 'placeholder' => 'Confirm Email address', 'required' => 'required')) }}
+                                                <br>               
+                                                {{ Form::password('pass1', array('class' => 'form-control', 'placeholder' => 'Password', 'required' => 'required')) }}
+                                                <br>                
+                                                 {{ Form::password('pass2', array('class' => 'form-control', 'placeholder' => 'Confirm   Password', 'required' => 'required')) }}
+                                                <br>                          
+                                            </div>
+                                                <br/>
+                                      
+                                            <div class="col-xs-12 col-md-6 col-md-offset-3 ">
+                                            {{ Form::submit('Sign Up',  array('class' => 'btn btn-md btn-primary btn-block')) }}
+                                            {{ Form::close() }}
+                                            </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+
 @stop
