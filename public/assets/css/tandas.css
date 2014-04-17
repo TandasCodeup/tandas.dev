@@ -107,7 +107,6 @@ display: none;
 }
 
 
-
 .navbar-custom 
 
 .navbar-custom .nav li a {
@@ -208,7 +207,7 @@ display: none;
     }
 
     .brand-heading {
-        font-size: 80px;
+        font-size: 70px;
     }
 
     .intro-text {
@@ -498,8 +497,14 @@ body {
 
 
 .well {
-    background-color: #f7f7f7;
+    
+    background-color: #fff;
+    margin-bottom: 0px;
+    
+
 }
+
+
 
 .well legend {
 
@@ -507,6 +512,10 @@ body {
 
 }
 
+.well-sm {
+
+background-color: #EDF5D7;
+}
 
 
 /*modals*/
@@ -528,3 +537,13 @@ body {
     transition: all .5s;
 }   
 
+
+.panel { 
+
+        background-color: #8179C9;
+    }
+
+
+.btn-info{
+        background-color: #8179C9;
+    }

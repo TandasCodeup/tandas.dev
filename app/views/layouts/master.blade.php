@@ -75,7 +75,7 @@
                     </li> 
                     @else
                     <li class="page-scroll">
-                        <a  data-toggle="modal" data-target="#signUpModal">Join</a>
+                        <a  href="" data-toggle="modal" data-target="#signUpModal">Join</a>
                     </li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign In <strong class="caret"></strong></a>
@@ -107,16 +107,21 @@
 
 
     @yield('content')
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
     
+    <!-- Alerts fadeout -->
+
     <script>
 		$('.alert').fadeIn();
 		setTimeout(function() {
 		$('.alert').fadeOut();
 		}, 2000);
 	</script>
+
+    <!-- Sing-in drop-down script -->
     <script type="text/javascript">
         $(document).ready(function(){
     //Handles menu drop down
@@ -137,5 +142,57 @@
 
 
 
+@yield('footer')
+
+
+<footer>
+    <hr>
+    <div class="container">    
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="col-md-4">
+            <ul class="list-unstyled">
+                <li><strong>Money Carousel</strong></li><br>
+                <li><a href="#">About us <br></a></li>
+                <li><a href="#">Codeup <br></a></li>
+                <li><a href="#">Testimonials</a></li>
+                <li><a href="#">Partnerships</a></li>
+                
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <ul class="list-unstyled">
+              <li><strong>Team Members</strong><li><br>
+              <li><a href="#">Travis Meyer</a></li>
+              <li><a href="#">Mitchell D Connell</a></li>
+              <li><a href="#">Jaime Velasco</a></li>             
+            </ul>
+          </div>
+          <div class="col-md-4 pull">
+            <ul class="list-unstyled">
+              <li><strong>Address</strong><li><br>
+
+              <li>112 E. Pecan Street, Floor 10, San Antonio, Texas</li>
+              <li>Tel 210.555.5555</li>              
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="col-md-5 pull-right">
+            <h5 class="muted pull-right">© 2014 Money Carousel</h5>
+            <a href="#">Terms of Service</a> |   
+            <a href="#">Privacy</a> |  
+            <a href="#">Security</a>
+          </div>
+        </div>
+      </div>
+    </div>
+</footer>
+
+
 </body>
+
+
 </html>
