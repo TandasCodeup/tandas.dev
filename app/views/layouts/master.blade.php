@@ -107,16 +107,21 @@
 
 
     @yield('content')
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
     
+    <!-- Alerts fadeout -->
+
     <script>
 		$('.alert').fadeIn();
 		setTimeout(function() {
 		$('.alert').fadeOut();
 		}, 2000);
 	</script>
+
+    <!-- Sing-in drop-down script -->
     <script type="text/javascript">
         $(document).ready(function(){
     //Handles menu drop down
@@ -138,4 +143,55 @@
 
 
 </body>
+
+
+@yield('footer')
+
+
+<footer>
+    <div class="container">    
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="col-md-4">
+            <ul class="list-unstyled">
+                <li><h4>Money Carousel</h4>
+                <li>About us <br></li>
+                <li>Codeup <br></li>
+                <li>Testimonials</li>
+                <li>Partnerships</li>
+                
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <ul class="list-unstyled">
+              <li><h4>Team Members</h4><li>
+              <li><a href="#">Travis Meyer</a></li>
+              <li><a href="#">Mitchell Connor</a></li>
+              <li><a href="#">Jaime Velasco</a></li>             
+            </ul>
+          </div>
+          <div class="col-md-4 pull">
+            <ul class="list-unstyled">
+              <li><h4>Address</h4><li>
+
+              <li>12 E. Pecan Street, Floor 10, San Antonio, Texas</li>              
+            </ul>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="col-md-8">
+            <a href="#">Terms of Service</a>    
+            <a href="#">Privacy</a>    
+            <a href="#">Security</a>
+          </div>
+          <div class="col-md-4">
+            <h5 class="muted pull-right">© 2014 Money Carousel</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+</footer>
 </html>
