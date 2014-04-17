@@ -142,9 +142,6 @@
 
 
 
-</body>
-
-
 @yield('footer')
 
 
@@ -193,4 +190,9 @@
       </div>
     </div>
 </footer>
+
+
+</body>
+
+
 </html>

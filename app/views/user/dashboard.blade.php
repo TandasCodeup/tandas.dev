@@ -202,7 +202,7 @@
                     <div class="col-sm-4" >
                         <div class="hero-widget well well-sm">
                             <div class="icon">
-                                <image src="/assets/img/Piggy-bank.ico" height="200"  alt="piggy"></image>
+                                <image src="/assets/img/piggy.png" height="200"  alt="piggy"></image>
                             </div>
                             <div class="text">
                                 <var>{{{ count($tandaList) }}}</var>
@@ -250,10 +250,10 @@
                                 <image src="/assets/img/Calendar2.ico" height="200" alt="calendar"></image>
                             </div>
                             <div class="text">
-                                <br>
                                 <var>$100</var>
                                 <label class="text-muted">Payment Due</label>
                             </div>
+                            <br>
                             <div class="row">
                                 <button class="btn btn-warning btn-md" data-toggle="modal" data-target="#payModal"><i class="glyphicon glyphicon-search"></i> Make Payment</button>
                             </div>
@@ -300,7 +300,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title" id="myModalLabel">Ongoing Carousels</h4>
+                    <h3 class="modal-title" id="myModalLabel">Ongoing Carousels</h3>
                 </div>
                 <div class="modal-body">
                     @foreach ($tandaList as $tanda)
@@ -313,7 +313,7 @@
                                     <? $color = 'black';
                                     $dateText = "Created at: {$tanda->created_at}";?>
                                 @endif
-                                <strong style="color: {{{ $color }}}">{{{ $tanda->title }}}</strong>
+                                <h3 style="color: {{{ $color }}}">{{{ $tanda->title }}}</h3>
                                 <span class="text-muted">Number of Users: {{{ count($tanda->users) }}} / {{{ $tanda->user_num }}} | {{{ $dateText }}}</span>
                             </div>
                             <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 dropdown-user" data-for=".tanda{{{ $tanda->id }}}">
@@ -322,8 +322,8 @@
                         </div>
                         <div class="row col-sm-8 user-infos tanda{{{ $tanda->id }}}">
                             <div class="row">
-                                <div class="col-sm-3"><small>PAY PER USER</small><br><b>${{{ $tanda->pay_per_user }}}</b></div>
-                                <div class="col-sm-2"><small>PAYOUT</small><br><b>${{{ $tanda->payout }}}</b></div>
+                                <div class="col-sm-3"><strong>PAY PER USER</strong><br><b>${{{ $tanda->pay_per_user }}}</b></div>
+                                <div class="col-sm-2"><strong>PAYOUT</strong><br><b>${{{ $tanda->payout }}}</b></div>
                                 <? $isIn = false; ?>
                                 @foreach ($tanda->users as $theUser)
                                     @if ($theUser->id == Auth::user()->id)
@@ -422,13 +422,13 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title" id="myModalLabel">Your Carousels</h4>
+                    <h3 class="modal-title" id="myModalLabel">Your Carousels</h3>
                 </div>
                 <div class="modal-body">
                     @foreach ($user->tandas as $tanda)
                         <div class="row user-row">
                             <div class="col-xs-8 col-sm-9 col-md-10 col-lg-11">
-                                <strong>{{{ $tanda->title }}}</strong>
+                                <h3>{{{ $tanda->title }}}</h3>
                                 <span class="text-muted">Number of Users: {{{ count($tanda->users) }}} / {{{ $tanda->user_num }}} | Created: {{{ $tanda->created_at }}}</span>
                             </div>
                             <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 dropdown-user" data-for=".tanda{{{ $tanda->id }}}">
