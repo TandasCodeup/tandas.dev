@@ -6,6 +6,7 @@
 
     body{
         padding-top: 10%;
+        background-image:url('/assets/img/')
     }
   
     /*Big Buttons CSS*/
@@ -15,10 +16,12 @@
         width:120px;
         margin-left:50px;
         margin-bottom:-60px;
+
     }
   
     .back { 
-        /*background-image:url("http://autoimagesize.com/wp-content/uploads/2014/01/rainbow-aurora-background-wallpaper-colour-images-rainbow-background.jpg");*/
+
+        background-image:url('/assets/img/gplaypattern.png');
     }
     
     .name {
@@ -162,15 +165,21 @@
         padding-top: 10%;
     }
 
+    .shadow {
+      -moz-box-shadow:    5px 5px 5px 1px #ccc;
+      -webkit-box-shadow: 5px 5px 5px 1px #ccc;
+      box-shadow:         5px 5px 5px 1px #ccc;
+    }
+
 </style>
 
 @stop
 
 @section('content')
     <!-- Page Container -->
-    <div class="container">
-        <div class="row well">
-            <div class="col-md-12">
+    <div class="container shadow">
+        <div class="row well ">
+            <div class="col-md-12 ">
                 <div class="panel back">
                     <img class="pic img-circle" src="http://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/twDq00QDud4/s120-c/photo.jpg" alt="...">
                     <div class="name"><small>User Dashboard for {{{ Auth::user()->first_name }}} {{{ Auth::user()->last_name }}}</small></div>  

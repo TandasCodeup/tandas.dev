@@ -498,7 +498,10 @@ body {
 
 
 .well {
-    background-color: #f7f7f7;
+    background-color: #fff;
+    margin-bottom: 0px;
+    
+
 }
 
 .well legend {
