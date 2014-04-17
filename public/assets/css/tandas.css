@@ -107,7 +107,6 @@ display: none;
 }
 
 
-
 .navbar-custom 
 
 .navbar-custom .nav li a {
@@ -498,11 +497,14 @@ body {
 
 
 .well {
+    
     background-color: #fff;
     margin-bottom: 0px;
     
 
 }
+
+
 
 .well legend {
 
@@ -510,6 +512,10 @@ body {
 
 }
 
+.well-sm {
+
+background-color: #E2DFEB;
+}
 
 
 /*modals*/
