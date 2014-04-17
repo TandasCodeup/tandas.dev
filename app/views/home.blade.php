@@ -1,4 +1,17 @@
 @extends('layouts.master')
+@section('contact')
+
+
+<li  class="page-scroll">
+    <a  href="#about">About</a>
+</li>
+
+<li  class="page-scroll">
+    <a  href="#contact">Contact</a>
+</li>
+
+
+@stop
 
 
 @section('content')
@@ -6,7 +19,7 @@
         <div class="intro-body">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-xs-4 col-sm4 col-md-6">
                         <img border="0" src="/assets/img/RecycleMoney.jpg" width="200" height="180" alt="recycle">
                         <h1 class="brand-heading">Money Carousel</h1>
 
@@ -21,11 +34,11 @@
 
                         <div class="page-scroll">
                             <center>
-                                <a href="#about" type="button" class="btn btn-warning btn-lg">
+                                <a href="#about" type="button" class="btn btn-warning btn-lg btn-outline">
                                     Learn More About Money Carousel
                                 </a>
                             <!-- Button trigger modal -->
-                                <button href="" type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#signUpModal">
+                                <button href="" type="button" class="btn btn-warning btn-lg btn-outline" data-toggle="modal" data-target="#signUpModal">
                                   Join Now! 
                                 </button>
                                 <!-- Modal -->
@@ -81,7 +94,7 @@
         </div>
         <!-- Button trigger firstModal -->
         <div class="col-lg-4">
-            <button class="btn btn-warning btn-lg" data-toggle="modal" data-target="#modal1">
+            <button class="btn btn-warning btn-lg btn-outline" data-toggle="modal" data-target="#modal1">
               What Is Money Carousel?
             </button>
             <br>
@@ -89,7 +102,7 @@
         </div>
         <!-- Button trigger secondModal -->
         <div class="col-lg-4">
-            <button class="btn btn-warning btn-lg" data-toggle="modal" data-target="#modal2">
+            <button class="btn btn-warning btn-lg btn-outline" data-toggle="modal" data-target="#modal2">
               How It Works
             </button>
             <br>
@@ -98,7 +111,7 @@
 
         <!-- Button trigger thirdModal -->
         <div class="col-lg-4">
-            <button class="btn btn-warning btn-lg" data-toggle="modal" data-target="#modal3">
+            <button class="btn btn-warning btn-lg btn-outline" data-toggle="modal" data-target="#modal3">
               What’s the advantage?
             </button>
             <br>
@@ -115,7 +128,7 @@
 
         <!-- First Modal -->
         <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
+            <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -138,7 +151,7 @@
 
         <!-- Second Modal -->
         <div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
+            <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -160,7 +173,7 @@
 
         <!-- Third Modal -->
         <div class="modal fade" id="modal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
+            <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -189,13 +202,13 @@
             <div class="col-lg-8 col-lg-offset-2">
                 <h1>Contact Money Carousel team</h1>
                 <p>Feel free to email us to provide some feedback on our website, give us suggestions for new features or improvements, or to just say hello!</p>
-                <h3><button class="btn btn-default btn-lg" href="mailto:contact@moneycarousel.us">contact@moneycarousel.us</button></h3> 
+                <h3><a class="btn btn-warning btn-lg btn-outline" href="mailto:contact@moneycarousel.us">contact@moneycarousel.us</a></h3> 
                 <ul class="list-inline banner-social-buttons">
-                    <li><a href="https://twitter.com/Tandas" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+                    <li><a href="https://twitter.com/Tandas" class="btn btn-warning btn-lg btn-outline"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
                     </li>
-                    <li><a href="https://github.com/TandasCodeup/tandas.dev" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                    <li><a href="https://github.com/TandasCodeup/tandas.dev" class="btn btn-warning btn-lg btn-outline"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
                     </li>
-                    <li><a href="https://plus.google.com/TandasCodeup" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
+                    <li><a href="https://plus.google.com/TandasCodeup" class="btn btn-warning btn-lg btn-outline"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
                     </li>
                 </ul>
             </div>

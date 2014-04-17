@@ -14,10 +14,11 @@ class CreatePaymentTable extends Migration {
 	{
 		Schema::create('payment', function($table) {
 			$table->increments('id');
-			$table->double('amount', 11, 2)->unsigned();
 
-			// 1 is in, 2 is out
-			$table->tinyInteger('in_or_out')->unsigned();
+			$table->double('payment_amnt', 11, 2)->nullable()->unsigned();
+			$table->double('payout_amnt', 11, 2)->nullable()->unsigned();
+
+			$table->timestamp('date_req');
 
 			$table->integer('user_id')->unsigned()->index();
 			$table->foreign('user_id')->references('id')->on('users');

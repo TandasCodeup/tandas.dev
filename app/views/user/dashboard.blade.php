@@ -4,8 +4,10 @@
 
   <style type="text/css">
 
+
     body{
-        padding-top: 5%;
+        padding-top: 10%;
+        background-image:url('/assets/img/')
     }
   
     /*Big Buttons CSS*/
@@ -15,11 +17,10 @@
         width:120px;
         margin-left:50px;
         margin-bottom:-60px;
+
     }
   
-    .back {
-        background-image:url("http://autoimagesize.com/wp-content/uploads/2014/01/rainbow-aurora-background-wallpaper-colour-images-rainbow-background.jpg");
-    }
+    
     
     .name {
         position:absolute;
@@ -33,12 +34,16 @@
         text-align: center; 
         padding-top: 20px; 
         padding-bottom: 20px;
-        color: darkgray; 
+        color: #c3c3c3;
+        background-color: #blue; 
     }
+
+  
   
     .hero-widget .icon {
-        display: block; 
-        font-size: 96px; 
+        display: block;
+        font-family: 'Lato'; 
+        font-size: 80px; 
         line-height: 96px; 
         margin-bottom: 10px; 
         text-align: center; 
@@ -70,6 +75,8 @@
     .user-row:last-child {
         margin-bottom: 0;
     }
+
+
     
     .dropdown-user {
         margin: 13px 0;
@@ -140,7 +147,7 @@
         color:#FFF
     }
   
-    .blockquote-box.blockquote-warning {
+    .blockquote-box.blockquote-info {
         border-color:#EEA236
     }
   
@@ -157,28 +164,45 @@
         background-color:#D9534F;color:#FFF
     }
 
+    footer{
+        padding-top: 10%;
+    }
+
+    .shadow {
+      -moz-box-shadow:    5px 5px 5px 1px #ccc;
+      -webkit-box-shadow: 5px 5px 5px 1px #ccc;
+      box-shadow:         5px 5px 5px 1px #ccc;
+    }
+
+    
+
+
+
+
 </style>
 
 @stop
 
 @section('content')
-
-    <div class="container">
-        <div class="row well">
-            <div class="col-md-12">
+    <!-- Page Container -->
+    <div class="container shadow">
+        <div class="row well ">
+            <div class="col-md-12 ">
                 <div class="panel back">
                     <img class="pic img-circle" src="http://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/twDq00QDud4/s120-c/photo.jpg" alt="...">
-                    <div class="name"><small>User Dashboard for {{{ Auth::user()->first_name }}} {{{ Auth::user()->last_name }}}</small></div>   
+                    <div class="name"><small>User Dashboard for {{{ Auth::user()->first_name }}} {{{ Auth::user()->last_name }}}</small></div>  
                 </div>
                 <br>
-                <br>     
+                <br>
+
+                <!-- Panel Row -->
                 <div class="row">
 
                     <!-- First Panel -->
-                    <div class="col-sm-4">
+                    <div class="col-sm-4" >
                         <div class="hero-widget well well-sm">
                             <div class="icon">
-                                <i data-icon="a"></i>
+                                <image src="/assets/img/piggy.png" height="200"  alt="piggy"></image>
                             </div>
                             <div class="text">
                                 <var>{{{ count($tandaList) }}}</var>
@@ -192,7 +216,7 @@
                             </div>
                             <br>
                             <div class="row">
-                                <button class="btn btn-default btn-md" data-toggle="modal" data-target="#currentTandaModal"><i class="glyphicon glyphicon-search"></i> View All Carousels</button>
+                                <button class="btn btn-info btn-md" data-toggle="modal" data-target="#currentTandaModal"><i class="glyphicon glyphicon-search"></i> View All Carousels</button>
                             </div>
                         </div>
                     </div>
@@ -201,19 +225,19 @@
                     <div class="col-sm-5">
                         <div class="hero-widget well well-sm">
                             <div class="icon">
-                                <i data-icon="d"></i>
+                                <image src="/assets/img/users.ico" height="200"  alt="piggy"></image>
                             </div>
                             <div class="text">
-                                <var>{{{ count($user->tandas )}}}</var>
+                                <var>{{{ count($user->tandas) }}}</var>
                                 <label class="text-muted">Your Active Carousels</label>
                             </div>
                             <br>
                             <div class="row">
                                 <div class="col-sm-2">
-                                    <button class="btn btn-default btn-md" data-toggle="modal" data-target="#viewYourCarousels"><i class="glyphicon glyphicon-search"></i> View Your Carousels</button>
+                                    <button class="btn btn-info btn-md" data-toggle="modal" data-target="#viewYourCarousels"><i class="glyphicon glyphicon-search"></i> View Your Carousels</button>
                                 </div>
                                 <div class="col-sm-2" style="margin-left: 37%">
-                                    <button class="btn btn-default btn-md" data-toggle="modal" data-target="#createTandaModal"><i class="glyphicon glyphicon-pencil"></i> Create A Carousel</button>
+                                    <button class="btn btn-info btn-md" data-toggle="modal" data-target="#createTandaModal"><i class="glyphicon glyphicon-pencil"></i> Create A Carousel</button>
                                 </div>
                             </div>
                         </div>
@@ -223,105 +247,44 @@
                     <div class="col-sm-3">
                         <div class="hero-widget well well-sm">
                             <div class="icon">
-                                <img src="http://png.findicons.com/files/icons/99/office/128/calendar.png" alt="calendar,date,schedule">
+                                <image src="/assets/img/Calendar2.ico" height="200" alt="calendar"></image>
                             </div>
                             <div class="text">
                                 <var>$100</var>
                                 <label class="text-muted">Payment Due</label>
                             </div>
+                            <br>
                             <div class="row">
-                                <a href="javascript:;" class="btn btn-default btn-md" data-toggle="modal" data-target="#payModal"><i class="glyphicon glyphicon-search"></i> Make Payment</a>
-                                <div class="modal fade" id="payModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog modal-lg">
-                            <div class="modal-content">
-                              <div class="modal-header">                          
-                                <div class="container">
-                                  <div class="row">
-                                      <div class="col-xs-12 col-md-9">
-                                          <div class="panel panel-default">
-                                              <div class="panel-heading">
-                                                  <h3 class="panel-title">
-                                                      Payment Details
-                                                  </h3>
-                                                  <div class="checkbox pull-right">
-                                                      <label>
-                                                          <input type="checkbox" />
-                                                          Remember
-                                                      </label>
-                                                  </div>
-                                              </div>
-                                              <div class="panel-body">
-                                                  <form role="form">
-                                                  <div class="form-group">
-                                                      <label for="cardNumber">
-                                                          CARD NUMBER</label>
-                                                      <div class="input-group">
-                                                          <input type="text" class="form-control" id="cardNumber" placeholder="Valid Card Number"
-                                                              required autofocus />
-                                                          <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-                                                      </div>
-                                                  </div>
-                                                  <div class="row">
-                                                      <div class="col-xs-6 col-md-4">
-                                                          <div class="form-group">
-                                                              <label for="expityMonth">
-                                                                  EXPIRY DATE</label>
-                                                             
-                                                                  <input type="text" class="form-control" id="expityMonth" placeholder="MM" required />
-                                                        
-                                                                  <input type="text" class="form-control" id="expityYear" placeholder="YY" required />
-                                                          </div>
-                                                      </div>
-                                                      <div class="col-xs-5 col-md-5 pull-right">
-                                                          <div class="form-group">
-                                                              <label for="cvCode">
-                                                                  CV CODE</label>
-                                                              <input type="password" class="form-control" id="cvCode" placeholder="CV" required />
-                                                          </div>
-                                                      </div>
-                                                  </div>
-                                                  </form>
-                                              </div>
-                                          </div>
-          
-                                          <br/>
-                                          <div class="col-xs-6 col-md-12">
-                                          <center><a href="http://www.jquery2dotnet.com" class="btn btn-success btn-lg btn-block" role="button">Pay</a></center>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-    
-                              </div>
+                                <button class="btn btn-info btn-md" data-toggle="modal" data-target="#payModal"><i class="glyphicon glyphicon-search"></i> Make Payment</button>
                             </div>
-                         </div>
-                        </div>
-                </div>
-          </div>
-            
+                        </div>  
+                    </div>
+                </div> <!-- End panel row -->
+            </div>
         </div>
-      </div>         
-      </div>
-    </div>
+    </div> <!-- End page container -->
     
     <!-- Create Carousel Modal -->
     <div class="modal fade bs-example-modal-lg" id="createTandaModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="col-xs-12 col-sm-6 col-md-offset-3 well well-lg">
-                    <legend>Create a new Carousel</legend>
+                    <center><legend>Create a new Carousel</legend></center>
                     {{ Form::open(array('action' => 'TandaController@store', 'class' => 'form')) }}
                     <br>
                     <div class="col-xs-12 col-md-12">
                         {{ Form::text('title', null, array('class' => 'form-control', 'placeholder' => 'Carousel Title', 'required' => 'required')) }}
                         <br>               
-                        <center><label>{{ Form::select('user_num', array('5' => '5', '10' => '10')) }} Carousel members</label></center>
+                        <label>{{ Form::select('user_num', array('5' => '5', '10' => '10')) }} Carousel members</label>
+                        <br>
                         <br>              
-                        {{ Form::text('payout', null, array('class' => 'form-control', 'placeholder' => 'User Payout', 'required' => 'required')) }}
+                        {{ Form::text('payout', null, array('class' => 'form-control', 'placeholder' => 'Monthly Payout', 'required' => 'required')) }}
                         <br>
                         <div class="col-xs-12 col-md-6 col-md-offset-3 ">
-                            {{ Form::submit('Create Carousel',  array('class' => 'btn btn-md btn-primary btn-block')) }}
-                            {{ Form::close() }}                          
+                            <center>{{ Form::button('Invite Friends',  array('class' => 'btn btn-info btn-md', 'data-toggle' => 'modal', 'data-target' => '#inviteFriendsModal')) }} </center>                        
+                            <br>
+                            {{ Form::submit('Create Carousel',  array('class' => 'btn btn-md btn-info btn-block')) }}
+                            {{ Form::close() }}
                         </div>
                     </div>
                     <br>
@@ -337,7 +300,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title" id="myModalLabel">Ongoing Carousels</h4>
+                    <h3 class="modal-title" id="myModalLabel">Ongoing Carousels</h3>
                 </div>
                 <div class="modal-body">
                     @foreach ($tandaList as $tanda)
@@ -350,20 +313,20 @@
                                     <? $color = 'black';
                                     $dateText = "Created at: {$tanda->created_at}";?>
                                 @endif
-                                <strong style="color: {{{ $color }}}">{{{ $tanda->title }}}</strong>
+                                <h3 style="color: {{{ $color }}}">{{{ $tanda->title }}}</h3>
                                 <span class="text-muted">Number of Users: {{{ count($tanda->users) }}} / {{{ $tanda->user_num }}} | {{{ $dateText }}}</span>
                             </div>
                             <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 dropdown-user" data-for=".tanda{{{ $tanda->id }}}">
-                                <i class="glyphicon glyphicon-chevron-down text-muted"></i>
+                                <i class="glyphicon glyphicon-chevron-down text-muted"><br>More</i>
                             </div>
                         </div>
                         <div class="row col-sm-8 user-infos tanda{{{ $tanda->id }}}">
                             <div class="row">
-                                <div class="col-sm-3"><small>PAY PER USER</small><br><b>${{{ $tanda->pay_per_user }}}</b></div>
-                                <div class="col-sm-2"><small>PAYOUT</small><br><b>${{{ $tanda->payout }}}</b></div>
+                                <div class="col-sm-3"><strong>PAY PER USER</strong><br><b>${{{ $tanda->pay_per_user }}}</b></div>
+                                <div class="col-sm-2"><strong>PAYOUT</strong><br><b>${{{ $tanda->payout }}}</b></div>
                                 <? $isIn = false; ?>
-                                @foreach ($tanda->users as $user)
-                                    @if ($user->id == Auth::user()->id)
+                                @foreach ($tanda->users as $theUser)
+                                    @if ($theUser->id == Auth::user()->id)
                                         <? $isIn = true;
                                         break; ?>
                                     @endif
@@ -381,20 +344,20 @@
                             <br>
                             <ul class="thumbnails">
                                 <div class="caption">
-                                    @foreach ($tanda->users as $user)
+                                    @foreach ($tanda->users as $theUser)
                                         <div class="row user-row">
                                             <div class="col-xs-3 col-sm-2 col-md-1 col-lg-1">
                                                 <img class="img-circle" src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=50" alt="User Pic">
                                             </div>
                                             <div class="col-xs-8 col-sm-9 col-md-10 col-lg-10">
-                                                <strong>{{{ $user->email }}}</strong>
-                                                <span class="text-muted">Trust Rating: {{{ $user->trust_rate }}}</span>
+                                                <strong>{{{ $theUser->email }}}</strong>
+                                                <span class="text-muted">Trust Rating: {{{ $theUser->trust_rate }}}</span>
                                             </div>
-                                            <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 dropdown-user" data-for=".{{{ $user->id }}}">
-                                                <i class="glyphicon glyphicon-chevron-down text-muted"></i>
+                                            <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 dropdown-user" data-for=".{{{ $theUser->id }}}">
+                                                <i class="glyphicon glyphicon-chevron-down text-muted"><br>More</i>
                                             </div>
                                         </div>
-                                        <div class="row user-infos {{{ $user->id }}}">
+                                        <div class="row user-infos {{{ $theUser->id }}}">
                                             <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 col-xs-offset-0 col-sm-offset-0 col-md-offset-1 col-lg-offset-1">
                                                 <div class="panel panel-primary">
                                                     <div class="panel-heading">
@@ -406,32 +369,32 @@
                                                                 <img class="img-circle" src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=100" alt="User Pic">
                                                             </div>
                                                             <div class="col-xs-10 col-sm-10 hidden-md hidden-lg">
-                                                                <strong>{{{ $user->first_name }}}</strong>
+                                                                <strong>{{{ $theUser->first_name }}}</strong>
                                                                 <br>
                                                                 <dl>
                                                                     <dt>Registered Since:</dt>
-                                                                        <dd>{{{ $user->created_at }}}</dd>
+                                                                        <dd>{{{ $theUser->created_at }}}</dd>
                                                                     <dt>Carousels:</dt>
-                                                                        <dd>{{{ count($user->tandas )}}}</dd>
+                                                                        <dd>{{{ count($theUser->tandas )}}}</dd>
                                                                     <dt>Trust Rating:</dt>
-                                                                        <dd>{{{ $user->trust_rate }}}</dd>
+                                                                        <dd>{{{ $theUser->trust_rate }}}</dd>
                                                                 </dl>
                                                             </div>
                                                             <div class="col-md-9 col-lg-9 hidden-xs hidden-sm">
-                                                                <strong>{{{ $user->first_name }}}</strong>
+                                                                <strong>{{{ $theUser->first_name }}}</strong>
                                                                 <table class="table table-user-information">
                                                                     <tbody>
                                                                         <tr>
                                                                             <td>Registered Since:</td>
-                                                                            <td>{{{ $user->created_at }}}</td>
+                                                                            <td>{{{ $theUser->created_at }}}</td>
                                                                         </tr>
                                                                         <tr>
                                                                             <td>Carousels:</td>
-                                                                            <td>{{{ count($user->tandas) }}}</td>
+                                                                            <td>{{{ count($theUser->tandas) }}}</td>
                                                                         </tr>
                                                                         <tr>
                                                                             <td>Trust Rating:</td>
-                                                                            <td>{{{ $user->trust_rate }}}</td>
+                                                                            <td>{{{ $theUser->trust_rate }}}</td>
                                                                         </tr>
                                                                     </tbody>
                                                                 </table>
@@ -459,17 +422,17 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title" id="myModalLabel">Ongoing Carousels</h4>
+                    <h3 class="modal-title" id="myModalLabel">Your Carousels</h3>
                 </div>
                 <div class="modal-body">
                     @foreach ($user->tandas as $tanda)
                         <div class="row user-row">
                             <div class="col-xs-8 col-sm-9 col-md-10 col-lg-11">
-                                <strong>{{{ $tanda->title }}}</strong>
+                                <h3>{{{ $tanda->title }}}</h3>
                                 <span class="text-muted">Number of Users: {{{ count($tanda->users) }}} / {{{ $tanda->user_num }}} | Created: {{{ $tanda->created_at }}}</span>
                             </div>
                             <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 dropdown-user" data-for=".tanda{{{ $tanda->id }}}">
-                                <i class="glyphicon glyphicon-chevron-down text-muted"></i>
+                                <i class="glyphicon glyphicon-chevron-down text-muted"><br>More</i>
                             </div>
                         </div>
                         <div class="row col-sm-8 user-infos tanda{{{ $tanda->id }}}">
@@ -490,7 +453,7 @@
                                                 <span class="text-muted">Trust Rating: {{{ $user->trust_rate }}}</span>
                                             </div>
                                             <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 dropdown-user" data-for=".{{{ $user->id }}}">
-                                                <i class="glyphicon glyphicon-chevron-down text-muted"></i>
+                                                <i class="glyphicon glyphicon-chevron-down text-muted"><br>More</i>
                                             </div>
                                         </div>
                                         <div class="row user-infos {{{ $user->id }}}">
@@ -552,45 +515,144 @@
     </div>
     <!-- End View Your Carousels Modal -->
 
+
+
+    <!-- Pay Modal -->
+    <div class="modal fade" id="payModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+                <div class="modal-header">                          
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-4 col-md-4 col-md-offset-1">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">Payment Details</h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        {{ Form::open(array('action' => 'PaymentController@store')) }}
+                                            <div class="form-group">
+                                                <label for="cardNumber">CARD NUMBER</label>
+                                                <div class="input-group">
+                                                    {{ Form::text('cardNumber', null, array('class' => 'form-control', 'id' => 'cardNumber', 'placeholder' => 'This is just a demo', 'required' => 'required')) }}
+                                                    <span class="input-group-addon">
+                                                        <span class="glyphicon glyphicon-lock"></span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                                <label for="expiryMonth">EXPIRATION DATE</label>
+                                                    <div class="form-group">
+                                                        {{ Form::text('expiryMonth', null, array('class' => 'form-control', 'id' => 'expiryMonth', 'placeholder' => 'MM', 'required' => 'required')) }}
+                                                        {{ Form::text('expiryYear', null, array('class' => 'form-control', 'id' => 'expiryYear', 'placeholder' => 'YY', 'required' => 'required')) }}
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="cvCode">CV CODE</label>
+                                                        {{ Form::password('cvCode', null, array('class' => 'form-control', 'id' => 'cvCode', 'placeholder' => 'CV', 'required' => 'required')) }}
+                                                        <div class="checkbox">
+                                                            <label>
+                                                                {{ Form::checkbox('remember', 'Remember My Details') }}Remember My Details
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                            <br>
+                                            <div class="col-xs-6 col-md-12">
+                                                <center>{{ Form::submit('Pay', array('class' => 'btn btn-success btn-block')) }}</center>
+                                            </div>
+                                        {{ Form::close() }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+<!-- invite friends modal -->
+
+                <div class="modal fade" id="inviteFriendsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-md">
+                            <div class="modal-content">
+                                <div class="modal-header">                          
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-xs-4 col-md-4 col-md-offset-1">
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading">
+                                                        <center><h3 class="panel-title">Invite friends!</h3>
+                                                        <p>Let them know about your new carousel!</p></center>
+                                                    </div>
+                                                    <div class="panel-body">
+                                                        {{ Form::open() }}
+                                                            <div class="form-group">
+                                                                <label for="cardNumber">Email Address</label>
+                                                                <div class="input-group">
+                                                                    {{ Form::text('cardNumber', null, array('class' => 'form-control', 'placeholder' => 'invite Friends and Family')) }}
+                                                                    {{ Form::text('cardNumber', null, array('class' => 'form-control', 'placeholder' => 'invite Friends and Family')) }}
+                                                                    {{ Form::text('cardNumber', null, array('class' => 'form-control', 'placeholder' => 'invite Friends and Family')) }}
+                                                                    {{ Form::text('cardNumber', null, array('class' => 'form-control', 'placeholder' => 'invite Friends and Family')) }}
+                                                                    {{ Form::text('cardNumber', null, array('class' => 'form-control', 'placeholder' => 'invite Friends and Family')) }}
+                                                                    {{ Form::text('cardNumber', null, array('class' => 'form-control', 'placeholder' => 'invite Friends and Family')) }}
+                                                                    <span class="input-group-addon">
+                                                                        <span class="glyphicon glyphicon-mail"></span>
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                                
+                                                        {{ Form::close() }}
+                                                            <br>
+                                                            <div class="col-xs-6 col-md-12">
+                                                                <center><button class = 'btn btn-success btn-block'>Send Invite!</button></center>
+                                                            </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
 @stop
 
 
 @section('bottomscript')
 
-<script type="text/javascript">
-    $(document).ready(function() {
-    var panels = $('.user-infos');
-    var panelsButton = $('.dropdown-user');
-    panels.hide();
+    <script type="text/javascript">
 
-    //Click dropdown
-    panelsButton.click(function() {
-        //get data-for attribute
-        var dataFor = $(this).attr('data-for');
-        var idFor = $(dataFor);
-
-        //current button
-        var currentButton = $(this);
-        idFor.slideToggle(400, function() {
-            //Completed slidetoggle
-            if(idFor.is(':visible'))
-            {
-                currentButton.html('<i class="glyphicon glyphicon-chevron-up text-muted"></i>');
-            }
-            else
-            {
-                currentButton.html('<i class="glyphicon glyphicon-chevron-down text-muted"></i>');
-            }
-        })
-    });
-
-
-    $('[data-toggle="tooltip"]').tooltip();
-
+        $(document).ready(function() {
+            var panels = $('.user-infos');
+            var panelsButton = $('.dropdown-user');
+            panels.hide();
+        
+            //Click dropdown
+            panelsButton.click(function() {
+                //get data-for attribute
+                var dataFor = $(this).attr('data-for');
+                var idFor = $(dataFor);
+        
+                //current button
+                var currentButton = $(this);
+                idFor.slideToggle(400, function() {
+                    //Completed slidetoggle
+                    if(idFor.is(':visible'))
+                    {
+                        currentButton.html('<i class="glyphicon glyphicon-chevron-up text-muted"><br>Click for less</i>');
+                    }
+                    else
+                    {
+                        currentButton.html('<i class="glyphicon glyphicon-chevron-down text-muted"><br>More</i>');
+                    }
+                })
+            });
+            $('[data-toggle="tooltip"]').tooltip();
+        });
     
-});
-
-</script>
+    </script>
 
 @stop
-

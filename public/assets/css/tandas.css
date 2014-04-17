@@ -105,7 +105,6 @@ display: none;
 }
 
 
-
 .navbar-custom 
 
 .navbar-custom .nav li a {
@@ -210,9 +209,13 @@ display: none;
 
     .brand-heading {
 <<<<<<< HEAD
+<<<<<<< HEAD
         font-size: 100px;
 =======
         font-size: 80px;
+>>>>>>> master
+=======
+        font-size: 70px;
 >>>>>>> master
     }
 
@@ -503,8 +506,14 @@ body {
 
 
 .well {
-    background-color: #f7f7f7;
+    
+    background-color: #fff;
+    margin-bottom: 0px;
+    
+
 }
+
+
 
 .well legend {
 
@@ -512,6 +521,10 @@ body {
 
 }
 
+.well-sm {
+
+background-color: #EDF5D7;
+}
 
 <<<<<<< HEAD
 =======
@@ -529,4 +542,23 @@ body {
 }
 
 
+<<<<<<< HEAD
+>>>>>>> master
+=======
+.btn-outline {
+    background-color: transparent;
+    color: inherit;
+    transition: all .5s;
+}   
+
+
+.panel { 
+
+        background-color: #8179C9;
+    }
+
+
+.btn-info{
+        background-color: #8179C9;
+    }
 >>>>>>> master
