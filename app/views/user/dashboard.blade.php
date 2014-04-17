@@ -5,7 +5,7 @@
   <style type="text/css">
 
     body{
-        padding-top: 5%;
+        padding-top: 10%;
     }
   
     /*Big Buttons CSS*/
@@ -17,8 +17,8 @@
         margin-bottom:-60px;
     }
   
-    .back {
-        background-image:url("http://autoimagesize.com/wp-content/uploads/2014/01/rainbow-aurora-background-wallpaper-colour-images-rainbow-background.jpg");
+    .back { 
+        /*background-image:url("http://autoimagesize.com/wp-content/uploads/2014/01/rainbow-aurora-background-wallpaper-colour-images-rainbow-background.jpg");*/
     }
     
     .name {
@@ -33,12 +33,13 @@
         text-align: center; 
         padding-top: 20px; 
         padding-bottom: 20px;
-        color: darkgray; 
+        color: c3c3c3; 
     }
   
     .hero-widget .icon {
-        display: block; 
-        font-size: 96px; 
+        display: block;
+        font-family: 'Lato'; 
+        font-size: 80px; 
         line-height: 96px; 
         margin-bottom: 10px; 
         text-align: center; 
