@@ -149,22 +149,23 @@
 
 
 <footer>
+    <hr>
     <div class="container">    
       <div class="row">
         <div class="col-lg-12">
           <div class="col-md-4">
             <ul class="list-unstyled">
-                <li><h4>Money Carousel</h4>
-                <li>About us <br></li>
-                <li>Codeup <br></li>
-                <li>Testimonials</li>
-                <li>Partnerships</li>
+                <li><strong>Money Carousel</strong></li><br>
+                <li><a href="#">About us <br></a></li>
+                <li><a href="#">Codeup <br></a></li>
+                <li><a href="#">Testimonials</a></li>
+                <li><a href="#">Partnerships</a></li>
                 
             </ul>
           </div>
           <div class="col-md-4">
             <ul class="list-unstyled">
-              <li><h4>Team Members</h4><li>
+              <li><strong>Team Members</strong><li><br>
               <li><a href="#">Travis Meyer</a></li>
               <li><a href="#">Mitchell D Connell</a></li>
               <li><a href="#">Jaime Velasco</a></li>             
@@ -172,23 +173,20 @@
           </div>
           <div class="col-md-4 pull">
             <ul class="list-unstyled">
-              <li><h4>Address</h4><li>
+              <li><strong>Address</strong><li><br>
 
               <li>12 E. Pecan Street, Floor 10, San Antonio, Texas</li>              
             </ul>
           </div>
         </div>
       </div>
-      <hr>
       <div class="row">
         <div class="col-lg-12">
-          <div class="col-md-8">
-            <a href="#">Terms of Service</a>    
-            <a href="#">Privacy</a>    
-            <a href="#">Security</a>
-          </div>
-          <div class="col-md-4">
+          <div class="col-md-5 pull-right">
             <h5 class="muted pull-right">© 2014 Money Carousel</h5>
+            <a href="#">Terms of Service</a> |   
+            <a href="#">Privacy</a> |  
+            <a href="#">Security</a>
           </div>
         </div>
       </div>
