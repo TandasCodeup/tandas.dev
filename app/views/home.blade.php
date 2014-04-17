@@ -1,13 +1,15 @@
 @extends('layouts.master')
 @section('contact')
 
-<li  class="page-scroll">
-    <a  href="#contact">Contact</a>
-</li>
 
 <li  class="page-scroll">
     <a  href="#about">About</a>
 </li>
+
+<li  class="page-scroll">
+    <a  href="#contact">Contact</a>
+</li>
+
 
 @stop
 

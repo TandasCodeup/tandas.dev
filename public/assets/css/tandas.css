@@ -514,7 +514,7 @@ body {
 
 .well-sm {
 
-background-color: #E2DFEB;
+background-color: #EDF5D7;
 }
 
 
@@ -537,3 +537,13 @@ background-color: #E2DFEB;
     transition: all .5s;
 }   
 
+
+.panel { 
+
+        background-color: #8179C9;
+    }
+
+
+.btn-info{
+        background-color: #8179C9;
+    }

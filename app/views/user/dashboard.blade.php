@@ -20,10 +20,7 @@
 
     }
   
-    .back { 
-
-        background-image:url('/assets/img/gplaypattern.png');
-    }
+    
     
     .name {
         position:absolute;
@@ -78,6 +75,8 @@
     .user-row:last-child {
         margin-bottom: 0;
     }
+
+
     
     .dropdown-user {
         margin: 13px 0;
@@ -148,7 +147,7 @@
         color:#FFF
     }
   
-    .blockquote-box.blockquote-warning {
+    .blockquote-box.blockquote-info {
         border-color:#EEA236
     }
   
@@ -175,6 +174,7 @@
       box-shadow:         5px 5px 5px 1px #ccc;
     }
 
+    
 
 
 
@@ -216,7 +216,7 @@
                             </div>
                             <br>
                             <div class="row">
-                                <button class="btn btn-warning btn-md" data-toggle="modal" data-target="#currentTandaModal"><i class="glyphicon glyphicon-search"></i> View All Carousels</button>
+                                <button class="btn btn-info btn-md" data-toggle="modal" data-target="#currentTandaModal"><i class="glyphicon glyphicon-search"></i> View All Carousels</button>
                             </div>
                         </div>
                     </div>
@@ -234,10 +234,10 @@
                             <br>
                             <div class="row">
                                 <div class="col-sm-2">
-                                    <button class="btn btn-warning btn-md" data-toggle="modal" data-target="#viewYourCarousels"><i class="glyphicon glyphicon-search"></i> View Your Carousels</button>
+                                    <button class="btn btn-info btn-md" data-toggle="modal" data-target="#viewYourCarousels"><i class="glyphicon glyphicon-search"></i> View Your Carousels</button>
                                 </div>
                                 <div class="col-sm-2" style="margin-left: 37%">
-                                    <button class="btn btn-warning btn-md" data-toggle="modal" data-target="#createTandaModal"><i class="glyphicon glyphicon-pencil"></i> Create A Carousel</button>
+                                    <button class="btn btn-info btn-md" data-toggle="modal" data-target="#createTandaModal"><i class="glyphicon glyphicon-pencil"></i> Create A Carousel</button>
                                 </div>
                             </div>
                         </div>
@@ -255,7 +255,7 @@
                             </div>
                             <br>
                             <div class="row">
-                                <button class="btn btn-warning btn-md" data-toggle="modal" data-target="#payModal"><i class="glyphicon glyphicon-search"></i> Make Payment</button>
+                                <button class="btn btn-info btn-md" data-toggle="modal" data-target="#payModal"><i class="glyphicon glyphicon-search"></i> Make Payment</button>
                             </div>
                         </div>  
                     </div>
@@ -281,9 +281,9 @@
                         {{ Form::text('payout', null, array('class' => 'form-control', 'placeholder' => 'Monthly Payout', 'required' => 'required')) }}
                         <br>
                         <div class="col-xs-12 col-md-6 col-md-offset-3 ">
-                            <center>{{ Form::button('Invite Friends',  array('class' => 'btn btn-warning btn-md', 'data-toggle' => 'modal', 'data-target' => '#inviteFriendsModal')) }} </center>                        
+                            <center>{{ Form::button('Invite Friends',  array('class' => 'btn btn-info btn-md', 'data-toggle' => 'modal', 'data-target' => '#inviteFriendsModal')) }} </center>                        
                             <br>
-                            {{ Form::submit('Create Carousel',  array('class' => 'btn btn-md btn-warning btn-block')) }}
+                            {{ Form::submit('Create Carousel',  array('class' => 'btn btn-md btn-info btn-block')) }}
                             {{ Form::close() }}
                         </div>
                     </div>

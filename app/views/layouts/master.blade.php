@@ -75,7 +75,7 @@
                     </li> 
                     @else
                     <li class="page-scroll">
-                        <a  data-toggle="modal" data-target="#signUpModal">Join</a>
+                        <a  href="" data-toggle="modal" data-target="#signUpModal">Join</a>
                     </li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign In <strong class="caret"></strong></a>
