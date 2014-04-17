@@ -166,7 +166,7 @@
             <ul class="list-unstyled">
               <li><h4>Team Members</h4><li>
               <li><a href="#">Travis Meyer</a></li>
-              <li><a href="#">Mitchell Connor</a></li>
+              <li><a href="#">Mitchell D Connell</a></li>
               <li><a href="#">Jaime Velasco</a></li>             
             </ul>
           </div>
