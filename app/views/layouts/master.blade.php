@@ -175,7 +175,8 @@
             <ul class="list-unstyled">
               <li><strong>Address</strong><li><br>
 
-              <li>12 E. Pecan Street, Floor 10, San Antonio, Texas</li>              
+              <li>112 E. Pecan Street, Floor 10, San Antonio, Texas</li>
+              <li>Tel 210.555.5555</li>              
             </ul>
           </div>
         </div>
