@@ -1,0 +1,9 @@
+<?
+
+	return array(
+
+		'debug' => true,
+
+	);
+
+?>
