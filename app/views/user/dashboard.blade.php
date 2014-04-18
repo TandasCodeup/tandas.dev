@@ -174,7 +174,7 @@
       box-shadow:         5px 5px 5px 1px #ccc;
     }
 
-    
+
 
 
 
@@ -186,7 +186,7 @@
 @section('content')
     <!-- Page Container -->
     <div class="container shadow">
-        <div class="row well ">
+        <div class="row well">
             <div class="col-md-12 ">
                 <div class="panel back">
                     <img class="pic img-circle" src="http://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/twDq00QDud4/s120-c/photo.jpg" alt="...">
