@@ -171,12 +171,15 @@ display: none;
     color: #000;
     margin-top: 100px;
     background-color: transparent;
+<<<<<<< HEAD
     background-image:url("/assets/img/womanSavings.jpeg");
     background-size: 500px;
     background-repeat: no-repeat;
     background-position:right top;
 <<<<<<< HEAD
    
+=======
+>>>>>>> master
 =======
 >>>>>>> master
 }
@@ -195,6 +198,20 @@ display: none;
 
 }
 
+.heading {
+    float: right;  
+}
+
+.heading strong{
+
+    font-size: 1.25em;
+}
+
+#maintext{
+    margin-top: 3%;
+    
+}
+
 .intro-text {
     font-family: 'Lato';
     font-weight: 200;
@@ -210,12 +227,16 @@ display: none;
     .brand-heading {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         font-size: 100px;
 =======
         font-size: 80px;
 >>>>>>> master
 =======
         font-size: 70px;
+>>>>>>> master
+=======
+        font-size: 5em;
 >>>>>>> master
     }
 
@@ -238,6 +259,10 @@ display: none;
     margin-bottom: 100px;
     color: #25881B;
 
+}
+
+#contact p{
+    font-size: 2em;
 }
 
 #contact {
@@ -554,7 +579,8 @@ background-color: #EDF5D7;
 
 .panel { 
 
-        background-color: #8179C9;
+        background-color: #cde3c7;
+        margin-bottom: 40px;
     }
 
 
