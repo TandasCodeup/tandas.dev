@@ -190,6 +190,15 @@ display: none;
 
 }
 
+.heading {
+    float: right;  
+}
+
+.heading strong{
+
+    font-size: 1.25em;
+}
+
 #maintext{
     margin-top: 3%;
     
@@ -208,7 +217,7 @@ display: none;
     }
 
     .brand-heading {
-        font-size: 70px;
+        font-size: 5em;
     }
 
     .intro-text {
@@ -230,6 +239,10 @@ display: none;
     margin-bottom: 100px;
     color: #25881B;
 
+}
+
+#contact p{
+    font-size: 2em;
 }
 
 #contact {
