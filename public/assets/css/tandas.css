@@ -173,10 +173,6 @@ display: none;
     color: #000;
     margin-top: 100px;
     background-color: transparent;
-    background-image:url("/assets/img/womanSavings.jpeg");
-    background-size: 500px;
-    background-repeat: no-repeat;
-    background-position:right top;
 }
 
 .intro-body {
@@ -192,6 +188,11 @@ display: none;
     position: relative;
     float: left;
 
+}
+
+#maintext{
+    margin-top: 3%;
+    
 }
 
 .intro-text {
@@ -540,7 +541,8 @@ background-color: #EDF5D7;
 
 .panel { 
 
-        background-color: #8179C9;
+        background-color: #cde3c7;
+        margin-bottom: 40px;
     }
 
 

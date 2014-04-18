@@ -1,4 +1,13 @@
 @extends('layouts.master')
+
+
+@section('topscript')
+
+
+@stop
+
+
+
 @section('contact')
 
 
@@ -18,8 +27,8 @@
     <section class="intro">
         <div class="intro-body">
             <div class="container">
-                <div class="row">
-                    <div class="col-xs-4 col-sm4 col-md-6">
+                <div class="row" >
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" id="maintext">
                         <img border="0" src="/assets/img/RecycleMoney.jpg" width="200" height="180" alt="recycle">
                         <h1 class="brand-heading">Money Carousel</h1>
                         <br>
@@ -73,9 +82,19 @@
                             </center>
                         </div>
                     </div>
+<!-- photo -->
+        <div id="picture">
+            <div class="col-md-6 col-lg-6">
+                <span class="hidden-sm hidden-xs"><img src="/assets/img/womanSavings.jpeg" class="hidden-phone" title="Main image" alt="Savings lady" width="500"></span>
+            </div>    
+        </div>
                 </div>
             </div>
         </div>
+
+
+
+
     </section>
 
     <section id="about" class="container content-section text-center">
