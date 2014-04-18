@@ -432,7 +432,7 @@
                                 <span class="text-muted">Number of Users: {{{ count($tanda->users) }}} / {{{ $tanda->user_num }}} | Created: {{{ $tanda->created_at }}}</span>
                             </div>
                             <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 dropdown-user" data-for=".tanda{{{ $tanda->id }}}">
-                                <i class="glyphicon glyphicon-chevron-down text-muted"><br>More</i>
+                                <i class="glyphicon glyphicon-chevron-down text-muted"><br>Show more</i>
                             </div>
                         </div>
                         <div class="row col-sm-8 user-infos tanda{{{ $tanda->id }}}">
@@ -642,7 +642,7 @@
                     //Completed slidetoggle
                     if(idFor.is(':visible'))
                     {
-                        currentButton.html('<i class="glyphicon glyphicon-chevron-up text-muted"><br>Click for less</i>');
+                        currentButton.html('<i class="glyphicon glyphicon-chevron-up text-muted"><br>Show Less</i>');
                     }
                     else
                     {
