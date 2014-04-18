@@ -55,7 +55,7 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'tandas_db',
+			'database'  => 'tanda_db',
 			'username'  => 'travis',
 			'password'  => 'Qazwsxe3',
 			'charset'   => 'utf8',
