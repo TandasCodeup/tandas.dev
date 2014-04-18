@@ -225,7 +225,7 @@
                     <div class="col-sm-5">
                         <div class="hero-widget well well-sm">
                             <div class="icon">
-                                <image src="/assets/img/users.ico" height="200"  alt="piggy"></image>
+                                <image src="/assets/img/Users.ico" height="200"  alt="piggy"></image>
                             </div>
                             <div class="text">
                                 <var>{{{ count($user->tandas) }}}</var>
