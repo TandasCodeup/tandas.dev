@@ -68,7 +68,7 @@
 
 			$tandaList = Tanda::with('users')->get();
 
-			$records = DB::table('payment')->where('user_id', '=', $id)->get();
+			$records = DB::table('payment')->where('user_id', '=', $id)->where('payout_amnt', '=', null)->get();
 
 			$data = array(
 				'user' => $user,

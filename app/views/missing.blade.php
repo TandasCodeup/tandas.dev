@@ -38,7 +38,7 @@
       <div class="hero-unit center">
           <h1>Page Not Found <small><font face="Tahoma" color="red">Error 404</font></small></h1>
           <br />
-          <p>The page you requested could not be found. Use your browsers</p>
+          <p>The page you requested could not be found.</p>
          
         </div>
         <br>

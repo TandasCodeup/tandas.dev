@@ -46,7 +46,7 @@
                     <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
                     <li>
                         @if (Session::has('loginSucc'))
-                            <div class="alert alert-success alert-dismissable">{{{ Session::get('successMessage') }}}</div>
+                            <div class="alert alert-success alert-dismissable">{{{ Session::get('loginSucc') }}}</div>
                         @endif
                         @if (Session::has('errorMessage'))
                             <div class="alert alert-warning alert-dismissable">{{{ Session::get('errorMessage') }}}</div>

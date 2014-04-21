@@ -20,15 +20,12 @@
 
     }
   
-    
-    
     .name {
         position:absolute;
         padding-left:200px;
         font-size:30px;
         color: black;
     }
-    
     
     .hero-widget {
         text-align: center; 
@@ -38,8 +35,6 @@
         background-color: #blue; 
     }
 
-  
-  
     .hero-widget .icon {
         display: block;
         font-family: 'Lato'; 
@@ -75,8 +70,6 @@
     .user-row:last-child {
         margin-bottom: 0;
     }
-
-
     
     .dropdown-user {
         margin: 13px 0;
@@ -95,7 +88,6 @@
     .table-user-information > tbody > tr:first-child {
         border-top: 0;
     }
-    
     
     .table-user-information > tbody > tr > td {
         border-top: 0;
@@ -174,11 +166,6 @@
       box-shadow:         5px 5px 5px 1px #ccc;
     }
 
-
-
-
-
-
 </style>
 
 @stop
@@ -199,7 +186,12 @@
                 <div class="row">
 
                     <!-- First Panel -->
-                    <div class="col-sm-4" >
+                    @if (count($records) == 0)
+                        <? $col1 = 5; ?>
+                    @else
+                        <? $col1 = 4 ?>
+                    @endif
+                    <div class="col-sm-{{{$col1}}}" >
                         <div class="hero-widget well well-sm">
                             <div class="icon">
                                 <image src="/assets/img/piggy.png" height="200"  alt="piggy"></image>
@@ -222,10 +214,15 @@
                     </div>
 
                     <!-- Second Panel -->
-                    <div class="col-sm-5">
+                    @if (count($records) == 0)
+                        <? $col2 = 7; ?>
+                    @else
+                        <? $col2 = 5; ?>
+                    @endif
+                    <div class="col-sm-{{{$col2}}}">
                         <div class="hero-widget well well-sm">
                             <div class="icon">
-                                <image src="/assets/img/users.ico" height="200"  alt="piggy"></image>
+                                <image src="/assets/img/Users.ico" height="200"  alt="piggy"></image>
                             </div>
                             <div class="text">
                                 <var>{{{ count($user->tandas) }}}</var>
@@ -244,21 +241,23 @@
                     </div>
 
                     <!-- Third Panel -->
-                    <div class="col-sm-3">
-                        <div class="hero-widget well well-sm">
-                            <div class="icon">
-                                <image src="/assets/img/Calendar2.ico" height="200" alt="calendar"></image>
-                            </div>
-                            <div class="text">
-                                <var>$100</var>
-                                <label class="text-muted">Payment Due</label>
-                            </div>
-                            <br>
-                            <div class="row">
-                                <button class="btn btn-info btn-md" data-toggle="modal" data-target="#payModal"><i class="glyphicon glyphicon-search"></i> Make Payment</button>
-                            </div>
-                        </div>  
-                    </div>
+                    @if (count($records) != 0)
+                        <div class="col-sm-3">
+                            <div class="hero-widget well well-sm">
+                                <div class="text">
+                                    <label class="text-muted">{{{ $records[0]->date_req }}}</label>
+                                </div>
+                                <div class="text">
+                                    <var>${{{ $records[0]->payment_amnt }}}</var>
+                                    <label class="text-muted">Payment Due</label>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <button class="btn btn-info btn-md" data-toggle="modal" data-target="#payModal"><i class="glyphicon glyphicon-search"></i> Make Payment</button>
+                                </div>
+                            </div> 
+                        </div>
+                    @endif 
                 </div> <!-- End panel row -->
             </div>
         </div>
@@ -570,43 +569,42 @@
 
 <!-- invite friends modal -->
 
-                <div class="modal fade" id="inviteFriendsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-md">
-                            <div class="modal-content">
-                               <div class="col-xs-12 col-md-12 col-lg-12 well well-lg">
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading">
-                                            <center><h3 class="panel-title">Invite friends!</h3>
-                                            <p>Let them know about your new carousel!</p></center>
-                                        </div>
-                                        <div class="panel-body">
-                                            {{ Form::open() }}
-                                                <div class="form-group">
-                                                    <label for="cardNumber">Email Address</label>
-                                                    <div class="input-group">
-                                                        {{ Form::text('e-mail', null, array('class' => 'form-control', 'placeholder' => 'Invite Friends and Family!')) }}
-                                                        {{ Form::text('e-mail', null, array('class' => 'form-control', 'placeholder' => 'Invite Friends and Family!')) }}
-                                                        {{ Form::text('e-mail', null, array('class' => 'form-control', 'placeholder' => 'Invite Friends and Family!')) }}
-                                                        {{ Form::text('e-mail', null, array('class' => 'form-control', 'placeholder' => 'Invite Friends and Family!')) }}
-                                                        {{ Form::text('e-mail', null, array('class' => 'form-control', 'placeholder' => 'Invite Friends and Family!')) }}
-                                                        {{ Form::text('e-mail', null, array('class' => 'form-control', 'placeholder' => 'Invite Friends and Family!')) }}
-                                                        <span class="input-group-addon">
-                                                            <span class="glyphicon glyphicon-mail"></span>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                                    
-                                            {{ Form::close() }}
-                                                <br>
-                                                <div class="col-xs-6 col-md-12">
-                                                    <center><button class = "btn btn-warning" data-dismiss="modal" target="_blank">Send Invite!</button></center>
-                                                </div>
-                                        </div>
+    <div class="modal fade" id="inviteFriendsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+               <div class="col-xs-12 col-md-12 col-lg-12 well well-lg">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <center><h3 class="panel-title">Invite friends!</h3>
+                            <p>Let them know about your new carousel!</p></center>
+                        </div>
+                        <div class="panel-body">
+                            {{ Form::open() }}
+                                <div class="form-group">
+                                    <label for="cardNumber">Email Address</label>
+                                    <div class="input-group">
+                                        {{ Form::text('e-mail', null, array('class' => 'form-control', 'placeholder' => 'Invite Friends and Family!')) }}
+                                        {{ Form::text('e-mail', null, array('class' => 'form-control', 'placeholder' => 'Invite Friends and Family!')) }}
+                                        {{ Form::text('e-mail', null, array('class' => 'form-control', 'placeholder' => 'Invite Friends and Family!')) }}
+                                        {{ Form::text('e-mail', null, array('class' => 'form-control', 'placeholder' => 'Invite Friends and Family!')) }}
+                                        {{ Form::text('e-mail', null, array('class' => 'form-control', 'placeholder' => 'Invite Friends and Family!')) }}
+                                        {{ Form::text('e-mail', null, array('class' => 'form-control', 'placeholder' => 'Invite Friends and Family!')) }}
+                                        <span class="input-group-addon">
+                                            <span class="glyphicon glyphicon-mail"></span>
+                                        </span>
                                     </div>
-                                </div>
+                                </div>       
+                            {{ Form::close() }}
+                            <br>
+                            <div class="col-xs-6 col-md-12">
+                                <center><button class = "btn btn-warning" data-dismiss="modal" target="_blank">Send Invite!</button></center>
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 @stop
