@@ -26,6 +26,8 @@ class CreatePaymentTable extends Migration {
 			$table->integer('tanda_id')->unsigned()->index();
 			$table->foreign('tanda_id')->references('id')->on('tandas');
 
+			$table->boolean('paid')->default(false);
+
 			$table->timestamps();
 		});
 	}
