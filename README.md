@@ -39,9 +39,13 @@ Features a user interface and administrative interface with customized views and
      
   
 # Team Money Carousel.
-	### Travis Meyer 
-	### Mitchel Connell 
-	### Jaime Velasco 
+
+### Travis Meyer 
+https://github.com/traviskm
+### Mitchel Connell 
+https://github.com/mitchconnell
+### Jaime Velasco 
+https://github.com/JaimeVelasco
    
   
 

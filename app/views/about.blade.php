@@ -111,6 +111,26 @@
                 </div>
             </div>  
         </div>
+
+        <br>
+        <br>
+
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a class="accordion-title" data-toggle="collapse" data-parent="#accordion" href="#collapse5">
+                            How does your trust-ratings system work?
+                        </a>
+                    </h4>
+                </div>
+               
+            <div id="collapse5" class="panel-collapse collapse out">
+                <div class="panel-body">
+                    <p>Everyone starts with 5 points When auser succesfully completes a carousel, a point will be added to his/her score. When </p>
+                </div>
+            </div>  
+        </div>
     </section>
 <br>
 <br>
