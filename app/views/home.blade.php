@@ -30,7 +30,7 @@
                 <div class="row" >
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" id="maintext">
                         <img border="0" src="/assets/img/RecycleMoney.jpg" width="200" height="180" alt="recycle"></center>
-                        <center><h1 class="brand-heading">Money Carousel</h1></center>
+                        <h1 class="brand-heading">Money Carousel</h1>
                         <br>
                         <p class="heading"><strong>What goes around comes around</strong><br>A trust-based lending circle where everyone saves, and when it’s their turn, gets paid.</p>
                         <div class="page-scroll">
@@ -213,9 +213,9 @@
             <div class="col-lg-8 col-lg-offset-2">
                 <h1>Contact Money Carousel team</h1>
                 <p>Feel free to email us to provide some feedback on our website, give us suggestions for new features or improvements, or to just say hello!</p>
-                <h3><a class="btn btn-warning btn-lg btn-outline" href="mailto:contact@moneycarousel.us">contact@moneycarousel.us</a></h3> 
+                <h3><a class="btn btn-warning btn-lg btn-outline" href="mailto:jaime@photojv.com">Send us an E-mail!</a></h3> 
                 <ul class="list-inline banner-social-buttons">
-                    <li><a href="https://github.com/TandasCodeup/tandas.dev" class="btn btn-warning btn-lg btn-outline"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                    <li><a href="https://github.com/TandasCodeup/tandas.dev" class="btn btn-warning btn-lg btn-outline"><i class="fa fa-github fa-fw"></i> <span class="network-name">Visit our Github</span></a>
                     </li>
                 </ul>
             </div>
