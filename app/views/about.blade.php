@@ -81,14 +81,14 @@
                 <div class="panel-heading">
                     <h4 class="panel-title">
                         <a class="accordion-title" data-toggle="collapse" data-parent="#accordion" href="#collapse3">
-                            Question 3
+                            Does it cost me anything?
                         </a>
                     </h4>
                 </div>
 
             <div id="collapse3" class="panel-collapse collapse out">
                 <div class="panel-body">
-                    <p>Awesome answer here!</p>
+                    <p>There will be a one percent charge on top of your payments, no other fee ever involved.</p>
                 </div>
             </div>  
         </div>
@@ -100,14 +100,14 @@
                 <div class="panel-heading">
                     <h4 class="panel-title">
                         <a class="accordion-title" data-toggle="collapse" data-parent="#accordion" href="#collapse4">
-                            Question 4
+                            Do I have to report payouts to my taxes?
                         </a>
                     </h4>
                 </div>
                
             <div id="collapse4" class="panel-collapse collapse out">
                 <div class="panel-body">
-                    <p>Awesome answer here!</p>
+                    <p>No. It’s your money and likely comes from income that’s already being taxed.</p>
                 </div>
             </div>  
         </div>

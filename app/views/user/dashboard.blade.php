@@ -314,6 +314,7 @@
                                     $dateText = "Created at: {$tanda->created_at}";?>
                                 @endif
                                 <h3 style="color: {{{ $color }}}">{{{ $tanda->title }}}</h3>
+                            
                                 <span class="text-muted">Number of Users: {{{ count($tanda->users) }}} / {{{ $tanda->user_num }}} | {{{ $dateText }}}</span>
                             </div>
                             <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 dropdown-user" data-for=".tanda{{{ $tanda->id }}}">
@@ -519,13 +520,13 @@
 
     <!-- Pay Modal -->
     <div class="modal fade" id="payModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-md">
+        <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">                          
                     <div class="container">
                         <div class="row">
-                            <div class="col-xs-4 col-md-4 col-md-offset-1">
-                                <div class="panel panel-default">
+                            <div class="col-xs-6 col-md-6 col-lg-6">
+                                <div class="panel">
                                     <div class="panel-heading">
                                         <h3 class="panel-title">Payment Details</h3>
                                     </div>

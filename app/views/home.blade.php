@@ -215,11 +215,7 @@
                 <p>Feel free to email us to provide some feedback on our website, give us suggestions for new features or improvements, or to just say hello!</p>
                 <h3><a class="btn btn-warning btn-lg btn-outline" href="mailto:contact@moneycarousel.us">contact@moneycarousel.us</a></h3> 
                 <ul class="list-inline banner-social-buttons">
-                    <li><a href="https://twitter.com/Tandas" class="btn btn-warning btn-lg btn-outline"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-                    </li>
                     <li><a href="https://github.com/TandasCodeup/tandas.dev" class="btn btn-warning btn-lg btn-outline"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
-                    </li>
-                    <li><a href="https://plus.google.com/TandasCodeup" class="btn btn-warning btn-lg btn-outline"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
                     </li>
                 </ul>
             </div>
