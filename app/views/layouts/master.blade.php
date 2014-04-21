@@ -155,10 +155,10 @@
           <div class="col-md-4">
             <ul class="list-unstyled">
                 <li><strong>Money Carousel</strong></li><br>
-                <li><a href="#">About us <br></a></li>
+                <li>About us <br></li>
                 <li><a href="http://www.codeup.com/">Codeup <br></a></li>
-                <li><a href="#">Testimonials</a></li>
-                <li><a href="#">Partnerships</a></li>
+                <li>Testimonials</li>
+                <li>Partnerships</li>
                 
             </ul>
           </div>
