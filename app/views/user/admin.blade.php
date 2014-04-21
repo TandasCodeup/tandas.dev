@@ -410,9 +410,11 @@
 										</div>
 									</div>
 									<div class="panel-footer">
-										<span class="pull-right">
-											<button href="{{{ action('UserController@destroy', $user->id) }}}" class="btn btn-sm btn-danger" type="button" data-toggle="tooltip" data-original-title="Remove this user"><i class="glyphicon glyphicon-remove"></i></button>
-										</span>
+										{{ Form::open(array('action' => array('UserController@destroy', $user->id), 'method' => 'DELETE')) }}
+											<span class="pull-right">
+												<button class="btn btn-sm btn-danger" type="submit" data-toggle="tooltip" data-original-title="Remove this user"><i class="glyphicon glyphicon-remove"></i></button>
+											</span>
+										{{ Form::close() }}
 									</div>
 								</div>
 							</div>
