@@ -156,7 +156,7 @@
             <ul class="list-unstyled">
                 <li><strong>Money Carousel</strong></li><br>
                 <li><a href="#">About us <br></a></li>
-                <li><a href="#">Codeup <br></a></li>
+                <li><a href="http://www.codeup.com/">Codeup <br></a></li>
                 <li><a href="#">Testimonials</a></li>
                 <li><a href="#">Partnerships</a></li>
                 
@@ -165,9 +165,9 @@
           <div class="col-md-4">
             <ul class="list-unstyled">
               <li><strong>Team Members</strong><li><br>
-              <li><a href="#">Travis Meyer</a></li>
-              <li><a href="#">Mitchell D Connell</a></li>
-              <li><a href="#">Jaime Velasco</a></li>             
+              <li><a href="https://www.github.com/traviskm">Travis Meyer</a></li>
+              <li><a href="https://github.com/mitchconnell">Mitchell D Connell</a></li>
+              <li><a href="https://github.com/JaimeVelasco">Jaime Velasco</a></li>             
             </ul>
           </div>
           <div class="col-md-4 pull">
