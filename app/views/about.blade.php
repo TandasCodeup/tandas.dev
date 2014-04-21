@@ -81,20 +81,15 @@
             <div class="panel panel-info">
                 <div class="panel-heading">
                     <h4 class="panel-title">
-<<<<<<< HEAD
-                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
-                            How much does it cost?
-=======
                         <a class="accordion-title" data-toggle="collapse" data-parent="#accordion" href="#collapse3">
-                            Question 3
->>>>>>> master
+                            How much does it cost?
                         </a>
                     </h4>
                 </div>
 
             <div id="collapse3" class="panel-collapse collapse out">
                 <div class="panel-body">
-                    <p>Money Carousel is free for users.</p>
+                    <p>Money Carousel charges a one percent fee.</p>
                 </div>
             </div>  
         </div>
@@ -105,13 +100,9 @@
             <div class="panel panel-info">
                 <div class="panel-heading">
                     <h4 class="panel-title">
-<<<<<<< HEAD
+
                         <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">
                             Do I have to report payouts on my taxes?
-=======
-                        <a class="accordion-title" data-toggle="collapse" data-parent="#accordion" href="#collapse4">
-                            Question 4
->>>>>>> master
                         </a>
                     </h4>
                 </div>
