@@ -43,7 +43,11 @@
                 <div class="row" >
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" id="maintext">
                         <img border="0" src="/assets/img/RecycleMoney.jpg" width="200" height="180" alt="recycle"></center>
+<<<<<<< HEAD
                         <center><h1 class="brand-heading">Money Carousel</h1></center>
+>>>>>>> master
+=======
+                        <h1 class="brand-heading">Money Carousel</h1>
 >>>>>>> master
                         <br>
                         
@@ -163,7 +167,7 @@
                         <div class="modal-body">
                             <p>On a carousel, what goes around comes around. And when we’re talking about money, it’s 
                             pretty great when it comes your way. 
-                            Money Carousel is a trust-based lending circle where friends, family members and even strangers can help each other save money for vacations, emergencies or even a down payment on a car or yacht. OK, maybe not a yacht. 
+                            <i>Money Carousel</i> is a trust-based lending circle where friends, family members and even strangers can help each other save money for vacations, emergencies or even a down payment on a car or yacht. OK, maybe not a yacht. 
                             But depending on the amount of money each person contributes, when the carousel comes your way, the payout could be substantial.
                             </p>
                         </div>
@@ -184,9 +188,9 @@
                     <h4 class="modal-title" id="myModalLabel">How It Works</h4>
                 </div>
                     <div class="modal-body">
-                        <p>Lending circles — called tandas in Latin America — have a long history in cultures across the globe. But until the Internet, such circles were conducted face-to-face or through snail mail. 
-                        The concept is this: A group of people form a lending circle and contribute a set amount of money per month. Each month, someone in the circle gets the whole pot of money, kind of like landing on Free Parking in a game of Monopoly. 
-                        So if there are 12 people in the lending circle and everyone throws in $100 per week, someone will receive a payout of $1,200 every week. With 12 people in the circle, the money carousel would come your way every three months.</p>
+                        <p>Lending circles — called <i>tandas</i> in Latin America — have a long history in cultures across the globe. But until the Internet, such circles were conducted face-to-face or through snail mail. 
+                        The concept is this: A group of people form a lending circle and contribute a set amount of money per month. Each month, someone in the circle gets the whole pot of money, kind of like landing on "Free Parking" in a game of <i>Monopoly</i>. 
+                        So, if there are twelve people in the lending circle and everyone throws in $100 per week, someone will receive a payout of $1,200 every week. With twelve people in the circle, the money carousel would come your way every three months.</p>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -208,7 +212,7 @@
                     <div class="modal-body">
                         <p>The idea behind a lending circle is that it helps you save money without being tempted to raid your own cookie jar. 
                         When you really DO need or want the money, it will be available to you at no interest, a much smarter option than a predatory, high-interest payday loan and a much easier option than trying to get a loan from a bank. 
-                        The advantage of using Money Carousel is that it allows you to conduct financial transactions online through PayPal. You can set up the carousel to draft elecronically from your PayPal account each week or month, and when it’s your turn to receive the payout, the lump sum will deposit directly into your account. 
+                        The advantage of using <i>Money Carousel</i> is that it allows you to conduct financial transactions online through <i>PayPal</i>. You can set up the carousel to draft electronically from your <i>PayPal</i> account each week or month, and when it’s your turn to receive the payout, the lump sum will deposit directly into your account. 
                         Best of all, unlike the old days, we can help you connect with like-minded people you may not know in person, but who have similar goals. Want to start a small business? Join a carousel where the contributions are larger, but so is the payout.
                         </p>
                     </div>
@@ -228,13 +232,9 @@
             <div class="col-lg-8 col-lg-offset-2">
                 <h1>Contact Money Carousel team</h1>
                 <p>Feel free to email us to provide some feedback on our website, give us suggestions for new features or improvements, or to just say hello!</p>
-                <h3><a class="btn btn-warning btn-lg btn-outline" href="mailto:contact@moneycarousel.us">contact@moneycarousel.us</a></h3> 
+                <h3><a class="btn btn-warning btn-lg btn-outline" href="mailto:jaime@photojv.com">Send us an E-mail!</a></h3> 
                 <ul class="list-inline banner-social-buttons">
-                    <li><a href="https://twitter.com/Tandas" class="btn btn-warning btn-lg btn-outline"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-                    </li>
-                    <li><a href="https://github.com/TandasCodeup/tandas.dev" class="btn btn-warning btn-lg btn-outline"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
-                    </li>
-                    <li><a href="https://plus.google.com/TandasCodeup" class="btn btn-warning btn-lg btn-outline"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
+                    <li><a href="https://github.com/TandasCodeup/tandas.dev" class="btn btn-warning btn-lg btn-outline"><i class="fa fa-github fa-fw"></i> <span class="network-name">Visit our Github</span></a>
                     </li>
                 </ul>
             </div>

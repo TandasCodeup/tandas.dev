@@ -33,6 +33,8 @@ ClassLoader::addDirectories(array(
 
 Log::useFiles(storage_path().'/logs/laravel.log');
 
+
+
 /*
 |--------------------------------------------------------------------------
 | Application Error Handler
@@ -50,6 +52,14 @@ App::error(function(Exception $exception, $code)
 {
 	Log::error($exception);
 });
+
+
+
+App::missing(function($exception)
+{
+    return Response::view('missing', array(), 404);
+});
+
 
 /*
 |--------------------------------------------------------------------------
