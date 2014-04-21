@@ -520,49 +520,45 @@
 
     <!-- Pay Modal -->
     <div class="modal fade" id="payModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-lg">
             <div class="modal-content">
-                <div class="modal-header">                          
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-xs-6 col-md-6 col-lg-6">
-                                <div class="panel">
-                                    <div class="panel-heading">
-                                        <h3 class="panel-title">Payment Details</h3>
-                                    </div>
-                                    <div class="panel-body">
-                                        {{ Form::open(array('action' => 'PaymentController@store')) }}
-                                            <div class="form-group">
-                                                <label for="cardNumber">CARD NUMBER</label>
-                                                <div class="input-group">
-                                                    {{ Form::text('cardNumber', null, array('class' => 'form-control', 'id' => 'cardNumber', 'placeholder' => 'This is just a demo', 'required' => 'required')) }}
-                                                    <span class="input-group-addon">
-                                                        <span class="glyphicon glyphicon-lock"></span>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                                <label for="expiryMonth">EXPIRATION DATE</label>
-                                                    <div class="form-group">
-                                                        {{ Form::text('expiryMonth', null, array('class' => 'form-control', 'id' => 'expiryMonth', 'placeholder' => 'MM', 'required' => 'required')) }}
-                                                        {{ Form::text('expiryYear', null, array('class' => 'form-control', 'id' => 'expiryYear', 'placeholder' => 'YY', 'required' => 'required')) }}
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="cvCode">CV CODE</label>
-                                                        {{ Form::password('cvCode', null, array('class' => 'form-control', 'id' => 'cvCode', 'placeholder' => 'CV', 'required' => 'required')) }}
-                                                        <div class="checkbox">
-                                                            <label>
-                                                                {{ Form::checkbox('remember', 'Remember My Details') }}Remember My Details
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                            <br>
-                                            <div class="col-xs-6 col-md-12">
-                                                <center>{{ Form::submit('Pay', array('class' => 'btn btn-success btn-block')) }}</center>
-                                            </div>
-                                        {{ Form::close() }}
+                <div class="col-xs-6 col-md-6 col-lg-6 col-lg-offset-3 well well-lg">
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Payment Details</h3>
+                        </div>
+                        <div class="panel-body">
+                            {{ Form::open(array('action' => 'PaymentController@store')) }}
+                                <div class="form-group">
+                                    <label for="cardNumber">CARD NUMBER</label>
+                                    <div class="input-group">
+                                        {{ Form::text('cardNumber', null, array('class' => 'form-control', 'id' => 'cardNumber', 'placeholder' => 'This is just a demo', 'required' => 'required')) }}
+                                        <span class="input-group-addon">
+                                            <span class="glyphicon glyphicon-lock"></span>
+                                        </span>
                                     </div>
                                 </div>
-                            </div>
+                                    <label for="expiryMonth">EXPIRATION DATE</label>
+                                        <div class="form-group">
+                                            {{ Form::text('expiryMonth', null, array('class' => 'form-control', 'id' => 'expiryMonth', 'placeholder' => 'MM', 'required' => 'required')) }}
+                                            {{ Form::text('expiryYear', null, array('class' => 'form-control', 'id' => 'expiryYear', 'placeholder' => 'YY', 'required' => 'required')) }}
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="cvCode">CV CODE</label>
+                                            {{ Form::password('cvCode', null, array('class' => 'form-control', 'id' => 'cvCode', 'placeholder' => 'CV', 'required' => 'required')) }}
+                                            <div class="checkbox">
+                                                <label>
+                                                    {{ Form::checkbox('remember', 'Remember My Details') }}Remember My Details
+                                                </label>
+                                            </div>
+                                        </div>
+                                <div class="col-xs-6 col-md-12">
+                                    <center>{{ Form::submit('Make a demo payment', array('class' => 'btn btn-lg btn-warning', 'onclick' => 'alertpay()')) }}</center>
+                                <br>
+                                </div>
+                            {{ Form::close() }}
+                            <br>
+                            <center><button class="btn btn-md btn-info" data-dismiss='modal' target='blank'>Close this form</button></center>
                         </div>
                     </div>
                 </div>
@@ -577,40 +573,34 @@
                 <div class="modal fade" id="inviteFriendsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-md">
                             <div class="modal-content">
-                                <div class="modal-header">                          
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-xs-4 col-md-4 col-md-offset-1">
-                                                <div class="panel panel-default">
-                                                    <div class="panel-heading">
-                                                        <center><h3 class="panel-title">Invite friends!</h3>
-                                                        <p>Let them know about your new carousel!</p></center>
-                                                    </div>
-                                                    <div class="panel-body">
-                                                        {{ Form::open() }}
-                                                            <div class="form-group">
-                                                                <label for="cardNumber">Email Address</label>
-                                                                <div class="input-group">
-                                                                    {{ Form::text('cardNumber', null, array('class' => 'form-control', 'placeholder' => 'invite Friends and Family')) }}
-                                                                    {{ Form::text('cardNumber', null, array('class' => 'form-control', 'placeholder' => 'invite Friends and Family')) }}
-                                                                    {{ Form::text('cardNumber', null, array('class' => 'form-control', 'placeholder' => 'invite Friends and Family')) }}
-                                                                    {{ Form::text('cardNumber', null, array('class' => 'form-control', 'placeholder' => 'invite Friends and Family')) }}
-                                                                    {{ Form::text('cardNumber', null, array('class' => 'form-control', 'placeholder' => 'invite Friends and Family')) }}
-                                                                    {{ Form::text('cardNumber', null, array('class' => 'form-control', 'placeholder' => 'invite Friends and Family')) }}
-                                                                    <span class="input-group-addon">
-                                                                        <span class="glyphicon glyphicon-mail"></span>
-                                                                    </span>
-                                                                </div>
-                                                            </div>
-                                                                
-                                                        {{ Form::close() }}
-                                                            <br>
-                                                            <div class="col-xs-6 col-md-12">
-                                                                <center><button class = 'btn btn-success btn-block'>Send Invite!</button></center>
-                                                            </div>
+                               <div class="col-xs-12 col-md-12 col-lg-12 well well-lg">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <center><h3 class="panel-title">Invite friends!</h3>
+                                            <p>Let them know about your new carousel!</p></center>
+                                        </div>
+                                        <div class="panel-body">
+                                            {{ Form::open() }}
+                                                <div class="form-group">
+                                                    <label for="cardNumber">Email Address</label>
+                                                    <div class="input-group">
+                                                        {{ Form::text('e-mail', null, array('class' => 'form-control', 'placeholder' => 'Invite Friends and Family!')) }}
+                                                        {{ Form::text('e-mail', null, array('class' => 'form-control', 'placeholder' => 'Invite Friends and Family!')) }}
+                                                        {{ Form::text('e-mail', null, array('class' => 'form-control', 'placeholder' => 'Invite Friends and Family!')) }}
+                                                        {{ Form::text('e-mail', null, array('class' => 'form-control', 'placeholder' => 'Invite Friends and Family!')) }}
+                                                        {{ Form::text('e-mail', null, array('class' => 'form-control', 'placeholder' => 'Invite Friends and Family!')) }}
+                                                        {{ Form::text('e-mail', null, array('class' => 'form-control', 'placeholder' => 'Invite Friends and Family!')) }}
+                                                        <span class="input-group-addon">
+                                                            <span class="glyphicon glyphicon-mail"></span>
+                                                        </span>
                                                     </div>
                                                 </div>
-                                            </div>
+                                                    
+                                            {{ Form::close() }}
+                                                <br>
+                                                <div class="col-xs-6 col-md-12">
+                                                    <center><button class = "btn btn-warning" data-dismiss="modal" target="_blank">Send Invite!</button></center>
+                                                </div>
                                         </div>
                                     </div>
                                 </div>
@@ -625,6 +615,11 @@
 @section('bottomscript')
 
     <script type="text/javascript">
+
+        function alertpay()
+        {
+        alert("Thanks for your payment!");
+        }
 
         $(document).ready(function() {
             var panels = $('.user-infos');
