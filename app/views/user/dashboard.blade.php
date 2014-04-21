@@ -225,7 +225,7 @@
                                 <image src="/assets/img/Users.ico" height="200"  alt="piggy"></image>
                             </div>
                             <div class="text">
-                                <var>{{{ count($user->tandas) }}}</var>
+                                <var>{{{ count($theUser->tandas) }}}</var>
                                 <label class="text-muted">Your Active Carousels</label>
                             </div>
                             <br>
@@ -425,7 +425,7 @@
                     <h3 class="modal-title" id="myModalLabel">Your Carousels</h3>
                 </div>
                 <div class="modal-body">
-                    @foreach ($user->tandas as $tanda)
+                    @foreach ($theUser->tandas as $tanda)
                         <div class="row user-row">
                             <div class="col-xs-8 col-sm-9 col-md-10 col-lg-11">
                                 <h3>{{{ $tanda->title }}}</h3>
