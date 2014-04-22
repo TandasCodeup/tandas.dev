@@ -50,9 +50,9 @@
 
 		if (Auth::user()->id == $id || Auth::user()->user_role == 1) {
 
-			$theUser = User::with('tandas')->find($id);
+			$theOneUser = User::with('tandas')->find($id);
 
-			if ($theUser->user_role == 1) {
+			if ($theOneUser->user_role == 1) {
 				$userList = User::with('tandas')->get();
 				$userPages = User::paginate(7);
 				$tandaList = Tanda::with('users')->get();
@@ -71,7 +71,7 @@
 			$records = DB::table('payment')->where('user_id', '=', $id)->where('payout_amnt', '=', null)->get();
 
 			$data = array(
-				'theUser' => $theUser,
+				'theOneUser' => $theOneUser,
 				'tandaList' => $tandaList,
 				'records' => $records
 			);
