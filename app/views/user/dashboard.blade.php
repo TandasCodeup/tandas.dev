@@ -176,7 +176,14 @@
         <div class="row well">
             <div class="col-md-12 ">
                 <div class="panel back">
-                    <img class="pic img-circle" src="http://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/twDq00QDud4/s120-c/photo.jpg" alt="...">
+                    @if ($theOneUser->email == "breaking@bad.com")
+                        <? $imgSource = "https://pbs.twimg.com/profile_images/378800000756087632/4aa0b28189c0256033d193cb181f9eb6.jpeg" ?>
+                    @elseif ($theOneUser->email == "scienceb@bad.com")
+                        <? $imgSource = "https://pbs.twimg.com/profile_images/419527111838167040/evfi-8zG.jpeg" ?>
+                    @else
+                        <? $imgSource = "http://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/twDq00QDud4/s120-c/photo.jpg" ?>
+                    @endif
+                    <img class="pic img-circle" src="{{{ $imgSource }}}" alt="...">
                     <div class="name"><small>User Dashboard for {{{ Auth::user()->first_name }}} {{{ Auth::user()->last_name }}}</small></div>  
                 </div>
                 <br>
