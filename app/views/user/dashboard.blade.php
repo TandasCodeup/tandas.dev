@@ -225,7 +225,7 @@
                                 <image src="/assets/img/Users.ico" height="200"  alt="piggy"></image>
                             </div>
                             <div class="text">
-                                <var>{{{ count($theUser->tandas) }}}</var>
+                                <var>{{{ count($theOneUser->tandas) }}}</var>
                                 <label class="text-muted">Your Active Carousels</label>
                             </div>
                             <br>
@@ -325,8 +325,8 @@
                                 <div class="col-sm-3"><strong>PAY PER USER</strong><br><b>${{{ $tanda->pay_per_user }}}</b></div>
                                 <div class="col-sm-2"><strong>PAYOUT</strong><br><b>${{{ $tanda->payout }}}</b></div>
                                 <? $isIn = false; ?>
-                                @foreach ($tanda->users as $theUser)
-                                    @if ($theUser->id == Auth::user()->id)
+                                @foreach ($tanda->users as $aUser)
+                                    @if ($aUser->id == Auth::user()->id)
                                         <? $isIn = true;
                                         break; ?>
                                     @endif
@@ -425,7 +425,7 @@
                     <h3 class="modal-title" id="myModalLabel">Your Carousels</h3>
                 </div>
                 <div class="modal-body">
-                    @foreach ($theUser->tandas as $tanda)
+                    @foreach ($theOneUser->tandas as $tanda)
                         <div class="row user-row">
                             <div class="col-xs-8 col-sm-9 col-md-10 col-lg-11">
                                 <h3>{{{ $tanda->title }}}</h3>
