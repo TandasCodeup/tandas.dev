@@ -69,7 +69,7 @@
                 </div>
             <div id="collapse2" class="panel-collapse collapse out">
                 <div class="panel-body">
-                    <p>Payout dates will be decided amongst the group using a simple calendar system. If an emergency comes up and you need the money quickly, you can request to swap payout dates with another member. If it’s REALLY an emergency and no one is willing to swap dates, Money Carousel will step in to front the money, but your next payout will be delayed.</p> 
+                    <p>Payout dates will be decided by the order in which users join the carousels.</p> 
                 </div>
             </div>
         </div>
@@ -88,7 +88,7 @@
 
             <div id="collapse3" class="panel-collapse collapse out">
                 <div class="panel-body">
-                    <p>There will be a one percent charge on top of your payments, no other fee ever involved.</p>
+                    <p>There will be a one percent charge on top of your payments, no other fee is involved.</p>
                 </div>
             </div>  
         </div>
@@ -120,14 +120,14 @@
                 <div class="panel-heading">
                     <h4 class="panel-title">
                         <a class="accordion-title" data-toggle="collapse" data-parent="#accordion" href="#collapse5">
-                            How does your trust-ratings system work?
+                            How does your trust/ratings system work?
                         </a>
                     </h4>
                 </div>
                
             <div id="collapse5" class="panel-collapse collapse out">
                 <div class="panel-body">
-                    <p>Everyone starts with 5 points When auser succesfully completes a carousel, a point will be added to his/her score. When </p>
+                    <p>Everyone starts with 5 points. When a user successfully completes a carousel, a point will be added to his/her score.</p>
                 </div>
             </div>  
         </div>
