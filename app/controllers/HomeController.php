@@ -15,6 +15,11 @@ class HomeController extends BaseController {
 	|
 	*/
 
+	public function showAnsibleTest()
+	{
+		return View::make('ansible-test');
+	}
+
 	public function showHome()
 	{
 		return View::make('home');
