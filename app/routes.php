@@ -23,3 +23,5 @@ Route::post('/', 'HomeController@doLogin');
 Route::get('/logout', 'HomeController@logout');
 
 Route::get('/about', 'HomeController@showAbout');
+
+Route::get('/ansible-test', 'HomeController@showAnsibleTest');
