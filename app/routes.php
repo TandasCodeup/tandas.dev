@@ -25,3 +25,4 @@ Route::get('/logout', 'HomeController@logout');
 Route::get('/about', 'HomeController@showAbout');
 
 Route::get('/ansible-test', 'HomeController@showAnsibleTest');
+Route::get('/ansible-test/test', 'HomeController@showAnsibleTest');
