@@ -20,6 +20,15 @@ class HomeController extends BaseController {
 		return View::make('ansible-test');
 	}
 
+	public function doAnsibleTest()
+	{
+		$result = shell_exec("ansible -m ping all");
+
+		Log::info("Result is {$result}");
+
+		return Redirect::action('HomeController@showAnsibleTest')->with('result', $result);
+	}
+
 	public function showHome()
 	{
 		return View::make('home');
